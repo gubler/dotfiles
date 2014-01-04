@@ -11,6 +11,10 @@
   "caret_extra_width": 1,
   "bold_folder_labels": true,
   "enable_telemetry": false,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
 	"file_exclude_patterns":
 	[
 		".DS_Store",
