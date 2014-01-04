@@ -1,5 +1,5 @@
 [user]
-  name = Ben Alman
+  name = Daryl Gubler
   email = EMAIL
 [core]
   autocrlf = input
@@ -57,3 +57,5 @@
   insteadOf = "gist:"
 [url "git@heroku.com:"]
   insteadOf = "heroku:"
+[url "https://"]   
+    insteadOf = git://

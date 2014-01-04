@@ -10,7 +10,7 @@ See the README for documentation.
 https://github.com/gubler/dotfiles
 Copyright (c) 2013 Daryl Gubler
 
-Modified from work by "Cowboy" Ben Alman
+Modified from original work by "Cowboy" Ben Alman
 Licensed under the MIT license.
 HELP
 exit; fi
