@@ -10,6 +10,16 @@ export GREP_OPTIONS='--color=auto'
 # Prevent less from clearing the screen while still showing colors.
 export LESS=-XR
 
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Prefer US English and use UTF-8
+export LANG="en_US"
+export LC_ALL="en_US.UTF-8"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
 # Set the terminal's title bar.
 function titlebar() {
   echo -n $'\e]0;'"$*"$'\a'

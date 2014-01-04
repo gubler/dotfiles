@@ -11,8 +11,11 @@ export HISTCONTROL="ignorespace:erasedups"
 # Give history timestamps.
 export HISTTIMEFORMAT="[%F %T] "
 # Lots o' history.
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+
 
 # Easily re-execute the last history command.
 alias r="fc -s"

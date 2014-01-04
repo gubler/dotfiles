@@ -7,6 +7,9 @@
 *.o
 *.so
 
+# Compiled Python files
+*.pyc
+
 # Packages #
 ############
 # It's better to unpack these files and commit the raw source because
@@ -35,7 +38,7 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
+# *.sql // Not sure
 *.sqlite
 
 # OS generated files #

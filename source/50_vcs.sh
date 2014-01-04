@@ -26,6 +26,11 @@ alias grr='git remote rm'
 alias gcl='git clone'
 alias gcd='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 
+alias gst='git status'
+alias gpom='git push origin master'
+alias glom='git pull origin master'
+alias gca='git commit -v -a'
+
 # Run commands in each subdirectory.
 alias gu-all='eachdir git pull'
 alias gp-all='eachdir git push'
