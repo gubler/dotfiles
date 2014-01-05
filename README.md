@@ -4,6 +4,21 @@ Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](htt
 
 My OS X / Ubuntu dotfiles.
 
+## TODO
+
+* Update README
+  * installed gems, npm
+  * installed homebrew apps
+  * extra directory
+  * Additional files in /reference
+    * Alfred theme and workflows
+    * Marked.sublime-build
+* Revise Cask lists
+  * Install important apps in ```extra/30_osx_install.sh```
+  * install remaining apps in ```extra/60_osx_optional_install.sh```
+* Add App listing
+  * Revise the ```reference/application_list.md```
+
 ## Why is this a git repo?
 
 I've been using bash on-and-off for a long time (since Slackware Linux was distributed on 1.44MB floppy disks). In all that time, every time I've set up a new Linux or OS X machine, I've copied over my `.bashrc` file and my `~/bin` folder to each machine manually. And I've never done a very good job of actually maintaining these files. It's been a total mess.
