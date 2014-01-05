@@ -2,13 +2,6 @@
 
 My OS X / Ubuntu dotfiles.
 
-## TODO
-
-* Update README
-* Revise Cask lists
-  * Install important apps in ```extra/30_osx_install.sh```
-  * install remaining apps in ```extra/60_osx_optional_install.sh```
-
 ## What This Is
 
 I've been futzing around with bash and zsh for years and moving bits and peices of my configurations around from machine to machine and platform to platform. After seeing all of the work put into various [dotfile repos](http://dotfiles.github.io/), I finally forked several and merged them into what I wanted.
@@ -130,7 +123,7 @@ Any file in the `link` subdirectory gets symbolically linked with `ln -s` into `
 Your .ssh folder is in the `link` directory, but rsa keys (public and private) as well as `known_hosts` and `authorized_keys` are ignored.
 
 ## Aliases and Functions
-To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/gubler/dotfiles/tree/master/source). I even have a [fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
+To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/gubler/dotfiles/tree/master/source). I even have [@cowboy's fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
 
 ## Scripts
 In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bash scripts][bin].
@@ -156,6 +149,12 @@ SVN repos display as **[rev1:rev2]** where rev1 and rev2 are:
 Check it out:
 
 ![The awesome bash prompt](http://farm8.staticflickr.com/7142/6754488927_563dd73553_b.jpg)
+
+## TODO
+
+* Replace the Cask lists with actual listings - gotta clean up my apps list first...
+    * Install important apps in ```extra/30_osx_install.sh```
+    * install remaining apps in ```extra/60_osx_optional_install.sh```
 
 ## Credits
 Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](https://github.com/mathiasbynens/dotfiles) and [@paulirish](https://github.com/paulirish/dotfiles). I'm just riding on the hard work they've done (especially @cowboy).

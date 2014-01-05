@@ -40,7 +40,7 @@ brew install brew-cask
 # installcask transmission
 # installcask virtualbox
 
-brew tap caskroom/versions
+# brew tap caskroom/versions
 # installcask sublime-text3
 
 brew cask alfred link
