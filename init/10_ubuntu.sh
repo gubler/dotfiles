@@ -38,8 +38,7 @@ sudo apt-get -qq dist-upgrade
 # Install APT packages.
 packages=(
   build-essential libssl-dev
-  git-core
-  tree sl id3tool cowsay
+  git-core tree
   nmap telnet
   htop ack-grep
 )

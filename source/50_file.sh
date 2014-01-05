@@ -48,7 +48,10 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias pbc="tr -d '\n' | pbcopy"
+
+# `cat` with beautiful colors. requires Pygments installed.
+alias c='pygmentize -g -O style=monokai -f console256'
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
