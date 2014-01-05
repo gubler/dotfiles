@@ -44,7 +44,7 @@ if [[ "$(type -P rbenv)" ]]; then
   fi
 fi
 
-Install Gems.
+# Install Gems.
 if [[ "$(type -P gem)" ]]; then
   gems=(bundler awesome_print pry lolcat)
 
@@ -55,4 +55,11 @@ if [[ "$(type -P gem)" ]]; then
     rbenv rehash
   fi
 fi
+
+# Install Pygments
+if [[ ! "$(type -P pygmentize)" ]]; then
+  e_header "Installing Pygments"
+  sudo easy_install Pygments
+fi
+
 
