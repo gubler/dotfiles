@@ -11,6 +11,8 @@ brew tap josegonzalez/homebrew-php
 brew install php55
 brew install php55-imagick
 brew install php55-mcrypt
+brew install php55-intl
+brew install php55-opcache
 brew install php55-xdebug
 brew install composer
 
