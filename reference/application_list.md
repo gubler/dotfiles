@@ -12,6 +12,7 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/)
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/)
 * [MPEG Streamclip](http://www.squared5.com/)
+* [NoteBurner M4V Converter Plus](http://www.noteburner.com/)
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/)
 * [Permute 2](http://fuelcollective.com/permute)
 * [ScreenFlow](http://www.telestream.net/screenflow/)
@@ -20,11 +21,13 @@ This is what I have installed on multiple machines coalesced into a single list.
 ## Design/Web Design
 * [Acorn](http://www.flyingmeat.com/acorn/)
 * [ColorSchemer Studio](http://www.colorschemer.com/)
+* [GIFBrewery](http://gifbrewery.com/)
 * [ImageOptim](http://imageoptim.com/)
 * [ImageAlpha](http://pngmini.com/)
 * [LittleSnapper](http://support.realmacsoftware.com/support/solutions/articles/84091)
 * [Pixelmator](http://www.pixelmator.com/)
 * [Pochade](http://fuelcollective.com/pochade)
+* [Sketch 2](http://bohemiancoding.com/sketch/)(Version 3 is out now)
 
 ## Developer
 * [Anvil](http://anvilformac.com/)
@@ -32,6 +35,7 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [CodeKit](http://incident57.com/codekit/)
 * [CodeRunner](http://krillapps.com/coderunner/)
 * [Dash](http://kapeli.com/dash)
+* [Exedore](http://celestialteapot.com/exedore/)
 * [Go2Shell](http://zipzapmac.com/Go2Shell)
 * [Hostbuddy](http://clickontyler.com/hostbuddy/)
 * [iTerm2](http://www.iterm2.com/)
@@ -65,7 +69,7 @@ This is what I have installed on multiple machines coalesced into a single list.
 
 ## Games
 * [Civilization V](http://www.civilization5.com/)
-* [Hearthstone beta](http://us.battle.net/hearthstone/en/)
+* [Hearthstone](http://us.battle.net/hearthstone/en/)
 * [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab)
 * [Numenera CC](http://3lbgames.com/games/numenera-character-creator/)
 * [PCGen 5.16](http://pcgen.sourceforge.net/)
@@ -99,13 +103,14 @@ This is what I have installed on multiple machines coalesced into a single list.
 
 ## Social
 * [Colloquy](http://colloquy.info/)
-* [HipChat](https://www.hipchat.com/)
+* [Slack](https://slack.com/)
 * [Skype](http://www.skype.com)
 * [Skype Call Recorder](http://www.ecamm.com/mac/callrecorder/)
 * [TweetBot](http://tapbots.com/software/tweetbot/mac/)
 * [Unison](http://panic.com/unison/)
 
 ## Utilities
+* [Aeon Timeline](http://www.scribblecode.com/)
 * [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/))
 * [Bartender](http://www.macbartender.com/)
 * [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/)
@@ -121,6 +126,7 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [ExpanDrive](http://www.expandrive.com/expandrive)
 * [F.lux](http://justgetflux.com/)
 * [Fantastical](http://flexibits.com/fantastical) (and the [menu bar applet](http://flexibits.com/fantastical/faq))
+* [Feeder](http://reinventedsoftware.com/feeder/)
 * [Firefox](http://www.mozilla.org/en-US/firefox/new/)
 * [Fluid](http://fluidapp.com/)
 * [Fuze](https://www.fuzebox.com/)
@@ -133,10 +139,12 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [Moom](http://manytricks.com/moom/)
 * [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html)
 * [Shortcat](http://shortcatapp.com/)
+* [Shush](http://mizage.com/shush/)
 * [SpamSieve](http://c-command.com/spamsieve/)
 * [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
 * [TextExpander](http://www.smilesoftware.com/TextExpander/)
 * [TimeMachineEditor](http://timesoftware.free.fr/timemachineeditor/)
+* [Timing](http://timingapp.com/)
 * [TotalFinder](http://totalfinder.binaryage.com/)
 * [Transmission](http://www.transmissionbt.com/)
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver)
