@@ -4,7 +4,7 @@
   "font_face": "Anonymous Pro",
   "font_size": 16.0,
   "highlight_line": true,
-  "tab_size": 2,
+  "tab_size": 4,
   "translate_tabs_to_spaces": true,
   // Removed $ to expand selections for PHP development
   "word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?",

@@ -53,10 +53,13 @@
 .Trashes
 
 # Windows image file caches
-Thumbs.db 
+Thumbs.db
 
 # Folder config file
 Desktop.ini
 
 # NPM
 .npmignore
+
+# PHPStorm IDE
+.idea
