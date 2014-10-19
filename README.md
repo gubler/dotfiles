@@ -26,7 +26,7 @@ It's really not very complicated. When [dotfiles][dotfiles] is run, it does a fe
 Note:
 
 * The `backups` folder only gets created when necessary. Any files in `~/` that would have been overwritten by `copy` or `link` get backed up there.
-* Files in `bin` are executable shell scripts (Eg. [~/.dotfiles/bin][bin] is added into the path).
+* Files in `bin` are executable shell scripts (Eg. [~/.dotfiles/bin](bin) is added into the path).
 * Files in `source` get sourced whenever a new shell is opened (in alphanumeric order, hence the "50_" names).
 * Files in `conf` just sit there. If a config file doesn't _need_ to go in `~/`, put it in there.
 * Files in `caches` are cached files, only used by some scripts. This folder will only be created if necessary.
@@ -35,7 +35,7 @@ Note:
 
 * `libs` is for submoduled applications
 * `extra` are scripts to be run once. They aren't hooked into the regular dotfiles command due to either needing input during execution or taking a long, long time to run.
-* `reference` holds extra config files as well as an [app log][references/application_list.md] that includes apps, plugins, browser extensions, etc...
+* `reference` holds extra config files as well as an [app log](references/application_list.md) that includes apps, plugins, browser extensions, etc...
 
 ## Installation
 ### OS X Notes
