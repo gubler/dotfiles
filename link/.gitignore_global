@@ -60,3 +60,6 @@ Desktop.ini
 
 # NPM
 .npmignore
+
+# PHPStorm
+.idea

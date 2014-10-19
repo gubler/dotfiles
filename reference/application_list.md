@@ -2,176 +2,163 @@
 
 This is what I have installed on multiple machines coalesced into a single list. This should be trimmed down to a more reasonable list as I prune programs from my life.
 
+### Sources
+I try to have links to every program on the list, but I also list how I install them:
+
+* [MAS] - [Mac AppStore](http://www.apple.com/osx/apps/app-store/)
+* [HBC] - [HomeBrew Cask](http://caskroom.io/)
+* [DL] - Manual Download (there is no caskfile for this app)
+* [Steam] - [Steam](http://store.steampowered.com/)
+
+If possible, I try to purchase apps outside of the Mac AppStore.
+
 ## Audio/Video
-* [Audio Hijack Pro](http://www.rogueamoeba.com/audiohijackpro/)
-* [Audiobook Builder](http://www.splasm.com/audiobookbuilder/)
-* [Enqueue](http://www.enqueueapp.com/)
-* [Fission](http://www.rogueamoeba.com/fission/)
-* [HandBrake](http://handbrake.fr/nightly.php) (Nightly Build)
-* [iFlicks 2](http://www.iflicksapp.com/)
-* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/)
-* [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/)
-* [MPEG Streamclip](http://www.squared5.com/)
-* [NoteBurner M4V Converter Plus](http://www.noteburner.com/)
-* [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/)
-* [Permute 2](http://fuelcollective.com/permute)
-* [ScreenFlow](http://www.telestream.net/screenflow/)
-* [XLD](http://tmkk.undo.jp/xld/index_e.html)
+* [Audio Hijack Pro](http://www.rogueamoeba.com/audiohijackpro/) [HBC]
+* [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [HBC]
+* [Fission](http://www.rogueamoeba.com/fission/) [HBC]
+* [HandBrake](http://handbrake.fr/) [HBC]
+* [iFlicks 2](http://www.iflicksapp.com/) [MAS]
+* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [HBC]
+* [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
+* [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
+* [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL]
+* [Permute 2](http://fuelcollective.com/permute) [MAS]
+* [ScreenFlow](http://www.telestream.net/screenflow/) [HBC]
+* [XLD](http://tmkk.undo.jp/xld/index_e.html) [HBC]
 
 ## Design/Web Design
-* [Acorn](http://www.flyingmeat.com/acorn/)
-* [ColorSchemer Studio](http://www.colorschemer.com/)
-* [GIFBrewery](http://gifbrewery.com/)
-* [ImageOptim](http://imageoptim.com/)
-* [ImageAlpha](http://pngmini.com/)
-* [LittleSnapper](http://support.realmacsoftware.com/support/solutions/articles/84091)
-* [Pixelmator](http://www.pixelmator.com/)
-* [Pochade](http://fuelcollective.com/pochade)
-* [Sketch 2](http://bohemiancoding.com/sketch/)(Version 3 is out now)
+* [Acorn](http://www.flyingmeat.com/acorn/) [HBC]
+* [GIFBrewery](http://gifbrewery.com/) [MAS]
+* [ImageOptim](http://imageoptim.com/) [HBC]
+* [ImageAlpha](http://pngmini.com/) [HBC]
+* [Ember](http://realmacsoftware.com/ember) [MAS]
+* [Pixelmator](http://www.pixelmator.com/) [MAS]
+* [Sip](http://theolabrothers.com/sip/) [MAS]
+* [Sketch 2](http://bohemiancoding.com/sketch/)(Version 3 is out now) [DL]
 
 ## Developer
-* [Anvil](http://anvilformac.com/)
-* [Base](http://menial.co.uk/base/)
-* [CodeKit](http://incident57.com/codekit/)
-* [CodeRunner](http://krillapps.com/coderunner/)
-* [Dash](http://kapeli.com/dash)
-* [Exedore](http://celestialteapot.com/exedore/)
-* [Go2Shell](http://zipzapmac.com/Go2Shell)
-* [Hostbuddy](http://clickontyler.com/hostbuddy/)
-* [iTerm2](http://www.iterm2.com/)
-* [Kaleidoscope](http://www.kaleidoscopeapp.com/)
-* [LiveReload](http://livereload.com/)
-* [MockSmtp](http://mocksmtpapp.com/)
-* [Patterns](http://krillapps.com/patterns/)
-* [Sequel Pro](http://www.sequelpro.com/)
-* [SiteSucker](http://sitesucker.us/mac/mac.html)
-* [Tower](http://www.git-tower.com/)
-* [Transmit](http://panic.com/transmit/)
-* [VirtualHostX](http://clickontyler.com/virtualhostx/)
-* [Xcode](https://developer.apple.com/xcode/)
-* [xScope](http://xscopeapp.com/)
+* [Base](http://menial.co.uk/base/) [HBC]
+* [CodeKit](http://incident57.com/codekit/) [HBC]
+* [CodeRunner](http://krillapps.com/coderunner/) [MAS]
+* [Dash](http://kapeli.com/dash) [MAS]
+* [Exedore](http://celestialteapot.com/exedore/) [DL]
+* [iTerm2](http://www.iterm2.com/) [HBC]
+* [Kaleidoscope](http://www.kaleidoscopeapp.com/) [DL] - This is available in Cask, but it can cause problems with `brew doctor`, so I install manually.
+* [LiveReload](http://livereload.com/) [HBC]
+* [MockSmtp](http://mocksmtpapp.com/) [MAS]
+* [Patterns](http://krillapps.com/patterns/) [MAS]
+* [Sequel Pro](http://www.sequelpro.com/) [HBC]
+* [Tower](http://www.git-tower.com/) [HBC]
+* [Transmit](http://panic.com/transmit/) [HBC]
+* [VirtualHostX](http://clickontyler.com/virtualhostx/) [HBC]
+* [Xcode](https://developer.apple.com/xcode/) [MAS]
+* [xScope](http://xscopeapp.com/) [MAS]
 
 ### Virtual Machines
-* [Vagrant](http://www.vagrantup.com/)
-* [VirtualBox](https://www.virtualbox.org/)
-* [VMware Fusion](http://www.vmware.com/products/fusion/)
+* [Vagrant](http://www.vagrantup.com/) [HBC]
+* [VirtualBox](https://www.virtualbox.org/) [HBC]
+* [boot2docker](http://boot2docker.io/) [HBC]
+* [VMware Fusion](http://www.vmware.com/products/fusion/) [DL]
 
 ## Editors
-* [BBEdit](http://www.barebones.com/products/bbedit/)
-* [Byword](http://bywordapp.com/)
-* [FoldingText](http://www.foldingtext.com/)
-* [MultiMarkdown Composer](http://multimarkdown.com/)
-* [nvALT](http://brettterpstra.com/projects/nvalt/)
-* [Scrivener](http://www.literatureandlatte.com/scrivener.php)
-* [Sublime Text 3](http://www.sublimetext.com/3)
-* [Ulysses](http://www.ulyssesapp.com/)
-* [VoodooPad](https://plausible.coop/voodoopad/)
+* [BBEdit](http://www.barebones.com/products/bbedit/) [MAS]
+* [Byword](http://bywordapp.com/) [MAS]
+* [FoldingText](http://www.foldingtext.com/) [MAS]
+* [nvALT](http://brettterpstra.com/projects/nvalt/) [HBC]
+* [PHPStorm](https://www.jetbrains.com/phpstorm/) [HBC]
+* [Scrivener](http://www.literatureandlatte.com/scrivener.php) [HBC]
+* [Sublime Text 3](http://www.sublimetext.com/3) [HBC]
 
 ## Games
-* [Civilization V](http://www.civilization5.com/)
-* [Hearthstone](http://us.battle.net/hearthstone/en/)
-* [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab)
-* [Numenera CC](http://3lbgames.com/games/numenera-character-creator/)
-* [PCGen 5.16](http://pcgen.sourceforge.net/)
-* [Steam](http://store.steampowered.com/)
-* [Zuma's Revenge!](http://www.popcap.com/games/zumas-revenge/mac)
+* [Civilization V](http://www.civilization5.com/) [Steam]
+* [Hearthstone](http://us.battle.net/hearthstone/en/) [DL]
+* [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab) [DL]
+* [Numenera CC](http://3lbgames.com/games/numenera-character-creator/) [DL]
+* [Steam](http://store.steampowered.com/) [HBC]
+* [Zuma's Revenge!](http://www.popcap.com/games/zumas-revenge/mac) [MAS]
+* [Minecraft](https://minecraft.net/) [HBC]
 
 ## Productivity
-* [1Password](https://agilebits.com/onepassword/mac)
-* [Airmail](http://airmailapp.com/)
-* [Clarify](http://www.clarify-it.com/)
-* [Day One](http://dayoneapp.com/)
-* [Delicious Library 3](http://delicious-monster.com/) (via the AppStore)
-* [EagleFiler](http://c-command.com/eaglefiler/)
-* [Home Inventory](http://binaryformations.com/products/home-inventory/)
-* iLife: [Aperture](https://www.apple.com/aperture/), [iPhoto](https://www.apple.com/mac/iphoto/), and [GarageBand (6.0 & 2013)](http://www.apple.com/mac/garageband/)
-* iWork: [Keynote](https://www.apple.com/mac/keynote/), [Numbers](https://www.apple.com/mac/numbers/), and [Pages](https://www.apple.com/mac/pages/)
-* [Marked 2](http://marked2app.com/)
-* [OmniFocus](http://www.omnigroup.com/omnifocus)
-* [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/)
-* [Paprika](http://www.paprikaapp.com/)
-* [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/)
-* [Soulver](http://www.acqualia.com/soulver/)
+* [1Password](https://agilebits.com/onepassword/mac) [MAS]
+* [Airmail 2](http://airmailapp.com/) [MAS]
+* [Clarify](http://www.clarify-it.com/) [HBC]
+* [Day One](http://dayoneapp.com/) [MAS]
+* [Delicious Library 3](http://delicious-monster.com/) [MAS]
+* [EagleFiler](http://c-command.com/eaglefiler/) [HBC]
+* iLife: [Aperture](https://www.apple.com/aperture/), [iPhoto](https://www.apple.com/mac/iphoto/), and [GarageBand (6.0 & 2013)](http://www.apple.com/mac/garageband/) [MAS]
+* iWork: [Keynote](https://www.apple.com/mac/keynote/), [Numbers](https://www.apple.com/mac/numbers/), and [Pages](https://www.apple.com/mac/pages/) [MAS]
+* [Marked 2](http://marked2app.com/) [HBC]
+* [OmniFocus](http://www.omnigroup.com/omnifocus) [HBC]
+* [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [HBC]
+* [Paprika](http://www.paprikaapp.com/) [MAS]
+* [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [HBC]
+* [Soulver](http://www.acqualia.com/soulver/) [HBC]
 
 ## eBook
-* [calibre](http://calibre-ebook.com/)
-* [iBooks Author](http://www.apple.com/ibooks-author/)
-* [Kindle](http://www.amazon.com/gp/feature.html?docId=1000464931)
-* [Murasaki](http://genjiapp.com/mac/murasaki/index_en.html)
-* [Sigil](https://code.google.com/p/sigil/)
-* [Simple Comic](http://dancingtortoise.com/simplecomic/)
+* [calibre](http://calibre-ebook.com/) [HBC]
+* [iBooks Author](http://www.apple.com/ibooks-author/) [MAS]
+* [Kindle](http://www.amazon.com/gp/feature.html?docId=1000464931) [DL]
+* [Murasaki](http://genjiapp.com/mac/murasaki/index_en.html) [MAS]
+* [Sigil](https://code.google.com/p/sigil/) [HBC]
+* [Simple Comic](http://dancingtortoise.com/simplecomic/) [HBC]
 
 ## Social
-* [Colloquy](http://colloquy.info/)
-* [Slack](https://slack.com/)
-* [Skype](http://www.skype.com)
-* [Skype Call Recorder](http://www.ecamm.com/mac/callrecorder/)
-* [TweetBot](http://tapbots.com/software/tweetbot/mac/)
-* [Unison](http://panic.com/unison/)
+* [Colloquy](http://colloquy.info/) [HBC]
+* [Slack](https://slack.com/) [HBC]
+* [Skype](http://www.skype.com) [HBC]
+* [Skype Call Recorder](http://www.ecamm.com/mac/callrecorder/) [DL]
+* [TweetBot](http://tapbots.com/software/tweetbot/mac/) [MAS]
+* [Unison](http://panic.com/unison/) [HBC]
 
 ## Utilities
-* [Aeon Timeline](http://www.scribblecode.com/)
-* [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/))
-* [Bartender](http://www.macbartender.com/)
-* [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/)
-* [BetterTouchTool](http://www.boastr.net/)
-* [Caffeine](http://lightheadsw.com/caffeine/)
-* [Citrix Receiver](http://www.citrix.com/products/receiver/overview.html)
-* [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html)
-* [CrashPlan](http://www.code42.com/crashplan/)
-* [DaisyDisk 2](http://www.daisydiskapp.com/)
-* [Default Folder X](http://stclairsoft.com/DefaultFolderX/)
-* [Delish](http://pinepointsoftware.com/delish/)
-* [Dropbox](https://www.dropbox.com/)
-* [ExpanDrive](http://www.expandrive.com/expandrive)
-* [F.lux](http://justgetflux.com/)
-* [Fantastical](http://flexibits.com/fantastical) (and the [menu bar applet](http://flexibits.com/fantastical/faq))
-* [Feeder](http://reinventedsoftware.com/feeder/)
-* [Firefox](http://www.mozilla.org/en-US/firefox/new/)
-* [Fluid](http://fluidapp.com/)
-* [Fuze](https://www.fuzebox.com/)
-* [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
-* [Google Talk Plugin](https://www.google.com/tools/dlpage/hangoutplugin)
-* [Growl](http://growl.info/)
-* [HyperSwitch](http://bahoom.com/hyperswitch)
-* [iStat Menus](http://bjango.com/mac/istatmenus/)
-* [LaunchControl](http://www.soma-zone.com/LaunchControl/)
-* [Moom](http://manytricks.com/moom/)
-* [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html)
-* [Shortcat](http://shortcatapp.com/)
-* [Shush](http://mizage.com/shush/)
-* [SpamSieve](http://c-command.com/spamsieve/)
-* [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html)
-* [TextExpander](http://www.smilesoftware.com/TextExpander/)
-* [TimeMachineEditor](http://timesoftware.free.fr/timemachineeditor/)
-* [Timing](http://timingapp.com/)
-* [TotalFinder](http://totalfinder.binaryage.com/)
-* [Transmission](http://www.transmissionbt.com/)
-* [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver)
+* [Aeon Timeline](http://www.scribblecode.com/) [DL]
+* [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/)) [HBC]
+* [Bartender](http://www.macbartender.com/) [HBC]
+* [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [HBC]
+* [BetterTouchTool](http://www.boastr.net/) [HBC]
+* [Caffeine](http://lightheadsw.com/caffeine/) [HBC]
+* [Citrix Receiver](http://www.citrix.com/products/receiver/overview.html) [DL]
+* [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [HBC]
+* [CrashPlan](http://www.code42.com/crashplan/) [HBC]
+* [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS]
+* [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [HBC]
+* [Dropbox](https://www.dropbox.com/) [HBC]
+* [F.lux](http://justgetflux.com/) [HBC]
+* [Fantastical](http://flexibits.com/fantastical) (and the [menu bar applet](http://flexibits.com/fantastical/faq)) [HBC]
+* [Feeder](http://reinventedsoftware.com/feeder/) [HBC]
+* [Firefox](http://www.mozilla.org/en-US/firefox/new/) [HBC]
+* [Fluid](http://fluidapp.com/) [HBC]
+* [Fuze](https://www.fuzebox.com/) [HBC]
+* [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html) [HBC]
+* [HyperSwitch](http://bahoom.com/hyperswitch) [HBC]
+* [iStat Menus](http://bjango.com/mac/istatmenus/) [HBC]
+* [Moom](http://manytricks.com/moom/) [HBC]
+* [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html) [HBC]
+* [Shortcat](http://shortcatapp.com/) [HBC]
+* [Shush](http://mizage.com/shush/) [MAS]
+* [SpamSieve](http://c-command.com/spamsieve/) [DL]
+* [Spillo](http://bananafishsoftware.com/products/spillo/)
+* [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [HBC]
+* [TextExpander](http://www.smilesoftware.com/TextExpander/) [HBC]
+* [Timing](http://timingapp.com/) [MAS]
+* [TotalFinder](http://totalfinder.binaryage.com/) [HBC]
+* [Transmission](http://www.transmissionbt.com/) [HBC]
+* [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [HBC]
 
 ## Programs for Work ( the Job )
-* [Adobe CS6 Web Premium](http://www.adobe.com/mena_en/products/creativesuite/design-web-premium.html)
-    * Adobe Acrobat Pro
-    * Adobe Photoshop CS6
-    * Adobe Illustrator CS6
-    * Adobe Bridge CS6
-* [Apple Remote Desktop](http://www.apple.com/remotedesktop/)
-* [CoRD](http://cord.sourceforge.net/)
-* [Microsoft Entourage](http://office.microsoft.com/en-us/mac-outlook-help/use-entourage-with-office-for-mac-2011-HA102927429.aspx?CTT=1)
-* [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/)
+* [Apple Remote Desktop](http://www.apple.com/remotedesktop/) [MAS]
+* [CoRD](http://cord.sourceforge.net/) DL
+* [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/) [DL]
     * Microsoft Excel 2011
     * [Microsoft Lync](http://www.microsoft.com/mac/enterprise/lync)
     * Microsoft Outlook 2011
     * Microsoft PowerPoint 2011
     * Microsoft Word 2011
-* [Microsoft Remote Desktop Connection (2.1)](http://www.microsoft.com/en-us/download/details.aspx?id=18140)
-* [Yammer](https://www.yammer.com/)
+* [Microsoft Remote Desktop Connection (2.1)](http://www.microsoft.com/en-us/download/details.aspx?id=18140) [MAS]
 
 ## PrefPanes
-* [Hazel](http://www.noodlesoft.com/hazel.php)
-* [Perian](http://www.perian.org/)
-* [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/)
-* [WebSharing](http://clickontyler.com/web-sharing/)
+* [Hazel](http://www.noodlesoft.com/hazel.php) [HBC]
+* [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/) [HBC]
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
@@ -191,12 +178,12 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [Yslow](http://developer.yahoo.com/yslow/)
 
 ## Quicklook Generators
-* [BetterZip](http://macitbetter.com/BetterZip-Quick-Look-Generator/)
-* [QLColorCode](https://code.google.com/p/qlcolorcode/)
-* [QLMarkdown](https://github.com/toland/qlmarkdown)
-* [QLStephen](https://github.com/whomwah/qlstephen)
-* [Quicklook JSON](http://www.sagtau.com/quicklookjson.html)
-* [Multimarkdown Quicklook](https://github.com/ttscoff/MMD-QuickLook)
+* [BetterZip](http://macitbetter.com/BetterZip-Quick-Look-Generator/) [HBC]
+* [QLColorCode](https://code.google.com/p/qlcolorcode/) [HBC]
+* [QLMarkdown](https://github.com/toland/qlmarkdown) [HBC]
+* [QLStephen](https://github.com/whomwah/qlstephen) [HBC]
+* [Quicklook JSON](http://www.sagtau.com/quicklookjson.html) [HBC]
+* [Multimarkdown Quicklook](https://github.com/ttscoff/MMD-QuickLook) [HBC]
 
 ## Alfred Workflows
 * [Caffeine Control](https://github.com/shawnrice/alfred-2-caffeinate-workflow/)
@@ -217,7 +204,7 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [VMWare Control](https://github.com/ctwise/alfred-workflows#vmware-control)
 
 ## Calibre Plugins
-* [DeDRM](http://apprenticealf.wordpress.com/)
+* [DeDRM](http://apprenticealf.wordpress.com/) [DL]
 * iOS Reader Applications
 * Goodreads
 * Marvin XD
@@ -296,9 +283,4 @@ This is what I have installed on multiple machines coalesced into a single list.
 * [Trimmer](https://sublime.wbond.net/packages/Trimmer)
 
 ## Fonts
-* [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro)
-
-## Windows Software (for VMs)
-* [VisualStudio 2013 Ultimate](http://www.visualstudio.com/)
-    * [Web Essentials](http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361?SRC=Home)
-    * [Productivity Power Tools](http://visualstudiogallery.msdn.microsoft.com/dbcb8670-889e-4a54-a226-a48a15e4cace)
+* [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [DL]

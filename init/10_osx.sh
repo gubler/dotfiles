@@ -23,10 +23,15 @@ if [[ "$(type -P brew)" ]]; then
   recipes=(
     bash
     ssh-copy-id
-    git git-extras
+    git
+    git-extras
+    git-flow
     tree
-    lesspipe nmap
-    htop-osx man2html ack
+    lesspipe
+    nmap
+    htop-osx
+    man2html
+    ack
   )
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"

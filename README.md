@@ -70,12 +70,16 @@ A whole bunch of things will be installed, but _only_ if they aren't already.
   * ssh-copy-id
   * git
   * git-extras
+  * git-flow
   * tree
   * lesspipe
   * nmap
   * htop-osx
   * man2html
   * ack 2
+  * graphicsmagick
+  * webkit2png
+  * ffmpeg
 
 ### Ubuntu
 * APT packages
