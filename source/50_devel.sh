@@ -102,3 +102,5 @@ PATH=$(path_remove ~/.dotfiles/libs/ruby-build/bin):~/.dotfiles/libs/ruby-build/
 if [[ "$(type -P rbenv)" && ! "$(type -t _rbenv)" ]]; then
   eval "$(rbenv init -)"
 fi
+
+alias sdbr='app/console doctrine:migrations:migrate 0 -n -q && app/console doctrine:migrations:migrate -n -q && app/console doctrine:fixtures:load -n -q && echo Done!'
