@@ -282,5 +282,14 @@ If possible, I try to purchase apps outside of the Mac AppStore.
 * [Theme - Flatland](https://sublime.wbond.net/packages/Theme%20-%20Flatland)
 * [Trimmer](https://sublime.wbond.net/packages/Trimmer)
 
+## PHPStorm Plugins (installed via PHPStorm)
+* [.gitignore Support](https://github.com/hsz/idea-gitignore)
+* [Codeivate](http://www.codeivate.com/)
+* Dash
+* Open in Marked
+* [PHP Annotations](https://github.com/Haehnchen/idea-php-annotation-plugin)
+* PHPUnit Code Coverage
+* [Symfony2 Plugin](https://github.com/Haehnchen/idea-php-symfony2-plugin/issues)
+
 ## Fonts
-* [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [DL]
+* [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]

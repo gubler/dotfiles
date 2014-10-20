@@ -5,8 +5,6 @@ function e_success()  { echo -e " \033[1;32m✔\033[0m  $@"; }
 function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
 
 # Install native apps
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 
 apps=(
   alfred
@@ -95,10 +93,11 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "installing apps..."
+e_header "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 
+e_header "linking to Alfred"
 brew cask alfred link
 
 e_success "Optional Apps Installed"

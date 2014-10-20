@@ -8,15 +8,11 @@ function e_error()    { echo -e " \033[1;31m✖\033[0m  $@"; }
 brew update
 
 # Tap extra sources
-echo "tapping extras..."
-brew tap homebrew/dupes
-brew tap homebrew/versions
+e_header "Tapping PHP..."
 brew tap homebrew/homebrew-php
 
-# software install
-brew install homebrew/dupes/grep
-
 # php base
+e_header "Installing PHP base"
 brew install php56
 brew install php56-imagick
 brew install php56-mcrypt
@@ -26,6 +22,7 @@ brew install php56-xdebug
 brew install composer
 
 # phpQA toolchain
+e_header "Installing PHPQA toolchain"
 brew install phpunit
 brew install phploc
 brew install pdepend

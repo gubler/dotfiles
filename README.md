@@ -80,6 +80,8 @@ A whole bunch of things will be installed, but _only_ if they aren't already.
   * graphicsmagick
   * webkit2png
   * ffmpeg
+  * dupes/grep
+  * Anonymous Pro font (via Cask)
 
 ### Ubuntu
 * APT packages

@@ -19,6 +19,13 @@ if [[ "$(type -P brew)" ]]; then
   brew doctor
   brew update
 
+  e_header "Tapping extras"
+  brew tap homebrew/dupes
+  brew tap homebrew/versions
+  brew install caskroom/cask/brew-cask
+  brew tap caskroom/versions
+  brew tap caskroom/fonts
+
   # Install Homebrew recipes.
   recipes=(
     bash
@@ -32,6 +39,7 @@ if [[ "$(type -P brew)" ]]; then
     htop-osx
     man2html
     ack
+    homebrew/dupes/grep
   )
 
   list="$(to_install "${recipes[*]}" "$(brew list)")"
@@ -39,6 +47,9 @@ if [[ "$(type -P brew)" ]]; then
     e_header "Installing Homebrew recipes: $list"
     brew install $list
   fi
+
+  e_header "Installing Anonymous Pro font"
+  brew cask install font-anonymous-pro
 
   # This is where brew stores its binary symlinks
   local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
