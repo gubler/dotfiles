@@ -61,7 +61,7 @@ If possible, I try to purchase apps outside of the Mac AppStore.
 * [VMware Fusion](http://www.vmware.com/products/fusion/) [DL]
 
 ## Editors
-* [BBEdit](http://www.barebones.com/products/bbedit/) [MAS]
+* [BBEdit](http://www.barebones.com/products/bbedit/) [DL]
 * [Byword](http://bywordapp.com/) [MAS]
 * [FoldingText](http://www.foldingtext.com/) [MAS]
 * [nvALT](http://brettterpstra.com/projects/nvalt/) [HBC]

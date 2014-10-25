@@ -75,6 +75,11 @@ echo "Always show scrollbars"
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
+echo ""
+echo "Reduce Transparency on Yosemite"
+defaults write com.apple.universalaccess reduceTransparency -boolean true
+
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
