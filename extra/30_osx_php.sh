@@ -38,5 +38,21 @@ You still need to add the following to your /etc/apache2/httpd.conf
 
 LoadModule php5_module    /usr/local/opt/php56/libexec/apache2/libphp5.so
 
-You also need to set a timezone in /usr/local/etc/php/5.6"
+You also need to set a timezone in /usr/local/etc/php/5.6
+
+If you want to enable xdebug add the following:
+
+[Xdebug]
+xdebug.max_nesting_level = 250
+xdebug.remote_enable = 1
+xdebug.remote_port = 9000
+xdebug.idekey = PHPSTORM
+xdebug.remote_host = 'localhost'
+xdebug.remote_handler="dbgp"
+xdebug.remote_mode = req
+xdebug.profiler_enable = 0
+xdebug.profiler_enable_trigger = 1
+xdebug.profiler_output_dir = '/tmp'
+
+"
 
