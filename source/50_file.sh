@@ -16,6 +16,8 @@ if [[ "$(type -P tree)" ]]; then
   alias ll='tree --dirsfirst -aLpughDFiC 1'
   alias l='ls -alh'
   alias lsd='CLICOLOR_FORCE=1 l | grep --color=never "^d"'
+  alias l.='ls -dalh .* --color=auto'
+  alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 else
   alias l='ls -alh'
   alias lsd='CLICOLOR_FORCE=1 l | grep --color=never "^d"'
