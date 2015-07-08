@@ -162,20 +162,16 @@ If possible, I try to purchase apps outside of the Mac AppStore.
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
-* [AdBlock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom)
-* [amCoffee](https://chrome.google.com/webstore/detail/amcoffee/eohnbihebhopoapemdbbodaiaagpogik)
-* [Angular.js Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk)
-* [ClipConverter](http://www.clipconverter.cc/)
-* [Grunt DevTools](https://chrome.google.com/webstore/detail/grunt-devtools/fbiodiodggnlakggeeckkjccjhhjndnb)
+* [Backtick](https://chrome.google.com/webstore/detail/backtick/daiejhinmmfgincamkeeobmpffhdljim)
+* [ChromeLogger](https://chrome.google.com/webstore/detail/chrome-logger/noaneddfkdjfnfdakjjmocngnfkfehhd)
+* [Disconnect](https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo)
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
-* [jQuery Audit](https://chrome.google.com/webstore/detail/jquery-audit/dhhnpbajdcgdmbbcoakfhmfgmemlncjg/)
-* [jQuery injector](https://chrome.google.com/webstore/detail/jquery-injector/indebdooekgjhkncmgbkeopjebofdoid)
-* [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-* [Pinboard Tools](https://chrome.google.com/webstore/detail/pinboard-tools/dpaohcncbmkojcpcjaojcehdlnjfbjkl)
+* [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
 * [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) (and [its launcher](https://chrome.google.com/webstore/detail/postman-launcher/igofndmniooofoabmmpfonmdnhgchoka))
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
-* [Speed Tracer](https://chrome.google.com/webstore/detail/speed-tracer-by-google/ognampngfcbddbfemdapefohjiobgbdl)
-* [Yslow](http://developer.yahoo.com/yslow/)
+* [uBlock Origins](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
+* [Xdebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)
+* [XML Tree](https://chrome.google.com/webstore/detail/xml-tree/gbammbheopgpmaagmckhpjbfgdfkpadb)
 
 ## Quicklook Generators
 * [BetterZip](http://macitbetter.com/BetterZip-Quick-Look-Generator/) [HBC]
