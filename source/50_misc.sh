@@ -10,9 +10,6 @@ export GREP_OPTIONS='--color=auto'
 # Prevent less from clearing the screen while still showing colors.
 export LESS=-XR
 
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md="$ORANGE"
-
 # Prefer US English and use UTF-8
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
@@ -29,3 +26,6 @@ function titlebar() {
 if [[ -e ~/.ssh/known_hosts ]]; then
   complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh scp sftp
 fi
+
+# Disable ansible cows }:]
+export ANSIBLE_NOCOWS=1

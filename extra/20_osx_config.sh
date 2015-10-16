@@ -50,19 +50,11 @@ echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in t
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 echo ""
-echo "Saving to disk (not to iCloud) by default"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-echo ""
-echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-echo ""
 echo "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 echo ""
-echo "Disable smart quotes and smart dashes as theyâ€™re annoying when typing code"
+echo "Disable smart quotes and smart dashes as they're annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
@@ -79,6 +71,23 @@ echo ""
 echo "Reduce Transparency on Yosemite"
 defaults write com.apple.universalaccess reduceTransparency -boolean true
 
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+# Save screenshots to the Desktop
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
+# Save screenshots as PNGs
+defaults write com.apple.screencapture type -string "png"
+
+# Disable automatic termination of inactive apps
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -94,6 +103,12 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 300
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+# Follow the keyboard focus while zoomed in
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 ###############################################################################
 # Screen                                                                      #
@@ -127,7 +142,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 echo ""
 echo "Use column view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 echo ""
 echo "Avoiding the creation of .DS_Store files on network volumes"
@@ -161,8 +176,20 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
+# Do not show recent tags
+defaults write com.apple.finder ShowRecentTags -bool false
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Finder: allow text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Finder: disable window animations and Get Info animations
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
@@ -197,6 +224,17 @@ defaults write com.apple.dock mru-spaces -bool false
 echo ""
 echo "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true
+
+echo ""
+echo "Show indicator lights for open applications"
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Enable spring loading for all Dock items
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -237,15 +275,15 @@ echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
 echo ""
-echo "Use a modified version of the Pro theme by default in Terminal.app"
-open "${HOME}/reference/SolarizedDark.terminal"
+echo "Use Solarized Dark theme by default in Terminal.app"
+open "${HOME}/.dotfiles/reference/SolarizedDark.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal "Default Window Settings" -string "SolarizedDark"
 defaults write com.apple.terminal "Startup Window Settings" -string "SolarizedDark"
 
 echo ""
 echo "Install pretty iTerm colors"
-open "${HOME}/reference/SolarizedDark.itermcolors"
+open "${HOME}/.dotfiles/reference/Solarized Dark Higher Contrast.itermcolors"
 
 echo ""
 echo "Don’t display the annoying prompt when quitting iTerm"
@@ -307,13 +345,14 @@ echo "Google Chrome: Allow installing user scripts via GitHub or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
-###############################################################################
-# Sublime Text                                                                #
-###############################################################################
+# Disable the all too sensitive backswipe on trackpads
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
-echo ""
-echo "Install Sublime Text settings"
-cp -r reference/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+# Disable the all too sensitive backswipe on Magic Mouse
+defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
+
 
 ###############################################################################
 # Transmission.app                                                            #
