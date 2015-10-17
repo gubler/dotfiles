@@ -71,23 +71,25 @@ echo ""
 echo "Reduce Transparency on Yosemite"
 defaults write com.apple.universalaccess reduceTransparency -boolean true
 
-# Disable shadow in screenshots
+echo ""
+echo "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
-# Save screenshots to the Desktop
+
+echo ""
+echo "Save screenshots to the Desktop"
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
-# Save screenshots as PNGs
+
+echo ""
+echo "Save screenshots as PNGs"
 defaults write com.apple.screencapture type -string "png"
 
-# Disable automatic termination of inactive apps
+echo ""
+echo "Disable automatic termination of inactive apps"
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog
+echo ""
+echo "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
-
-# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
-
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -104,10 +106,13 @@ echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 300
 
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
+echo ""
+echo "Use scroll gesture with the Ctrl (^) modifier key to zoom"
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# Follow the keyboard focus while zoomed in
+
+echo ""
+echo "Follow the keyboard focus while zoomed in"
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 ###############################################################################
@@ -153,10 +158,12 @@ echo "Set Downloads as the default location for new Finder windows"
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 
-# Enable spring loading for directories
+echo ""
+echo "Enable spring loading for directories"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
-# Remove the spring loading delay for directories
+echo ""
+echo "Remove the spring loading delay for directories"
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 echo ""
@@ -171,28 +178,34 @@ echo "Enabling snap-to-grid for icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# Automatically open a new Finder window when a volume is mounted
+echo ""
+echo "Automatically open a new Finder window when a volume is mounted"
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
-# Do not show recent tags
+echo ""
+echo "Do not show recent tags"
 defaults write com.apple.finder ShowRecentTags -bool false
 
-# Show the ~/Library folder
+echo ""
+echo "Show the ~/Library folder"
 chflags nohidden ~/Library
 
-# Avoid creating .DS_Store files on network volumes
+echo ""
+echo "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Finder: allow text selection in Quick Look
+echo ""
+echo "Allow text selection in Quick Look"
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# Finder: disable window animations and Get Info animations
+echo ""
+echo "Disable window animations and Get Info animations"
 defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
+echo ""
+echo "Expand the following File Info panes: General, Open with, and Sharing & Permissions"
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
@@ -229,10 +242,12 @@ echo ""
 echo "Show indicator lights for open applications"
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Minimize windows into their application’s icon
+echo ""
+echo "Minimize windows into their application’s icon"
 defaults write com.apple.dock minimize-to-application -bool true
 
-# Enable spring loading for all Dock items
+echo ""
+echo "Enable spring loading for all Dock items"
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
 
@@ -306,16 +321,19 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 ###############################################################################
 echo ""
 echo "Config ActivityMonitor"
-# Show the main window when launching Activity Monitor
+echo "Show the main window when launching Activity Monitor"
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# Visualize CPU usage in the Activity Monitor Dock icon
+echo ""
+echo "Visualize CPU usage in the Activity Monitor Dock icon"
 defaults write com.apple.ActivityMonitor IconType -int 5
 
-# Show all processes in Activity Monitor
+echo ""
+echo "Show all processes in Activity Monitor"
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
-# Sort Activity Monitor results by CPU usage
+echo ""
+echo "Sort Activity Monitor results by CPU usage"
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
@@ -345,11 +363,13 @@ echo "Google Chrome: Allow installing user scripts via GitHub or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
-# Disable the all too sensitive backswipe on trackpads
+echo ""
+echo "Disable the all too sensitive backswipe on trackpads"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
-# Disable the all too sensitive backswipe on Magic Mouse
+echo ""
+echo "Disable the all too sensitive backswipe on Magic Mouse"
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
@@ -360,20 +380,24 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 
 echo ""
 echo "Configure Transmission.app"
-# Use `~/Downloads/Torrents` to store incomplete downloads
+echo "Use `~/Downloads/Torrents` to store incomplete downloads"
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
 
-# Don’t prompt for confirmation before downloading
+echo ""
+echo "Don’t prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false
 
-# Trash original torrent files
+echo ""
+echo "Trash original torrent files"
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
-# Hide the donate message
+echo ""
+echo "Hide the donate message"
 defaults write org.m0k.transmission WarningDonate -bool false
 
-# Hide the legal disclaimer
+echo ""
+echo "Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
