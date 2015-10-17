@@ -27,8 +27,7 @@ function nave_install() {
 # Global npm modules to install.
 npm_globals=(
   bower
-  linken
-  node-inspector
+  jshint
   yo
 )
 

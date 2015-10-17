@@ -1,14 +1,30 @@
 {
     "installed_packages":
     [
+        "Alignment",
+        "BracketHighlighter",
         "DashDoc",
+        "DocBlockr",
+        "Dotfiles Syntax Highlighting",
+        "Emmet",
+        "EncodingHelper",
+        "Fountain",
+        "HTML5",
+        "INI",
+        "LESS",
         "MarkdownEditing",
         "Material Theme",
         "Modific",
         "Origami",
+        "PHP-Twig",
         "PlainTasks",
+        "Sass",
         "SideBarEnhancements",
         "SublimeCodeIntel",
+        "SublimeLinter",
+        "SublimeLinter-jshint",
+        "SublimeLinter-json",
+        "SublimeLinter-php",
         "Table Editor",
         "Trimmer"
     ]
