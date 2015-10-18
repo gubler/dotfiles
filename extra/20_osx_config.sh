@@ -281,28 +281,7 @@ echo ""
 echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
 
-echo ""
-echo "Only use UTF-8 in Terminal.app"
-defaults write com.apple.terminal StringEncodings -array 4
-
-echo ""
-echo "Use Solarized Dark theme by default in Terminal.app"
-open "${HOME}/.dotfiles/reference/MaterialTheme.terminal"
-sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "MaterialTheme"
-defaults write com.apple.terminal "Startup Window Settings" -string "MaterialTheme"
-
-echo ""
-echo "Install pretty iTerm colors"
-open "${HOME}/.dotfiles/reference/MaterialTheme.itermcolors"
-
-echo ""
-echo "Don’t display the annoying prompt when quitting iTerm"
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
