@@ -291,14 +291,14 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 echo ""
 echo "Use Solarized Dark theme by default in Terminal.app"
-open "${HOME}/.dotfiles/reference/SolarizedDark.terminal"
+open "${HOME}/.dotfiles/reference/MaterialTheme.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "SolarizedDark"
-defaults write com.apple.terminal "Startup Window Settings" -string "SolarizedDark"
+defaults write com.apple.terminal "Default Window Settings" -string "MaterialTheme"
+defaults write com.apple.terminal "Startup Window Settings" -string "MaterialTheme"
 
 echo ""
 echo "Install pretty iTerm colors"
-open "${HOME}/.dotfiles/reference/Solarized Dark Higher Contrast.itermcolors"
+open "${HOME}/.dotfiles/reference/MaterialTheme.itermcolors"
 
 echo ""
 echo "Don’t display the annoying prompt when quitting iTerm"
