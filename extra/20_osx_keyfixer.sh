@@ -6,4 +6,4 @@ echo ""
 echo "Remap Home/End Keys"
 
 mkdir ~/Library/KeyBindings
-cp ${HOME}/.dotfiles/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+cp ${HOME}/.dotfiles/reference/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
