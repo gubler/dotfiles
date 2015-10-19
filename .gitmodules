@@ -1,0 +1,3 @@
+[submodule "vendor/z"]
+	path = vendor/z
+	url = git://github.com/rupa/z.git
