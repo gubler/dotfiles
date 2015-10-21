@@ -6,7 +6,7 @@ PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
 export PATH
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+alias pbc="tr -d '\n' | pbcopy"
 
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"

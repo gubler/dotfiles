@@ -4,7 +4,7 @@
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 # and
 # https://gist.github.com/brandonb927/3195465
-# 
+#
 # Ask for the administrator password upfront
 sudo -v
 
@@ -90,6 +90,10 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 echo ""
 echo "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo ""
+echo "Set wallpaper"
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #

@@ -37,13 +37,24 @@ brew install composer
 e_success "Everything Installed"
 echo "
 
+## Apache Config
+
 You still need to add the following to your /etc/apache2/httpd.conf
 
 LoadModule php5_module    /usr/local/opt/php55/libexec/apache2/libphp5.so
 
-You also need to set a timezone in /usr/local/etc/php/5.5
+You may also need to create a /private/var/logs/apache2 directory.
 
-If you want to enable xdebug add the following:
+## PHP Config
+
+You also need to confure the following in /usr/local/etc/php/5.5 (my updated values are in parens:
+
+* memory_limit (512M)
+* post_max_size (25M)
+* upload_max_filesize (25M)
+* date.timezone ('America/New_York')
+
+If you want to enable xdebug add the following to the bottom of php.ini:
 
 [Xdebug]
 xdebug.max_nesting_level = 250

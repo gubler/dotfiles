@@ -38,6 +38,13 @@ Note:
 * `reference` holds extra config files as well as an [app log](references/application_list.md) that includes apps, plugins, browser extensions, etc...
 
 ## Installation
+**Note:** Before running this, you may have to set Git to use HTTPS instead of GIT due to corporate firewalls (or whatever other reasons you may have). If so, run:
+~~~
+git config --global url."https://".insteadOf git://
+~~~
+
+**This is also configured in the `.gitignore` file in this repo** because of my work. See the section below on **Updating the `.gitignore` file after install.
+
 ### OS X Notes
 
 * You need to be an administrator (for `sudo`).
@@ -49,67 +56,85 @@ Note:
 * You might want to set up your ubuntu server [like I do it](/cowboy/dotfiles/wiki/ubuntu-setup), but then again, you might not.
 * Either way, you should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
 
+### After Installation
+
+After you run the install, you will need to:
+
+* configure the `.gitignore` file that is copied to your home directory.
+  - Set your name and email address at the top of the file
+  - If you want to use the `git://` protocol instead of `https://`, you will need to delete the following from the bottom of the file:
+  ~~~
+  [url "https://"]
+    insteadOf = git://
+  ~~~
+
+* Either copy your SSH keys from wherever you _securely_ store them or generate new ones with:
+~~~
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+~~~
+
 ### Actual Installation
 
-```sh
-bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
-```
+~~~
+sh bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
+~~~
 
 If, for some reason, [bit.ly](https://bit.ly/) is down, you can use the canonical URL.
 
-```sh
-bash -c "$(curl -fsSL https://raw.github.com/gubler/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
-```
+~~~
+sh bash -c "$(curl -fsSL https://raw.github.com/gubler/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+~~~
 
 ## The "init" step
 A whole bunch of things will be installed, but _only_ if they aren't already.
 
 ### OS X
 * Homebrew recipes
+  * ack 2
   * bash 4
-  * ssh-copy-id
+  * cowsay
   * git
   * git-extras
   * git-flow
-  * tree
-  * lesspipe
-  * nmap
-  * htop-osx
-  * man2html
-  * ack 2
-  * graphicsmagick
-  * webkit2png
   * ffmpeg
-  * dupes/grep
+  * htop-osx
+  * hub
+  * id3tool
+  * lesspipe
+  * man2html
+  * mercurial
+  * nmap
+  * sl
+  * ssh-copy-id
+  * terminal-notifier
+  * the_silver_searcher
+  * tree
+  * wget
   * Anonymous Pro font (via Cask)
+  * H@ck font (via Cask)
 
 ### Ubuntu
 * APT packages
-  tree sl id3tool cowsay
-  nmap telnet
-  htop ack-grep
-
   * build-essential
-  * libssl-dev
+  * cowsay
   * git-core
-  * tree
-  * nmap
-  * telnet
   * htop
-  * ack-grep
+  * id3tool
+  * libssl-dev
+  * mercurial
+  * nmap
+  * silversearcher-ag
+  * sl
+  * telnet
+  * tree
 
 ### Both
 * Nave
   * node (latest stable)
     * npm
-    * grunt-cli
-    * linken
     * bower
-    * node-inspector
+    * jshint
     * yo
-    * coffee-script
-    * less
-    * karma
 * rbenv
   * ruby 2.1.0
 * gems
@@ -156,14 +181,11 @@ Check it out:
 
 ![The awesome bash prompt](http://farm8.staticflickr.com/7142/6754488927_563dd73553_b.jpg)
 
-## TODO
-
-* Replace the Cask lists with actual listings - gotta clean up my apps list first...
-    * Install important apps in ```extra/30_osx_install.sh```
-    * install remaining apps in ```extra/60_osx_optional_install.sh```
 
 ## Credits
 Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](https://github.com/mathiasbynens/dotfiles) and [@paulirish](https://github.com/paulirish/dotfiles). I'm just riding on the hard work they've done (especially @cowboy).
+
+[Cortex Podcast](https://www.relay.fm/cortex) wallpaper in reference directory by [GrafikSyndikat](https://grafiksyndikat.com/wallpaper/cortex-desktop/)
 
 ## License
 Copyright (c) 2014 Daryl Gubler  
