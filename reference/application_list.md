@@ -20,7 +20,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Fission](https://www.rogueamoeba.com/fission/) [DL]
 * [HandBrake](http://handbrake.fr/) [DL]
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS]
-* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [HBC]
+* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
 * [Metadatics](http://markvapps.com/metadatics) [DL]
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
@@ -32,8 +32,8 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 ## Graphics
 * [Acorn](http://www.flyingmeat.com/acorn/) [DL]
 * [GIFBrewery](http://gifbrewery.com/) [MAS]
-* [ImageOptim](http://imageoptim.com/) [HBC]
-* [ImageAlpha](http://pngmini.com/) [HBC]
+* [ImageOptim](http://imageoptim.com/) [DL]
+* [ImageAlpha](http://pngmini.com/) [DL]
 * [Ember](http://realmacsoftware.com/ember) [DL]
 * [Pixelmator](http://www.pixelmator.com/) [MAS]
 * [Sip](http://theolabrothers.com/sip/) [MAS]
@@ -167,8 +167,14 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [QLColorCode](https://code.google.com/p/qlcolorcode/) [HBC]
 * [QLMarkdown](https://github.com/toland/qlmarkdown) [HBC]
 * [QLStephen](https://github.com/whomwah/qlstephen) [HBC]
+* [Quicklook CSV](https://github.com/p2/quicklook-csv) [HBC]
 * [Quicklook JSON](http://www.sagtau.com/quicklookjson.html) [HBC]
 * [Multimarkdown Quicklook](https://github.com/ttscoff/MMD-QuickLook) [HBC]
+* [QLPrettPatch](https://github.com/atnan/QLPrettyPatch) [HBC]
+* [QLRest](https://github.com/idan/qlrest) [HBC]
+* [QLVideo](https://github.com/Marginal/QLVideo) [HBC]
+* [QuickNFO](https://github.com/planbnet/QuickNFO) [HBC]
+* [WebP Quicklook](https://github.com/dchest/webp-quicklook) [HBC]
 
 ## Alfred Workflows
 * [Caffeine Control](https://github.com/shawnrice/alfred-2-caffeinate-workflow/)

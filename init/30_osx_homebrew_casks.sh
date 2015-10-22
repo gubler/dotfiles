@@ -26,11 +26,13 @@ casks=(
   qlcolorcode
   qlmarkdown
   qlprettypatch
+  qlrest
   qlstephen
+  qlvideo
   quicklook-csv
   quicklook-json
   quicknfo
-  suspicious-package
+  ttscoff-mmd-quicklook
   webpquicklook
   # Color pickers
   colorpicker-developer
