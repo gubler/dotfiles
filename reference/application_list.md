@@ -23,6 +23,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
 * [Metadatics](http://markvapps.com/metadatics) [DL]
+* [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL]
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL]
 * [ScreenFlow](http://www.telestream.net/screenflow/) [DL]
@@ -31,20 +32,26 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 
 ## Graphics
 * [Acorn](http://www.flyingmeat.com/acorn/) [DL]
+* [Graphviz](http://www.graphviz.org/) [HBC]
 * [GIFBrewery](http://gifbrewery.com/) [MAS]
 * [ImageOptim](http://imageoptim.com/) [DL]
 * [ImageAlpha](http://pngmini.com/) [DL]
 * [Ember](http://realmacsoftware.com/ember) [DL]
+* [Napkin](https://itunes.apple.com/us/app/napkin-image-annotation-markup/id581789185?mt=12) [MAS]
 * [Pixelmator](http://www.pixelmator.com/) [MAS]
 * [Sip](http://theolabrothers.com/sip/) [MAS]
 
 ## Developer
 * [Base](http://menial.co.uk/base/) [DL]
+* [Codekit](https://incident57.com/codekit/) [DL]
 * [CodeRunner](http://krillapps.com/coderunner/) [DL]
 * [Dash](http://kapeli.com/dash) [DL]
+* [Hype2](http://tumult.com/hype/whats-new/2.0/) [DL]
 * [iTerm2](http://www.iterm2.com/) [DL]
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/) [DL]
 * [MockSmtp](http://mocksmtpapp.com/) [MAS]
+* [MySQL Community Server](http://dev.mysql.com/downloads/mysql/) [DL]
+* [MySQL Workbench](http://dev.mysql.com/downloads/workbench/) [DL]
 * [Patterns](http://krillapps.com/patterns/) [MAS]
 * [Quiver](http://happenapps.com/#quiver) [MAS]
 * [Sequel Pro](http://www.sequelpro.com/) [DL]
@@ -55,9 +62,9 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [xScope](http://xscopeapp.com/) [MAS]
 
 ### Virtual Machines
+* [Docker Toolbox](https://www.docker.com/docker-toolbox)
 * [Vagrant](http://www.vagrantup.com/) [DL]
 * [VirtualBox](https://www.virtualbox.org/) [DL]
-* [boot2docker](http://boot2docker.io/) [DL]
 * [VMware Fusion](http://www.vmware.com/products/fusion/) [DL]
 
 ## Editors
@@ -78,12 +85,15 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Airmail 2](http://airmailapp.com/) [MAS]
 * [Clarify](http://www.clarify-it.com/) [DL]
 * [Day One](http://dayoneapp.com/) [MAS]
+* [Deckset](https://itunes.apple.com/us/app/deckset-turn-your-notes-into/id847496013?mt=12) [MAS]
 * [EagleFiler](http://c-command.com/eaglefiler/) [DL]
+* [FoldingText](https://itunes.apple.com/us/app/foldingtext/id540003654?mt=12) [MAS]
 * iWork: [Keynote](https://www.apple.com/mac/keynote/), [Numbers](https://www.apple.com/mac/numbers/), and [Pages](https://www.apple.com/mac/pages/) [MAS]
 * [Marked 2](http://marked2app.com/) [DL]
 * [OmniFocus](http://www.omnigroup.com/omnifocus) [DL]
 * [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [DL]
 * [Paprika](http://www.paprikaapp.com/) [MAS]
+* [Path Finder](http://www.cocoatech.com/pathfinder/) [DL]
 * [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [DL]
 * [Reeder](http://reederapp.com/mac/) [MAS]
 * [Soulver](http://www.acqualia.com/soulver/) [DL]
@@ -101,13 +111,15 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Colloquy](http://colloquy.info/) [DL]
 * [Slack](https://slack.com/) [MAS]
 * [Skype](http://www.skype.com) [DL]
+    - [Skype Call Recorder](http://www.ecamm.com/mac/callrecorder/) [DL]
 * [TweetBot](http://tapbots.com/software/tweetbot/mac/) [MAS]
 * [Unison](https://download.panic.com/unison/) [DL]
 
 ## Utilities
 * [Aeon Timeline](http://www.scribblecode.com/) [DL]
+* [Aerial](https://github.com/JohnCoates/Aerial) [DL]
 * [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/)) [DL]
-* [Bartender](http://www.macbartender.com/) [DL]
+* [Bartender 2](http://www.macbartender.com/) [DL]
 * [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [DL]
 * [BetterTouchTool](http://www.boastr.net/) [DL]
 * [Caffeine](http://lightheadsw.com/caffeine/) [DL]
@@ -121,8 +133,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Dropbox](https://www.dropbox.com/) [DL]
 * [Due](http://www.dueapp.com/mac.html) [MAS]
 * [F.lux](http://justgetflux.com/) [DL]
-* [Fantastical](http://flexibits.com/fantastical) (and the [menu bar applet](http://flexibits.com/fantastical/faq)) [DL]
+* [Fantastical](http://flexibits.com/fantastical) [DL]
 * [Feeder](http://reinventedsoftware.com/feeder/) [DL]
+* [Fluid](http://fluidapp.com/) [DL]
+* [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS]
 * [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html) [DL]
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [DL]
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL]
@@ -138,8 +152,8 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [DL]
 
 ## Programs for Work ( the Job )
-* [Apple Remote Desktop](http://www.apple.com/remotedesktop/) [MAS]
-* [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/) [DL]
+* [Apple Remote Desktop](https://itunes.apple.com/us/app/apple-remote-desktop/id409907375?mt=12) [MAS]
+* * [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/) [DL]
     * Microsoft Excel 2011
     * [Microsoft Lync](http://www.microsoft.com/mac/enterprise/lync)
     * Microsoft Outlook 2011
@@ -206,8 +220,6 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [git](http://git-scm.com/)
 * [Python](http://www.python.org/) 2.7.x
     * [Pygments](http://pygments.org/)
-* [Pandoc](http://johnmacfarlane.net/pandoc/index.html)
-* [MySQL](http://www.mysql.com/)
 
 ### Ruby and Gems
 * [Ruby](https://www.ruby-lang.org/)
@@ -232,7 +244,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
     * [jshint](http://jshint.com/)
     * [yo (yeoman)](http://yeoman.io/)
 
-## Sublime Text Packages (via [Package Control](https://packagecontol.io/))
+## Sublime Text Packages
+
+These plugins are installed via [Package Control](https://packagecontol.io/) using the `extra/40_osx_sublime_text.sh` script.
+
 * [Alignment](https://packagecontrol.io/packages/Alignment)
 * [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
 * [DashDoc](https://packagecontrol.io/packages/DashDoc)
