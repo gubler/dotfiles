@@ -20,6 +20,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Fission](https://www.rogueamoeba.com/fission/) [DL]
 * [HandBrake](http://handbrake.fr/) [DL]
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS]
+* [Kid3 Audio Tagger](http://kid3.sourceforge.net/) [DL]
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
 * [Metadatics](http://markvapps.com/metadatics) [DL]
