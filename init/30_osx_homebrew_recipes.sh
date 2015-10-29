@@ -12,6 +12,7 @@ recipes=(
   git
   git-extras
   git-flow
+  # graphviz installed below
   ffmpeg
   htop-osx
   hub
@@ -29,6 +30,9 @@ recipes=(
 )
 
 brew_install_recipes
+
+# Install Graphviz with pango support
+brew install graphviz --with-pango
 
 # Misc cleanup!
 
