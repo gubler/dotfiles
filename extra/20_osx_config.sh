@@ -27,6 +27,10 @@ echo "Increasing the window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo ""
+echo "Remove new window zoom-in animation"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
+echo ""
 echo "Expanding the save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
