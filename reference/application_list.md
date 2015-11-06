@@ -25,6 +25,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
 * [Metadatics](http://markvapps.com/metadatics) [DL]
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL]
+* [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html)
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL]
 * [ScreenFlow](http://www.telestream.net/screenflow/) [DL]
