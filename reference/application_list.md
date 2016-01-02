@@ -20,10 +20,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Fission](https://www.rogueamoeba.com/fission/) [DL]
 * [HandBrake](http://handbrake.fr/) [DL]
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS]
-* [Kid3 Audio Tagger](http://kid3.sourceforge.net/) [DL]
+* [Kid3 Audio Tagger](http://kid3.sourceforge.net/) [DL] - This is used to add chapter tags to podcasts
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
-* [Metadatics](http://markvapps.com/metadatics) [DL]
+* [Metadatics](http://markvapps.com/metadatics) [DL] - Used for all other ID3 tag modifications
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL]
 * [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html)
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
@@ -100,6 +100,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Reeder](http://reederapp.com/mac/) [MAS]
 * [Soulver](http://www.acqualia.com/soulver/) [DL]
 * [YNAB](https://www.youneedabudget.com/) [DL]
+    - New version 5 is a web app that I create a Fluid app for
 
 ## eBook
 * [calibre](http://calibre-ebook.com/) [DL]
@@ -130,7 +131,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [CrashPlan](http://www.code42.com/crashplan/) [DL]
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS]
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL]
-    - Not currently working on OS X 10.11
+    - Verion 5 for OS X 10.11 in beta
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS]
 * [Dropbox](https://www.dropbox.com/) [DL]
 * [Due](http://www.dueapp.com/mac.html) [MAS]
@@ -141,9 +142,11 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS]
 * [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html) [DL]
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [DL]
+* [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) [DL] - Used to remap F19 to Hyper (command-control-option-shift)
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL]
 * [Moom](http://manytricks.com/moom/) [DL]
 * [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html) [DL]
+* [Seil](https://pqrs.org/osx/karabiner/seil.html.en) [DL] - Used to remap CapsLock to F19 (for Karabiner)
 * [Shush](http://mizage.com/shush/) [MAS]
 * [SpamSieve](http://c-command.com/spamsieve/) [DL]
 * [Spillo](http://bananafishsoftware.com/products/spillo/)[MAS]
@@ -161,7 +164,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
     * Microsoft Outlook 2011
     * Microsoft PowerPoint 2011
     * Microsoft Word 2011
-* [Microsoft Remote Desktop Connection (2.1)](http://www.microsoft.com/en-us/download/details.aspx?id=18140) [MAS]
+* [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12) [MAS]
 
 ## PrefPanes
 * [Hazel](http://www.noodlesoft.com/hazel.php) [DL]
