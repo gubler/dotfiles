@@ -4,7 +4,7 @@
 umask 022
 
 # Always use color output for `ls`
-if [[ "$OSTYPE" =~ ^darwin ]]; then
+if is_osx; then
   alias ls="command ls -G"
 else
   alias ls="command ls --color"
@@ -15,12 +15,12 @@ fi
 if [[ "$(type -P tree)" ]]; then
   alias ll='tree --dirsfirst -aLpughDFiC 1'
   alias l='ls -alh'
-  alias lsd='CLICOLOR_FORCE=1 l | grep --color=never "^d"'
+  alias lsd='ll -d'
   alias l.='ls -dalh .* --color=auto'
   alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
 else
   alias l='ls -alh'
-  alias lsd='CLICOLOR_FORCE=1 l | grep --color=never "^d"'
+  alias lsd='CLICOLOR_FORCE=1 ll | grep --color=never "^d"'
 fi
 
 # Easier navigation: .., ..., -
@@ -39,35 +39,15 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 alias eachdir=". eachdir"
 
 # Create a new directory and enter it
-function mkd() {
+function md() {
   mkdir -p "$@" && cd "$@"
 }
-
-# OS X has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
-
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
-# Trim new lines and copy to clipboard
-alias pbc="tr -d '\n' | pbcopy"
 
 # `cat` with beautiful colors. requires Pygments installed.
 alias c='pygmentize -g -O style=monokai -f console256'
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
-# the `.git` directory, listing directories first. The output gets piped into
-# `less` with options to preserve color and line numbers, unless the output is
-# small enough for one screen.
-function tre() {
-  tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
-}
-
-
 # Fast directory switching
+mkdir -p $DOTFILES/caches/z
 _Z_NO_PROMPT_COMMAND=1
-_Z_DATA=~/.dotfiles/caches/.z
-. ~/.dotfiles/libs/z/z.sh
+_Z_DATA=$DOTFILES/caches/z/z
+. $DOTFILES/vendor/z/z.sh

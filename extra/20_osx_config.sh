@@ -4,7 +4,7 @@
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 # and
 # https://gist.github.com/brandonb927/3195465
-# 
+#
 # Ask for the administrator password upfront
 sudo -v
 
@@ -31,6 +31,10 @@ echo "Increasing the window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo ""
+echo "Remove new window zoom-in animation"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool NO
+
+echo ""
 echo "Expanding the save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -54,19 +58,11 @@ echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in t
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 echo ""
-echo "Saving to disk (not to iCloud) by default"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-echo ""
-echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-echo ""
 echo "Check for software updates daily, not just once per week"
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 echo ""
-echo "Disable smart quotes and smart dashes as theyâ€™re annoying when typing code"
+echo "Disable smart quotes and smart dashes as they're annoying when typing code"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
@@ -83,6 +79,29 @@ echo ""
 echo "Reduce Transparency on Yosemite"
 defaults write com.apple.universalaccess reduceTransparency -boolean true
 
+echo ""
+echo "Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
+
+echo ""
+echo "Save screenshots to the Desktop"
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
+
+echo ""
+echo "Save screenshots as PNGs"
+defaults write com.apple.screencapture type -string "png"
+
+echo ""
+echo "Disable automatic termination of inactive apps"
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+echo ""
+echo "Disable the 'Are you sure you want to open this application?' dialog"
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo ""
+echo "Set wallpaper"
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -98,6 +117,15 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 300
+
+echo ""
+echo "Use scroll gesture with the Ctrl (^) modifier key to zoom"
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+echo ""
+echo "Follow the keyboard focus while zoomed in"
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 ###############################################################################
 # Screen                                                                      #
@@ -131,7 +159,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 echo ""
 echo "Use column view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 echo ""
 echo "Avoiding the creation of .DS_Store files on network volumes"
@@ -142,10 +170,12 @@ echo "Set Downloads as the default location for new Finder windows"
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 
-# Enable spring loading for directories
+echo ""
+echo "Enable spring loading for directories"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
-# Remove the spring loading delay for directories
+echo ""
+echo "Remove the spring loading delay for directories"
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 echo ""
@@ -160,16 +190,34 @@ echo "Enabling snap-to-grid for icons on the desktop and in other icon views"
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
-# Automatically open a new Finder window when a volume is mounted
+echo ""
+echo "Automatically open a new Finder window when a volume is mounted"
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
-# Show the ~/Library folder
+echo ""
+echo "Do not show recent tags"
+defaults write com.apple.finder ShowRecentTags -bool false
+
+echo ""
+echo "Show the ~/Library folder"
 chflags nohidden ~/Library
 
-# Expand the following File Info panes:
-# “General”, “Open with”, and “Sharing & Permissions”
+echo ""
+echo "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+echo ""
+echo "Allow text selection in Quick Look"
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+echo ""
+echo "Disable window animations and Get Info animations"
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+echo ""
+echo "Expand the following File Info panes: General, Open with, and Sharing & Permissions"
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
@@ -202,6 +250,19 @@ echo ""
 echo "Make Dock icons of hidden applications translucent"
 defaults write com.apple.dock showhidden -bool true
 
+echo ""
+echo "Show indicator lights for open applications"
+defaults write com.apple.dock show-process-indicators -bool true
+
+echo ""
+echo "Minimize windows into their application’s icon"
+defaults write com.apple.dock minimize-to-application -bool true
+
+echo ""
+echo "Enable spring loading for all Dock items"
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
@@ -232,28 +293,7 @@ echo ""
 echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
-###############################################################################
-# Terminal & iTerm 2                                                          #
-###############################################################################
 
-echo ""
-echo "Only use UTF-8 in Terminal.app"
-defaults write com.apple.terminal StringEncodings -array 4
-
-echo ""
-echo "Use a modified version of the Pro theme by default in Terminal.app"
-open "${HOME}/reference/SolarizedDark.terminal"
-sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "SolarizedDark"
-defaults write com.apple.terminal "Startup Window Settings" -string "SolarizedDark"
-
-echo ""
-echo "Install pretty iTerm colors"
-open "${HOME}/reference/SolarizedDark.itermcolors"
-
-echo ""
-echo "Don’t display the annoying prompt when quitting iTerm"
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
@@ -272,16 +312,19 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 ###############################################################################
 echo ""
 echo "Config ActivityMonitor"
-# Show the main window when launching Activity Monitor
+echo "Show the main window when launching Activity Monitor"
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-# Visualize CPU usage in the Activity Monitor Dock icon
+echo ""
+echo "Visualize CPU usage in the Activity Monitor Dock icon"
 defaults write com.apple.ActivityMonitor IconType -int 5
 
-# Show all processes in Activity Monitor
+echo ""
+echo "Show all processes in Activity Monitor"
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
-# Sort Activity Monitor results by CPU usage
+echo ""
+echo "Sort Activity Monitor results by CPU usage"
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
@@ -311,13 +354,16 @@ echo "Google Chrome: Allow installing user scripts via GitHub or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
-###############################################################################
-# Sublime Text                                                                #
-###############################################################################
+echo ""
+echo "Disable the all too sensitive backswipe on trackpads"
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 echo ""
-echo "Install Sublime Text settings"
-cp -r reference/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
+echo "Disable the all too sensitive backswipe on Magic Mouse"
+defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
+
 
 ###############################################################################
 # Transmission.app                                                            #
@@ -325,20 +371,24 @@ cp -r reference/Preferences.sublime-settings ~/Library/Application\ Support/Subl
 
 echo ""
 echo "Configure Transmission.app"
-# Use `~/Downloads/Torrents` to store incomplete downloads
+echo "Use `~/Downloads/Torrents` to store incomplete downloads"
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
 
-# Don’t prompt for confirmation before downloading
+echo ""
+echo "Don’t prompt for confirmation before downloading"
 defaults write org.m0k.transmission DownloadAsk -bool false
 
-# Trash original torrent files
+echo ""
+echo "Trash original torrent files"
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
-# Hide the donate message
+echo ""
+echo "Hide the donate message"
 defaults write org.m0k.transmission WarningDonate -bool false
 
-# Hide the legal disclaimer
+echo ""
+echo "Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
 
 ###############################################################################
