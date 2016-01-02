@@ -7,3 +7,6 @@ IRB::Irb.class_eval do
     ap @context.last_value
   end
 end
+
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:AUTO_INDENT_MODE] = false
