@@ -16,6 +16,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 echo ""
+echo "Disabling opening and closing window animations"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+echo ""
 echo "Disabling OS X Gate Keeper"
 echo "(You'll be able to install any app you want from here on, not just Mac App Store apps)"
 sudo spctl --master-disable
