@@ -22,3 +22,5 @@
 *LOCAL*
 
 !/link/.vimrc.local
+
+.DS_Store
