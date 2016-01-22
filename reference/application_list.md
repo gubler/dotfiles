@@ -104,6 +104,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Soulver](http://www.acqualia.com/soulver/) [DL]
 * [YNAB](https://www.youneedabudget.com/) [DL]
     - New version 5 is a web app that I create a Fluid app for
+    - Not positive I will be keeping this
 
 ## eBook
 * [calibre](http://calibre-ebook.com/) [DL]
@@ -134,7 +135,6 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [CrashPlan](http://www.code42.com/crashplan/) [DL]
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS]
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL]
-    - Verion 5 for OS X 10.11 in beta
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS]
 * [Dropbox](https://www.dropbox.com/) [DL]
 * [Due](http://www.dueapp.com/mac.html) [MAS]
