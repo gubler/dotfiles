@@ -66,6 +66,9 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 ### Virtual Machines
 * [Docker Toolbox](https://www.docker.com/docker-toolbox)
 * [Vagrant](http://www.vagrantup.com/) [DL]
+    - [Vagrant Manager](http://vagrantmanager.com/) [DL]
+    - [Hostname Manager](https://github.com/smdahlen/vagrant-hostmanager) [DL]
+    - [BindFS](https://github.com/gael-ian/vagrant-bindfs) [DL]
 * [VirtualBox](https://www.virtualbox.org/) [DL]
 * [VMware Fusion](http://www.vmware.com/products/fusion/) [DL]
 
