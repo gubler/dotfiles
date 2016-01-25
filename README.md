@@ -73,7 +73,7 @@ After you run the install, you will need to:
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ~~~
 
-* Finally, I follow the instructions by Brett Terpstra ([here](http://brettterpstra.com/2015/12/18/a-hyper-key-that-can-still-yell/) and [here](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)) to remap my Caps Lock key to act as Escape when pressed or Hyper (Command-Shift-Option-Control) when held.
+* Finally, I follow the instructions by Brett Terpstra ([here](http://brettterpstra.com/2015/12/18/a-hyper-key-that-can-still-yell/) and [here](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)) to remap my Caps Lock key to act as Escape when pressed or Hyper (Command-Shift-Option-Control) when held (make sure you change CapsLock to _No Action_ in Preferences -> Keyboard -> Modifier Keys on Mac OS X). The `private.xml` file that I use is in the `reference` folder, which also has a section for switching the modifier keys on my MS Sculpt Ergonomic keyboard.
 
 ### Actual Installation
 
