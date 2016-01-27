@@ -100,6 +100,10 @@ echo "Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 echo ""
+echo "Prevent Photos app from opening when devices are connected"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+echo ""
 echo "Set wallpaper"
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
 
