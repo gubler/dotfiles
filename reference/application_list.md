@@ -229,6 +229,8 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [git](http://git-scm.com/)
 * [Python](http://www.python.org/) 2.7.x
     * [Pygments](http://pygments.org/)
+    * [Sphinx](http://sphinx-doc.org)
+    * [gmvault](http://gmvault.org)
 
 ### Ruby and Gems
 * [Ruby](https://www.ruby-lang.org/)
