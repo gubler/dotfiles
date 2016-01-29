@@ -144,7 +144,10 @@ A whole bunch of things will be installed, but _only_ if they aren't already.
   * bundler
   * awesome_print
   * pry
-* Pygments
+* Python
+  * Pygments
+  * Sphinx Doc
+  * gmvault
 
 ## The ~/ "copy" step
 Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
