@@ -514,7 +514,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Projects/dotfiles/reference/iterm2_profile</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
@@ -1261,13 +1261,13 @@
 			<key>Window Type</key>
 			<integer>2</integer>
 			<key>Working Directory</key>
-			<string>/Users/dev88</string>
+			<string>~/</string>
 		</dict>
 	</array>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>453220428.80974299</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>466883114.87344301</real>
+	<real>475760622.89042097</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1314,7 +1314,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/dev88/Projects/dotfiles/reference/iterm2_profile</string>
+	<string>~/.dotfiles/reference/iterm2_profile</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1330,7 +1330,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-18T18:35:21Z</date>
+	<date>2016-01-28T18:27:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
