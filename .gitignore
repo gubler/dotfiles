@@ -23,5 +23,6 @@
 
 
 !/link/.vimrc.local
+!/copy/.local_aliases.sh
 
 .DS_Store
