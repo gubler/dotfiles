@@ -17,10 +17,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Audacity](http://audacityteam.org/) [DL]
 * [Audio Hijack](https://www.rogueamoeba.com/audiohijack/) [DL]
 * [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [DL]
+* [Chapters](http://chaptersapp.com/) [MAS]
 * [Fission](https://www.rogueamoeba.com/fission/) [DL]
 * [HandBrake](http://handbrake.fr/) [DL]
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS]
-* [Kid3 Audio Tagger](http://kid3.sourceforge.net/) [DL] - This is used to add chapter tags to podcasts
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
 * [Metadatics](http://markvapps.com/metadatics) [DL] - Used for all other ID3 tag modifications
@@ -89,7 +89,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [1Password](https://agilebits.com/onepassword/mac) [MAS]
 * [Airmail 2](http://airmailapp.com/) [MAS]
 * [Clarify](http://www.clarify-it.com/) [DL]
-* [Day One](http://dayoneapp.com/) [MAS]
+* [Day One 2](http://dayoneapp.com/) [MAS]
 * [Deckset](https://itunes.apple.com/us/app/deckset-turn-your-notes-into/id847496013?mt=12) [MAS]
 * [EagleFiler](http://c-command.com/eaglefiler/) [DL]
 * [FoldingText](https://itunes.apple.com/us/app/foldingtext/id540003654?mt=12) [MAS]
