@@ -16,6 +16,7 @@ recipes=(
   ffmpeg
   htop-osx
   hub
+  hugo
   id3tool
   lesspipe
   man2html
