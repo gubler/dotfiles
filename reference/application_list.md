@@ -8,182 +8,178 @@ I try to have links to every program on the list, but I also list how I install 
 * [MAS] - [Mac AppStore](http://www.apple.com/osx/apps/app-store/)
 * [HBC] - [HomeBrew Cask](http://caskroom.io/)
 * [DL] - Manual Download
-* [Steam] - [Steam](http://store.steampowered.com/)
 
-If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _thrilled_ with how Cask installs applications, so I mostly use if for programs I don't expect to have to update, main fonts, and some quicklook plugins.
+If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _thrilled_ with how Cask installs applications, so I mostly use if for programs I don't expect to have to update, main fonts, and some [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) plugins.
 
 ## Audio/Video
-* [Aegisub](http://www.aegisub.org/) [DL]
-* [Audacity](http://audacityteam.org/) [DL]
-* [Audio Hijack](https://www.rogueamoeba.com/audiohijack/) [DL]
-* [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [DL]
-* [Chapters](http://chaptersapp.com/) [MAS]
-* [Fission](https://www.rogueamoeba.com/fission/) [DL]
-* [HandBrake](http://handbrake.fr/) [DL]
-* [iFlicks 2](http://www.iflicksapp.com/) [MAS]
-* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL]
-* [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL]
-* [Metadatics](http://markvapps.com/metadatics) [DL] - Used for all other ID3 tag modifications
-* [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL]
-* [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html)
-* [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL]
-* [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL]
-* [ScreenFlow](http://www.telestream.net/screenflow/) [DL]
-* [VLC](http://www.videolan.org/vlc/index.html) [DL]
-* [XLD](http://tmkk.undo.jp/xld/index_e.html) [DL]
+* [Aegisub](http://www.aegisub.org/) [DL] - Subtitling/Captioning tool for video
+* [Audacity](http://audacityteam.org/) [DL] - Audio editor (because I can't justify the price of [Logic Pro X](https://www.apple.com/logic-pro/))
+* [Audio Hijack](https://www.rogueamoeba.com/audiohijack/) [DL] - How I record audio for podcasts (or pretty much _any_ audio recording)
+* [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [DL] - Convert piles of MP3 or M4A files into a M4B audiobook file
+* [Chapters](http://chaptersapp.com/) [MAS] - Tool for adding chapter metadata to podcast files
+* [Fission](https://www.rogueamoeba.com/fission/) [DL] - Quick audio editing
+* [HandBrake](http://handbrake.fr/) [DL] - Video converter and DVD ripper
+* [iFlicks 2](http://www.iflicksapp.com/) [MAS] - Add metadata and prepare for videos for iTunes playback
+* [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [DL] - Fix levels in audio files (makes podcast sound less bad)
+* [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL] - Convert M4A audio files to MP3s
+* [Metadatics](http://markvapps.com/metadatics) [DL] - ID3 tag editing for mp3 files
+* [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL] - Create MKV video files. Also useful for ripping obstinate DVDs
+* [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
+* [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL] - Remove DRM from purchased videos for archiving
+* [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
+* [ScreenFlow](http://www.telestream.net/screenflow/) [DL] - Screen recoding software for screencasts
+* [VLC](http://www.videolan.org/vlc/index.html) [DL] - Play pretty much any video or audio file
+* [XLD](http://tmkk.undo.jp/xld/index_e.html) [DL] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
 ## Graphics
-* [Acorn](http://www.flyingmeat.com/acorn/) [DL]
-* [Graphviz](http://www.graphviz.org/) [HBC]
-* [GIFBrewery](http://gifbrewery.com/) [MAS]
-* [ImageOptim](http://imageoptim.com/) [DL]
-* [ImageAlpha](http://pngmini.com/) [DL]
-* [Ember](http://realmacsoftware.com/ember) [DL]
-* [Napkin](https://itunes.apple.com/us/app/napkin-image-annotation-markup/id581789185?mt=12) [MAS]
-* [Pixelmator](http://www.pixelmator.com/) [MAS]
-* [Sip](http://theolabrothers.com/sip/) [MAS]
+* [Acorn](http://www.flyingmeat.com/acorn/) [DL] - Amazing image editor
+* [Graphviz](http://www.graphviz.org/) [HBC] - Draw graphs with DOT syntax
+* [GIFBrewery](http://gifbrewery.com/) [MAS] - Create animated GIFs from video files
+* [ImageOptim](http://imageoptim.com/) [DL] - Optimize image file size
+* [ImageAlpha](http://pngmini.com/) [DL] - Optimize PNGs with alpha files
+* [Ember](http://realmacsoftware.com/ember) [DL] - Screen capturing and image library tool
+* [Napkin](https://itunes.apple.com/us/app/napkin-image-annotation-markup/id581789185?mt=12) [MAS] - Image markup/annotation tool
+* [Pixelmator](http://www.pixelmator.com/) [MAS] - Photoshop alternative. More complex but also more powerful than Acorn.
+* [Sip](http://theolabrothers.com/sip/) [MAS] - Color picker
 
 ## Developer
-* [Base](http://menial.co.uk/base/) [DL]
-* [Codekit](https://incident57.com/codekit/) [DL]
-* [CodeRunner](http://krillapps.com/coderunner/) [DL]
-* [Dash](http://kapeli.com/dash) [DL]
-* [Hype2](http://tumult.com/hype/whats-new/2.0/) [DL]
-* [iTerm2](http://www.iterm2.com/) [DL]
-* [Kaleidoscope](http://www.kaleidoscopeapp.com/) [DL]
-* [MockSmtp](http://mocksmtpapp.com/) [MAS]
-* [MySQL Community Server](http://dev.mysql.com/downloads/mysql/) [DL]
-* [MySQL Workbench](http://dev.mysql.com/downloads/workbench/) [DL]
-* [Patterns](http://krillapps.com/patterns/) [MAS]
-* [Quiver](http://happenapps.com/#quiver) [MAS]
-* [Sequel Pro](http://www.sequelpro.com/) [DL]
-* [Tower](http://www.git-tower.com/) [DL]
-* [Transmit](http://panic.com/transmit/) [DL]
-* [VirtualHostX](http://clickontyler.com/virtualhostx/) [DL]
-* [Xcode](https://developer.apple.com/xcode/) [MAS]
-* [xScope](http://xscopeapp.com/) [MAS]
+* [Base](http://menial.co.uk/base/) [DL] - SQLite GUI
+* [Codekit](https://incident57.com/codekit/) [DL] - Web developer swiss army tool
+* [CodeRunner](http://krillapps.com/coderunner/) [DL] - Simple code runner for quick tests
+* [Dash](http://kapeli.com/dash) [DL] - Documentation viewer
+* [iTerm2](http://www.iterm2.com/) [DL] - Better terminal than Apple's built-in terminal
+* [Kaleidoscope](http://www.kaleidoscopeapp.com/) [DL] - File diff tool
+* [MockSmtp](http://mocksmtpapp.com/) [MAS] - Email catcher for testing
+* [MySQL Community Server](http://dev.mysql.com/downloads/mysql/) [DL] - Database server
+* [MySQL Workbench](http://dev.mysql.com/downloads/workbench/) [DL] - MySQL management tool
+* [Patterns](http://krillapps.com/patterns/) [MAS] - Regular Expression testing tool
+* [Quiver](http://happenapps.com/#quiver) [MAS] - Programmer notebook
+* [Sequel Pro](http://www.sequelpro.com/) [DL] - MySQL GUI
+* [Tower](http://www.git-tower.com/) [DL] - Git GUI
+* [Transmit](http://panic.com/transmit/) [DL] - FTP
+* [VirtualHostX](http://clickontyler.com/virtualhostx/) [DL] - Manage virtual hosts
+* [Xcode](https://developer.apple.com/xcode/) [MAS] - Mac/iOS IDE
+* [xScope](http://xscopeapp.com/) [MAS] - Measure, inspect & test on-screen graphics and layouts
 
 ### Virtual Machines
-* [Docker Toolbox](https://www.docker.com/docker-toolbox)
-* [Vagrant](http://www.vagrantup.com/) [DL]
+* [Docker Toolbox](https://www.docker.com/docker-toolbox) - Tools for managing Docker containers
+* [Vagrant](http://www.vagrantup.com/) [DL] - Virtual machine management for development
     - [Vagrant Manager](http://vagrantmanager.com/) [DL]
     - [Hostname Manager](https://github.com/smdahlen/vagrant-hostmanager) [DL]
     - [BindFS](https://github.com/gael-ian/vagrant-bindfs) [DL]
-* [VirtualBox](https://www.virtualbox.org/) [DL]
-* [VMware Fusion](http://www.vmware.com/products/fusion/) [DL]
+* [VirtualBox](https://www.virtualbox.org/) [DL] - Free virtual machine software - good for Vagrant
+* [VMware Fusion](http://www.vmware.com/products/fusion/) [DL] - More robust virtual machine software
 
 ## Editors
-* [BBEdit](http://www.barebones.com/products/bbedit/) [DL]
-* [nvALT](http://brettterpstra.com/projects/nvalt/) [DL]
-* [PHPStorm](https://www.jetbrains.com/phpstorm/) [DL]
-* [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL]
-* [Sublime Text 3](http://www.sublimetext.com/3) [DL]
+* [nvALT](http://brettterpstra.com/projects/nvalt/) [DL] - quick notes manager/editor
+* [PHPStorm](https://www.jetbrains.com/phpstorm/) [DL] - PHP IDE
+* [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL] - long form writing tool
+* [Sublime Text 3](http://www.sublimetext.com/3) [DL] - text editor
 
 ## Games
-* [Civilization V](http://www.civilization5.com/) [Steam]
-* [Hearthstone](http://us.battle.net/hearthstone/en/) [DL]
-* [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab) [DL]
-* [Steam](http://store.steampowered.com/) [DL]
+* [Battle.net](http://battle.net) [DL] - Blizzard's game platform
+    * [Hearthstone](http://us.battle.net/hearthstone/en/) - Collectible Card Game
+* [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab) [DL] - RPG character management
+* [Steam](http://store.steampowered.com/) [DL] - Valve's game platform
+    * [Civilization V](http://www.civilization5.com/) - Empire simulation game
 
 ## Productivity
-* [1Password](https://agilebits.com/onepassword/mac) [MAS]
-* [Airmail 2](http://airmailapp.com/) [MAS]
-* [Clarify](http://www.clarify-it.com/) [DL]
-* [Day One 2](http://dayoneapp.com/) [MAS]
-* [Deckset](https://itunes.apple.com/us/app/deckset-turn-your-notes-into/id847496013?mt=12) [MAS]
-* [EagleFiler](http://c-command.com/eaglefiler/) [DL]
-* [FoldingText](https://itunes.apple.com/us/app/foldingtext/id540003654?mt=12) [MAS]
+* [1Password](https://agilebits.com/onepassword/mac) [MAS] - Password manager
+* [Airmail 2](http://airmailapp.com/) [MAS] - Email client
+* [Clarify](http://www.clarify-it.com/) [DL] - Tutorial creator
+* [Day One 2](http://dayoneapp.com/) [MAS] - Journaling
+* [Deckset](https://itunes.apple.com/us/app/deckset-turn-your-notes-into/id847496013?mt=12) [MAS] - Text-to-presentation tool
+* [EagleFiler](http://c-command.com/eaglefiler/) [DL] - Document manager
 * iWork: [Keynote](https://www.apple.com/mac/keynote/), [Numbers](https://www.apple.com/mac/numbers/), and [Pages](https://www.apple.com/mac/pages/) [MAS]
-* [Marked 2](http://marked2app.com/) [DL]
-* [OmniFocus](http://www.omnigroup.com/omnifocus) [DL]
-* [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [DL]
-* [Paprika](http://www.paprikaapp.com/) [MAS]
-* [Path Finder](http://www.cocoatech.com/pathfinder/) [DL]
-* [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [DL]
-* [Reeder](http://reederapp.com/mac/) [MAS]
-* [Soulver](http://www.acqualia.com/soulver/) [DL]
-* [YNAB](https://www.youneedabudget.com/) [DL]
+* [Marked 2](http://marked2app.com/) [DL] - Markdown viewer
+* [OmniFocus](http://www.omnigroup.com/omnifocus) [DL] - Task manager
+* [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [DL] - Diagram generator
+* [Paprika](http://www.paprikaapp.com/) [MAS] - Recipe manager
+* [Path Finder](http://www.cocoatech.com/pathfinder/) [DL] - Finder replacement
+* [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [DL] - PDF editor
+* [Reeder](http://reederapp.com/mac/) [MAS] - RSS reader
+* [Soulver](http://www.acqualia.com/soulver/) [DL] - Better calculator
+* [YNAB](https://www.youneedabudget.com/) [DL] - Money management
     - New version 5 is a web app that I create a Fluid app for
     - Not positive I will be keeping this
 
 ## eBook
-* [calibre](http://calibre-ebook.com/) [DL]
-* [iBooks Author](http://www.apple.com/ibooks-author/) [MAS]
-* [Kindle](http://www.amazon.com/gp/feature.html?docId=1000464931) [DL]
-* [Murasaki](http://genjiapp.com/mac/murasaki/index_en.html) [MAS]
-* [Sigil](https://code.google.com/p/sigil/) [HBC]
-* [Simple Comic](http://dancingtortoise.com/simplecomic/) [HBC]
+* [calibre](http://calibre-ebook.com/) [DL] - eBook manager
+* [Murasaki](http://genjiapp.com/mac/murasaki/index_en.html) [MAS] - ePub reader
+* [Sigil](https://code.google.com/p/sigil/) [HBC] - ePub editor
+* [Simple Comic](http://dancingtortoise.com/simplecomic/) [HBC] - comic book reader
 
 ## Social
-* [Colloquy](http://colloquy.info/) [DL]
-* [Slack](https://slack.com/) [MAS]
-* [Skype](http://www.skype.com) [DL]
+* [Colloquy](http://colloquy.info/) [DL] - IRC client
+* [Slack](https://slack.com/) [MAS] - team chat client
+* [Skype](http://www.skype.com) [DL] - internet phone calls
     - [Skype Call Recorder](http://www.ecamm.com/mac/callrecorder/) [DL]
-* [TweetBot](http://tapbots.com/software/tweetbot/mac/) [MAS]
-* [Unison](https://download.panic.com/unison/) [DL]
+* [TweetBot](http://tapbots.com/software/tweetbot/mac/) [MAS] - Twitter client
+* [Unison](https://download.panic.com/unison/) [DL] - Usenet client
 
 ## Utilities
-* [Aeon Timeline](http://www.scribblecode.com/) [DL]
-* [Aerial](https://github.com/JohnCoates/Aerial) [DL]
-* [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/)) [DL]
-* [Bartender 2](http://www.macbartender.com/) [DL]
-* [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [DL]
-* [BetterTouchTool](http://www.boastr.net/) [DL]
-* [Caffeine](http://lightheadsw.com/caffeine/) [DL]
-* [Citrix Receiver](http://www.citrix.com/products/receiver/overview.html) [DL]
-* [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [DL]
-* [CrashPlan](http://www.code42.com/crashplan/) [DL]
-* [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS]
-* [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL]
-* [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS]
-* [Dropbox](https://www.dropbox.com/) [DL]
-* [Due](http://www.dueapp.com/mac.html) [MAS]
-* [F.lux](http://justgetflux.com/) [DL]
-* [Fantastical](http://flexibits.com/fantastical) [DL]
-* [Feeder](http://reinventedsoftware.com/feeder/) [DL]
-* [Fluid](http://fluidapp.com/) [DL]
-* [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS]
-* [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html) [DL]
-* [iStat Menus](http://bjango.com/mac/istatmenus/) [DL]
+* [Aeon Timeline](http://www.scribblecode.com/) [DL] - Create timelines
+* [Aerial](https://github.com/JohnCoates/Aerial) [DL] - Sceensavers
+* [Alfred 2](http://www.alfredapp.com/) (and the [Powerpack](http://www.alfredapp.com/powerpack/)) [DL] - App launcher and general utility
+* [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704) [MAS] - keep computer from sleeping
+* [Bartender 2](http://www.macbartender.com/) [DL] - Wrangle menubar apps
+* [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [DL] - Batch file renamer
+* [BetterTouchTool](http://www.boastr.net/) [DL] - Input utility
+* [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [DL] - File sync tool
+* [CrashPlan](http://www.code42.com/crashplan/) [DL] - Online backup
+* [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
+* [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL] - Power up save dialogs
+* [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS] - Track UPS, Fedex, and other deliveries
+* [Dropbox](https://www.dropbox.com/) [DL] - one folder that syncs
+* [Due](http://www.dueapp.com/mac.html) [MAS] - timer/reminder app that syncs with iOS
+* [F.lux](http://justgetflux.com/) [DL] - Screen color manager
+* [Fantastical](http://flexibits.com/fantastical) [DL] - Better calendar
+* [Feeder](http://reinventedsoftware.com/feeder/) [DL] - RSS feed generator
+* [Fluid](http://fluidapp.com/) [DL] - Wrap webpages as standalone applications
+* [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS] - Battery manager
+* [Google Chrome](https://www.google.com/chrome/) & [Canary](https://www.google.com/intl/en/chrome/browser/canary.html) [DL] - preferred browser
+* [iStat Menus](http://bjango.com/mac/istatmenus/) [DL] - Resource usage (CPU, memory, network, etc) graphs in the menubar
 * [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) [DL] - Used to remap F19 to Hyper (command-control-option-shift)
-* [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL]
-* [Launch Control](http://www.soma-zone.com/LaunchControl/) [DL]
-* [Moom](http://manytricks.com/moom/) [DL]
+* [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL] - Super-powered keyboard macros
+* [Launch Control](http://www.soma-zone.com/LaunchControl/) [DL] - Launchd manager
+* [Moom](http://manytricks.com/moom/) [DL] - window manager
     * Moom preferences can be setup by copying the `com.manytricks.Moom.plist` file to `{home}/Library/Preferences` and running `killall cfprefsd` and then launching Moom.
-* [Mountain](http://appgineers.de/mountain/) [DL]
-* [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html) [DL]
+* [Mountain](http://appgineers.de/mountain/) [DL] - Mount and unmount external drives
+* [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html) [DL] - Scanner software
 * [Seil](https://pqrs.org/osx/karabiner/seil.html.en) [DL] - Used to remap CapsLock to F19 (for Karabiner)
-* [Shush](http://mizage.com/shush/) [MAS]
-* [SpamSieve](http://c-command.com/spamsieve/) [DL]
-* [Spillo](http://bananafishsoftware.com/products/spillo/)[MAS]
-* [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [DL]
-* [TextExpander](http://www.smilesoftware.com/TextExpander/) [DL]
-* [Timing](http://timingapp.com/) [MAS]
-* [Transmission](http://www.transmissionbt.com/) [DL]
-* [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [DL]
+* [Shush](http://mizage.com/shush/) [MAS] - Push-to-speak or push-to-silence for audio input
+* [SpamSieve](http://c-command.com/spamsieve/) [DL] - Spam blocker for email apps
+* [Spillo](http://bananafishsoftware.com/products/spillo/)[MAS] - Pinboard client
+* [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [DL] - Create a bootable, whole-disk copy
+* [TextExpander](http://www.smilesoftware.com/TextExpander/) [DL] - Expand keyboard snippets
+* [Timing](http://timingapp.com/) [MAS] - Track computer use
+* [Transmission](http://www.transmissionbt.com/) [DL] - Bit torrent client
+* [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [DL] - Open zip (or other format) archives
 
 ## Programs for Work ( the Job )
-* [Apple Remote Desktop](https://itunes.apple.com/us/app/apple-remote-desktop/id409907375?mt=12) [MAS]
-* * [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/) [DL]
+* [Apple Remote Desktop](https://itunes.apple.com/us/app/apple-remote-desktop/id409907375?mt=12) [MAS] - Remote desktop for Macs
+* [Citrix Receiver](http://www.citrix.com/products/receiver/overview.html) [DL] - VPN utility
+* [Microsoft Office 2011 for Mac](http://www.microsoft.com/mac/) [DL]
     * Microsoft Excel 2011
     * [Microsoft Lync](http://www.microsoft.com/mac/enterprise/lync)
     * Microsoft Outlook 2011
     * Microsoft PowerPoint 2011
     * Microsoft Word 2011
-* [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12) [MAS]
+* [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12) [MAS] - Remote desktop for windows machines
 
 ## PrefPanes
-* [Hazel](http://www.noodlesoft.com/hazel.php) [DL]
-* [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/) [DL]
+* [Hazel](http://www.noodlesoft.com/hazel.php) [DL] - move files according to riles
+* [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/) [DL] - Set what app opens what files
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
-* [ChromeLogger](https://chrome.google.com/webstore/detail/chrome-logger/noaneddfkdjfnfdakjjmocngnfkfehhd)
-* [Ghostery](https://www.ghostery.com/our-solutions/ghostery-add-on/)
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
+* [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
-* [Postman](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm) (and [its launcher](https://chrome.google.com/webstore/detail/postman-launcher/igofndmniooofoabmmpfonmdnhgchoka))
+* [Postman 3](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
+* [Privacy Badger](https://www.eff.org/privacybadger)
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
+* [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * [Xdebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)
 * [XML Tree](https://chrome.google.com/webstore/detail/xml-tree/gbammbheopgpmaagmckhpjbfgdfkpadb)
 
@@ -273,7 +269,7 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 * [HTML5](https://packagecontrol.io/packages/HTML5)
 * [INI](https://packagecontrol.io/packages/INI)
 * [LESS](https://packagecontrol.io/packages/LESS)
-* [Marked Bonus Pack](http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles)
+* [Marked Bonus Pack](https://packagecontrol.io/packages/Marked%20App%20Menu)
 * [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 * [Material Theme](https://packagecontrol.io/packages/Material%20Theme)
 * [Modific](https://packagecontrol.io/packages/Modific)

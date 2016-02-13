@@ -1,5 +1,9 @@
 # Post-Install Config
 
+## Local Aliases
+
+There are aliases that I create for work that I don't want in a public repository. During setup, a `.local_aliases.sh` file is created in your home directory that you can add aliases to that will not be added to the repository.
+
 ## gmvault
 
 You need to do the initial sync with gmvault manually so that the authorization tokens can be saved and the recurring task can then do a quick sync.
