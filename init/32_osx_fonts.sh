@@ -11,6 +11,8 @@ brew_tap_kegs
 fonts=(
 	font-anonymous-pro
 	font-hack
+    font-meslo-lg
+    font-inconsolata
 )
 
 # Install Homebrew casks.
