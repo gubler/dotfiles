@@ -24,7 +24,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL] - Convert M4A audio files to MP3s
 * [Metadatics](http://markvapps.com/metadatics) [DL] - ID3 tag editing for mp3 files
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL] - Create MKV video files. Also useful for ripping obstinate DVDs
-* [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
+* [MPEG Streamclip](http://www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL] - Remove DRM from purchased videos for archiving
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [ScreenFlow](http://www.telestream.net/screenflow/) [DL] - Screen recoding software for screencasts
