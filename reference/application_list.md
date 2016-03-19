@@ -99,6 +99,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [DL] - PDF editor
 * [Reeder](http://reederapp.com/mac/) [MAS] - RSS reader
 * [Soulver](http://www.acqualia.com/soulver/) [DL] - Better calculator
+* [TaskPaper 3](http://www.taskpaper.com/) [DL]
 * [YNAB](https://www.youneedabudget.com/) [DL] - Money management
     - New version 5 is a web app that I create a Fluid app for
     - Not positive I will be keeping this
