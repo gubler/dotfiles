@@ -33,8 +33,11 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 
 ## Graphics
 * [Acorn](http://www.flyingmeat.com/acorn/) [DL] - Amazing image editor
+* [Affinity Designer](https://affinity.serif.com/en-us/designer/) [MAS] - Vector image editor
+* [Droplr](https://droplr.com/)[DL] - Easy image sharing - requires subscripion
 * [Graphviz](http://www.graphviz.org/) [HBC] - Draw graphs with DOT syntax
 * [GIFBrewery](http://gifbrewery.com/) [MAS] - Create animated GIFs from video files
+* [Google Photos Backup](https://photos.google.com/apps) [DL] - Uploads all my photos to Google Photos
 * [ImageOptim](http://imageoptim.com/) [DL] - Optimize image file size
 * [ImageAlpha](http://pngmini.com/) [DL] - Optimize PNGs with alpha files
 * [Ember](http://realmacsoftware.com/ember) [DL] - Screen capturing and image library tool
@@ -75,13 +78,17 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [DL] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [DL] - text editor
+* [Ulysses](http://www.ulyssesapp.com/) [MAS] - Notes and writing tools
 
 ## Games
 * [Battle.net](http://battle.net) [DL] - Blizzard's game platform
     * [Hearthstone](http://us.battle.net/hearthstone/en/) - Collectible Card Game
 * [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab) [DL] - RPG character management
+* [HSTracker](https://github.com/HearthSim/HSTracker) [DL] - Hearthstone Deck Tracker
 * [Steam](http://store.steampowered.com/) [DL] - Valve's game platform
     * [Civilization V](http://www.civilization5.com/) - Empire simulation game
+    * [Stardew Valley](http://stardewvalley.net/) - Farm simulator
+        - [Easier Fishing Mod](http://stardewmods.com/resources/easier-fishing.39/) [DL] - Because fishing is a pain in the butt
 
 ## Productivity
 * [1Password](https://agilebits.com/onepassword/mac) [MAS] - Password manager
@@ -127,6 +134,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [DL] - Batch file renamer
 * [BetterTouchTool](http://www.boastr.net/) [DL] - Input utility
 * [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [DL] - File sync tool
+* [Cloak](https://www.getcloak.com/) [DL] - VPN software - requires subscripion
 * [CrashPlan](http://www.code42.com/crashplan/) [DL] - Online backup
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL] - Power up save dialogs
@@ -142,7 +150,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [DL] - Resource usage (CPU, memory, network, etc) graphs in the menubar
 * [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) [DL] - Used to remap F19 to Hyper (command-control-option-shift)
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL] - Super-powered keyboard macros
-* [Launch Control](http://www.soma-zone.com/LaunchControl/) [DL] - Launchd manager
+* [LaunchControl](http://www.soma-zone.com/LaunchControl/) [DL] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [DL]
 * [Micro Snitch](https://www.obdev.at/products/microsnitch/index.html) [DL]
 * [Moom](http://manytricks.com/moom/) [DL] - window manager

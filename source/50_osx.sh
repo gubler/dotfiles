@@ -4,6 +4,9 @@ is_osx || return 1
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
 PATH="/usr/local/sbin:$(path_remove /usr/local/sbin)"
 PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
+
+# Add Calibre tools to path
+PATH="/Applications/calibre.app/Contents/console.app/Contents/MacOS:$PATH"
 export PATH
 
 # Trim new lines and copy to clipboard
