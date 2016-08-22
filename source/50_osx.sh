@@ -4,6 +4,7 @@ is_osx || return 1
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
 PATH="/usr/local/sbin:$(path_remove /usr/local/sbin)"
 PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
+PATH="$PATH:~/.composer/vendor/bin"
 export PATH
 
 # Trim new lines and copy to clipboard

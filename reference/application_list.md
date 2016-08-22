@@ -27,7 +27,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL] - Remove DRM from purchased videos for archiving
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
+* [Plex](https://www.plex.tv/) [DL] - Manage movies and TV shows and play them on the TV
+* [Podcast Chapters](http://chaptersapp.com/) [MAS] - Add chapters to podcasts
 * [ScreenFlow](http://www.telestream.net/screenflow/) [DL] - Screen recoding software for screencasts
+* [Subsonic](http://www.subsonic.org/) [DL] - Manage large music library that I keep on a NAS
 * [VLC](http://www.videolan.org/vlc/index.html) [DL] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [DL] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
@@ -35,6 +38,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Acorn](http://www.flyingmeat.com/acorn/) [DL] - Amazing image editor
 * [Graphviz](http://www.graphviz.org/) [HBC] - Draw graphs with DOT syntax
 * [GIFBrewery](http://gifbrewery.com/) [MAS] - Create animated GIFs from video files
+* [Google Photos](https://photos.google.com/) [DL] - Online storage and sharing of photos
 * [ImageOptim](http://imageoptim.com/) [DL] - Optimize image file size
 * [ImageAlpha](http://pngmini.com/) [DL] - Optimize PNGs with alpha files
 * [Ember](http://realmacsoftware.com/ember) [DL] - Screen capturing and image library tool
@@ -53,6 +57,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MySQL Community Server](http://dev.mysql.com/downloads/mysql/) [DL] - Database server
 * [MySQL Workbench](http://dev.mysql.com/downloads/workbench/) [DL] - MySQL management tool
 * [Patterns](http://krillapps.com/patterns/) [MAS] - Regular Expression testing tool
+* [Paw](https://paw.cloud/) [DL] - API testing tool
 * [Quiver](http://happenapps.com/#quiver) [MAS] - Programmer notebook
 * [Sequel Pro](http://www.sequelpro.com/) [DL] - MySQL GUI
 * [Tower](http://www.git-tower.com/) [DL] - Git GUI
@@ -75,6 +80,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [DL] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [DL] - text editor
+* [vim](http://www.vim.org/) [DL] - when in doubt, fall back to vim
 
 ## Games
 * [Battle.net](http://battle.net) [DL] - Blizzard's game platform
@@ -290,6 +296,8 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 * [.gitignore Support](https://github.com/hsz/idea-gitignore)
 * [Codeivate](http://www.codeivate.com/)
 * Dash
+* IdeaVim - Testing this, not sure if will remain in use
+* [Material Theme](https://github.com/equinusocio/material-theme)
 * Open in Marked
 * [PHP Annotations](https://github.com/Haehnchen/idea-php-annotation-plugin)
 * PHPUnit Code Coverage
