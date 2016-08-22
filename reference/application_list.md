@@ -24,7 +24,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL] - Convert M4A audio files to MP3s
 * [Metadatics](http://markvapps.com/metadatics) [DL] - ID3 tag editing for mp3 files
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [DL] - Create MKV video files. Also useful for ripping obstinate DVDs
-* [MPEG Streamclip](www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
+* [MPEG Streamclip](http://www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL] - Remove DRM from purchased videos for archiving
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [Plex](https://www.plex.tv/) [DL] - Manage movies and TV shows and play them on the TV
@@ -36,9 +36,11 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 
 ## Graphics
 * [Acorn](http://www.flyingmeat.com/acorn/) [DL] - Amazing image editor
+* [Affinity Designer](https://affinity.serif.com/en-us/designer/) [MAS] - Vector image editor
+* [Droplr](https://droplr.com/)[DL] - Easy image sharing - requires subscripion
 * [Graphviz](http://www.graphviz.org/) [HBC] - Draw graphs with DOT syntax
 * [GIFBrewery](http://gifbrewery.com/) [MAS] - Create animated GIFs from video files
-* [Google Photos](https://photos.google.com/) [DL] - Online storage and sharing of photos
+* [Google Photos Backup](https://photos.google.com/apps) [DL] - Uploads all my photos to Google Photos
 * [ImageOptim](http://imageoptim.com/) [DL] - Optimize image file size
 * [ImageAlpha](http://pngmini.com/) [DL] - Optimize PNGs with alpha files
 * [Ember](http://realmacsoftware.com/ember) [DL] - Screen capturing and image library tool
@@ -80,14 +82,18 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [DL] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [DL] - text editor
+* [Ulysses](http://www.ulyssesapp.com/) [MAS] - Notes and writing tools
 * [vim](http://www.vim.org/) [DL] - when in doubt, fall back to vim
 
 ## Games
 * [Battle.net](http://battle.net) [DL] - Blizzard's game platform
     * [Hearthstone](http://us.battle.net/hearthstone/en/) - Collectible Card Game
 * [Hero Lab](http://www.wolflair.com/index.php?context=hero_lab) [DL] - RPG character management
+* [HSTracker](https://github.com/HearthSim/HSTracker) [DL] - Hearthstone Deck Tracker
 * [Steam](http://store.steampowered.com/) [DL] - Valve's game platform
     * [Civilization V](http://www.civilization5.com/) - Empire simulation game
+    * [Stardew Valley](http://stardewvalley.net/) - Farm simulator
+        - [Easier Fishing Mod](http://stardewmods.com/resources/easier-fishing.39/) [DL] - Because fishing is a pain in the butt
 
 ## Productivity
 * [1Password](https://agilebits.com/onepassword/mac) [MAS] - Password manager
@@ -105,6 +111,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [PDFpenPro](http://www.smilesoftware.com/PDFpenPro/) [DL] - PDF editor
 * [Reeder](http://reederapp.com/mac/) [MAS] - RSS reader
 * [Soulver](http://www.acqualia.com/soulver/) [DL] - Better calculator
+* [TaskPaper 3](http://www.taskpaper.com/) [DL]
 * [YNAB](https://www.youneedabudget.com/) [DL] - Money management
     - New version 5 is a web app that I create a Fluid app for
     - Not positive I will be keeping this
@@ -132,6 +139,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [A Better Finder Rename 9](http://www.publicspace.net/ABetterFinderRename/) [DL] - Batch file renamer
 * [BetterTouchTool](http://www.boastr.net/) [DL] - Input utility
 * [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [DL] - File sync tool
+* [Cloak](https://www.getcloak.com/) [DL] - VPN software - requires subscripion
 * [CrashPlan](http://www.code42.com/crashplan/) [DL] - Online backup
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [DL] - Power up save dialogs
@@ -147,10 +155,13 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [DL] - Resource usage (CPU, memory, network, etc) graphs in the menubar
 * [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) [DL] - Used to remap F19 to Hyper (command-control-option-shift)
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [DL] - Super-powered keyboard macros
-* [Launch Control](http://www.soma-zone.com/LaunchControl/) [DL] - Launchd manager
+* [LaunchControl](http://www.soma-zone.com/LaunchControl/) [DL] - Launchd manager
+* [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [DL]
+* [Micro Snitch](https://www.obdev.at/products/microsnitch/index.html) [DL]
 * [Moom](http://manytricks.com/moom/) [DL] - window manager
     * Moom preferences can be setup by copying the `com.manytricks.Moom.plist` file to `{home}/Library/Preferences` and running `killall cfprefsd` and then launching Moom.
 * [Mountain](http://appgineers.de/mountain/) [DL] - Mount and unmount external drives
+* [PowerMate Manager](https://support.griffintechnology.com/product/powermate/) [DL] for the [Griffin PowerMate](https://griffintechnology.com/us/device/laptops/powermate)
 * [ScanSnap Manager](http://www.fujitsu.com/us/services/computing/peripherals/scanners/support/scansnap_mac.html) [DL] - Scanner software
 * [Seil](https://pqrs.org/osx/karabiner/seil.html.en) [DL] - Used to remap CapsLock to F19 (for Karabiner)
 * [Shush](http://mizage.com/shush/) [MAS] - Push-to-speak or push-to-silence for audio input
