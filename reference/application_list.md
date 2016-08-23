@@ -190,10 +190,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
+* [ChromeLogger](https://craig.is/writing/chrome-logger)
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
-* [Postman 3](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 * [Privacy Badger](https://www.eff.org/privacybadger)
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
