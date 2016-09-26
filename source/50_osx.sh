@@ -71,3 +71,9 @@ function o() {
     open "$@"
   fi
 }
+
+# `pw` provides a graphical password prompt for sudo
+# This is used for authenticating with a smart card
+function pw() {
+    osascript -e "do shell script \"$*\" with administrator privileges"
+}
