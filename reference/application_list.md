@@ -27,7 +27,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MPEG Streamclip](http://www.squared5.com/svideo/mpeg-streamclip-mac.html) [DL] - Simple video trimming
 * [NoteBurner M4V Converter Plus](http://www.noteburner.com/) [DL] - Remove DRM from purchased videos for archiving
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
+* [Plex](https://www.plex.tv/) [DL] - Manage movies and TV shows and play them on the TV
+* [Podcast Chapters](http://chaptersapp.com/) [MAS] - Add chapters to podcasts
 * [ScreenFlow](http://www.telestream.net/screenflow/) [DL] - Screen recoding software for screencasts
+* [Subsonic](http://www.subsonic.org/) [DL] - Manage large music library that I keep on a NAS
 * [VLC](http://www.videolan.org/vlc/index.html) [DL] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [DL] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
@@ -56,6 +59,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [MySQL Community Server](http://dev.mysql.com/downloads/mysql/) [DL] - Database server
 * [MySQL Workbench](http://dev.mysql.com/downloads/workbench/) [DL] - MySQL management tool
 * [Patterns](http://krillapps.com/patterns/) [MAS] - Regular Expression testing tool
+* [Paw](https://paw.cloud/) [DL] - API testing tool
 * [Quiver](http://happenapps.com/#quiver) [MAS] - Programmer notebook
 * [Sequel Pro](http://www.sequelpro.com/) [DL] - MySQL GUI
 * [Tower](http://www.git-tower.com/) [DL] - Git GUI
@@ -79,6 +83,7 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [DL] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [DL] - text editor
 * [Ulysses](http://www.ulyssesapp.com/) [MAS] - Notes and writing tools
+* [vim](http://www.vim.org/) [DL] - when in doubt, fall back to vim
 
 ## Games
 * [Battle.net](http://battle.net) [DL] - Blizzard's game platform
@@ -185,10 +190,10 @@ If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _t
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
+* [ChromeLogger](https://craig.is/writing/chrome-logger)
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
-* [Postman 3](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)
 * [Privacy Badger](https://www.eff.org/privacybadger)
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
@@ -302,6 +307,8 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 * [.gitignore Support](https://github.com/hsz/idea-gitignore)
 * [Codeivate](http://www.codeivate.com/)
 * Dash
+* IdeaVim - Testing this, not sure if will remain in use
+* [Material Theme](https://github.com/equinusocio/material-theme)
 * Open in Marked
 * [PHP Annotations](https://github.com/Haehnchen/idea-php-annotation-plugin)
 * PHPUnit Code Coverage
