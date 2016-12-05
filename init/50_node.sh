@@ -1,5 +1,4 @@
-# Load nave- and npm-related functions.
-source $DOTFILES/source/50_node.sh
+# Exit if Homebrew is not installed.
+[[ ! "$(type -P node)" ]] && e_error "Node should have been installed via Homebrew" && return 1
 
-# Install latest stable Node.js, set as default, install global npm modules.
-nave_install stable
+npm install -g yarn

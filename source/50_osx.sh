@@ -2,12 +2,16 @@
 is_osx || return 1
 
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH="/usr/local/sbin:$(path_remove /usr/local/sbin)"
 PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
+PATH="/usr/local/sbin:$(path_remove /usr/local/sbin)"
 
-# Add Calibre tools to path
-PATH="/Applications/calibre.app/Contents/console.app/Contents/MacOS:$PATH"
+# Add Composer global to path
+PATH="~/.composer/vendor/bin:$PATH"
+
 export PATH
+
+# Set Java Home
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
@@ -67,3 +71,17 @@ function o() {
     open "$@"
   fi
 }
+
+# run composer without xdebug enabled
+function composer() {
+    COMPOSER="$(which composer)" || {
+        echo "Could not find composer in path" >&2;
+        return 1;
+    } &&
+    mv /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini /usr/local/etc/php/7.0/conf.dis;
+    $COMPOSER "$@";
+    STATUS=$?;
+    mv /usr/local/etc/php/7.0/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.0/conf.d;
+    return $STATUS;
+}
+
