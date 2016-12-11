@@ -11,6 +11,16 @@
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
 
+# Don't commit Atom packages
+/link/.atom/**/*
+!/link/.atom/*.cson
+!/link/.atom/*.less
+!/link/.atom/*.coffee
+
+# Don't commit karabiner logs
+/link/.karabiner.d/log/*
+!/link/.karabiner.d/log/.gitkeep
+
 # Don't commit rbenv temp files.
 /link/.rbenv/shims/
 /link/.rbenv/versions/

@@ -16,6 +16,15 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
 
+# Replace git with hub
+alias git=hub
+
+# Alias phing in projects
+alias phing=vendor/bin/phing
+
+# Alias symfony console in projects
+alias sf=bin/console
+
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
 
@@ -84,4 +93,3 @@ function composer() {
     mv /usr/local/etc/php/7.0/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.0/conf.d;
     return $STATUS;
 }
-

@@ -9,7 +9,12 @@ I try to have links to every program on the list, but I also list how I install 
 * [HBC] - [HomeBrew Cask](http://caskroom.io/)
 * [DL] - Manual Download
 
-If possible, I try to purchase apps outside of the Mac AppStore. I'm also not _thrilled_ with how Cask installs applications, so I mostly use if for programs I don't expect to have to update, main fonts, and some [Quick Look](https://en.wikipedia.org/wiki/Quick_Look) plugins.
+## Not Installed by Brewfiles
+
+* [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL] - Convert M4A audio files to MP3s
+* [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
+
+
 
 ## Audio/Video
 * [Aegisub](http://www.aegisub.org/) [DL] - Subtitling/Captioning tool for video
