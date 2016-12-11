@@ -16,6 +16,7 @@
 !/link/.atom/*.cson
 !/link/.atom/*.less
 !/link/.atom/*.coffee
+!/link/.atom/*.txt
 
 # Don't commit karabiner logs
 /link/.karabiner.d/log/*
