@@ -112,6 +112,8 @@ I try to have links to every program on the list, but I also list how I install 
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [HBC] - Power up save dialogs
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS] - Track UPS, Fedex, and other deliveries
+* [Deluge](http://deluge-torrent.org/) [HBC] - BitTorrent Client
+    * [Deluge-Magnet-Handler](https://github.com/Lord-Kamina/Deluge-Magnet-Handler) [DL] - Associate magnet links with Deluge
 * [Dropbox](https://www.dropbox.com/) [HBC] - one folder that syncs
 * [Due](http://www.dueapp.com/mac.html) [MAS] - timer/reminder app that syncs with iOS
 * [Fantastical](http://flexibits.com/fantastical) [HBC] - Better calendar
@@ -119,7 +121,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS] - Battery manager
 * [Google Chrome](https://www.google.com/chrome/) [HBC] - preferred browser
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [HBC] - Resource usage (CPU, memory, network, etc) graphs in the menubar
-* [Karabiner](https://pqrs.org/osx/karabiner/index.html.en) [HBC] - Used to remap F19 to Hyper (command-control-option-shift)
+* [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) [HBC] - Used to remap F19 to Hyper (command-control-option-shift)
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [HBC] - Super-powered keyboard macros
 * [LaunchControl](http://www.soma-zone.com/LaunchControl/) [HBC] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [HBC]
@@ -133,7 +135,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [HBC] - Create a bootable, whole-disk copy
 * [TextExpander](http://www.smilesoftware.com/TextExpander/) [HBC] - Expand keyboard snippets
 * [Timing](http://timingapp.com/) [MAS] - Track computer use
-* [Transmission](http://www.transmissionbt.com/) [HBC] - Bit torrent client
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [HBC] - Open zip (or other format) archives
 
 ## PrefPanes
