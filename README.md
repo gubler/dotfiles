@@ -123,7 +123,7 @@ There's a lot of stuff that requires admin access via `sudo`, so be warned that 
 ### Actual installation (for me)
 
 ```sh
-bash -c "$(curl -fsSL https://bit.ly/gubler-dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
 ```
 ### After Installation
 
