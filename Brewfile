@@ -36,6 +36,7 @@ brew 'z'
 # PHP
 brew 'php71', args: ['with-debug']
 brew 'php71-xdebug'
+brew 'composer'
 brew 'mariadb'
 
 # Casks
