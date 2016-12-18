@@ -5,10 +5,14 @@
 # and
 # https://gist.github.com/brandonb927/3195465
 #
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
@@ -84,8 +88,8 @@ echo "Disable shadow in screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
 
 echo ""
-echo "Save screenshots to the Desktop"
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+echo "Save screenshots to Downloads"
+defaults write com.apple.screencapture location -string "$HOME/Downloads"
 
 echo ""
 echo "Save screenshots as PNGs"
@@ -102,6 +106,10 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 echo ""
 echo "Prevent Photos app from opening when devices are connected"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+echo ""
+echo "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 echo ""
 echo "Set wallpaper"
@@ -209,6 +217,10 @@ echo "Show the ~/Library folder"
 chflags nohidden ~/Library
 
 echo ""
+echo "Show the /Volumes folder"
+sudo chflags nohidden /Volumes
+
+echo ""
 echo "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -226,6 +238,15 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
   Privileges -bool true
+
+echo ""
+echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+echo ""
+echo "Enable the MacBook Air SuperDrive on any Mac"
+sudo nvram boot-args="mbasd=1"
+
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -290,6 +311,11 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ###############################################################################
 
 echo ""
+echo "Privacy: don’t send search queries to Apple"
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+echo ""
 echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
@@ -297,7 +323,44 @@ echo ""
 echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
+echo ""
+echo "Show the full URL in the address bar (note: this still hides the scheme)"
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
+echo ""
+echo "Prevent Safari from opening ‘safe’ files automatically after downloading"
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+echo ""
+echo "Allow hitting the Backspace key to go to the previous page in history"
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+echo ""
+echo "Hide Safari’s sidebar in Top Sites"
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+
+echo ""
+echo "Enable the Develop menu and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+echo ""
+echo "Add a context menu item for showing the Web Inspector in web views"
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+echo ""
+echo "Block pop-up windows"
+defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
+
+echo ""
+echo "Enable \“Do Not Track\”"
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+echo ""
+echo "Update extensions automatically"
+defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
 ###############################################################################
 # Time Machine                                                                #
@@ -368,40 +431,20 @@ echo "Disable the all too sensitive backswipe on Magic Mouse"
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
-
 ###############################################################################
-# Transmission.app                                                            #
+# Tweetbot.app                                                                #
 ###############################################################################
 
 echo ""
-echo "Configure Transmission.app"
-echo "Use `~/Downloads/Torrents` to store incomplete downloads"
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Torrents"
-
-echo ""
-echo "Don’t prompt for confirmation before downloading"
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-echo ""
-echo "Trash original torrent files"
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-echo ""
-echo "Hide the donate message"
-defaults write org.m0k.transmission WarningDonate -bool false
-
-echo ""
-echo "Hide the legal disclaimer"
-defaults write org.m0k.transmission WarningLegal -bool false
+echo "Bypass the annoyingly slow t.co URL shortener"
+defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "Dock" \
-  "Finder" "Mail" "Messages" "Safari" "SystemUIServer" "Terminal" \
-  "Transmission" "iCal"; do
+  "Finder" "Mail" "Messages" "Safari" "SystemUIServer" "Terminal" "iCal" "Tweetbot"; do
   killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."

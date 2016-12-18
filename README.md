@@ -4,18 +4,18 @@ My OS X / Ubuntu dotfiles.
 
 ## What This Is
 
-I've been futzing around with bash and zsh for years and moving bits and peices of my configurations around from machine to machine and platform to platform. After seeing all of the work put into various [dotfile repos](http://dotfiles.github.io/), I finally forked several and merged them into what I wanted.
+I've been futzing around with bash and zsh for years and moving bits and pieces of my configurations around from machine to machine and platform to platform. After seeing all of the work put into various [dotfile repos](http://dotfiles.github.io/), I finally forked several and merged them into what I wanted.
 
 The core of the system is by [@cowboy](https://github.com/cowboy/dotfiles/): execute a single command to "bootstrap" a new system to pull down all of my dotfiles and configs, as well as install all the tools I commonly use. In addition, be able to re-execute that command at any time to synchronize anything that might have changed. Finally, make it easy to re-integrate changes back in, so that other machines could be updated.
 
 The command is [dotfiles][dotfiles].
 
 [dotfiles]: bin/dotfiles
-[bin]: https://github.com/cowboy/dotfiles/tree/master/bin
+[bin]: https://github.com/gubler/dotfiles/tree/master/bin
 
 ## What, exactly, does the "dotfiles" command do?
 
-It's really not very complicated. When [dotfiles][dotfiles] is run, it does a few things:
+When [dotfiles][dotfiles] is run, it does a few things:
 
 1. Git is installed if necessary, via APT or Homebrew (which is installed if necessary).
 2. This repo is cloned into the `~/.dotfiles` directory (or updated if it already exists).
@@ -33,17 +33,26 @@ Note:
 
 ### What about the other folders?
 
-* `libs` is for submoduled applications
 * `extra` are scripts to be run once. They aren't hooked into the regular dotfiles command due to either needing input during execution or taking a long, long time to run.
 * `reference` holds extra config files as well as an [app log](references/application_list.md) that includes apps, plugins, browser extensions, etc...
+
+### Installation Command
+
+~~~
+sh bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
+~~~
+
+If, for some reason, [bit.ly](https://bit.ly/) is down, you can use the canonical URL.
+
+~~~
+sh bash -c "$(curl -fsSL https://raw.github.com/gubler/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+~~~
 
 ## Installation
 **Note:** Before running this, you may have to set Git to use HTTPS instead of GIT due to corporate firewalls (or whatever other reasons you may have). If so, run:
 ~~~
 git config --global url."https://".insteadOf git://
 ~~~
-
-**This is also configured in the `.gitignore` file in this repo** because of my work. See the section below on **Updating the `.gitignore` file after install.
 
 ### OS X Notes
 
@@ -53,8 +62,7 @@ git config --global url."https://".insteadOf git://
 ### Ubuntu Notes
 
 * You need to be an administrator (for `sudo`).
-* You might want to set up your ubuntu server [like I do it](/cowboy/dotfiles/wiki/ubuntu-setup), but then again, you might not.
-* Either way, you should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
+* You should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
 
 ### After Installation
 
@@ -62,7 +70,7 @@ After you run the install, you will need to:
 
 * configure the `.gitignore` file that is copied to your home directory.
   - Set your name and email address at the top of the file
-  - If you want to use the `git://` protocol instead of `https://`, you will need to delete the following from the bottom of the file:
+  - If you want to use the `https://` protocol instead of `git://`, you will need to uncomment the following from the bottom of the file:
   ~~~
   [url "https://"]
     insteadOf = git://
@@ -75,80 +83,8 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 I have some additional post-install configuration instructions in `refence/Post-Install Setup.md`.
 
-### Actual Installation
-
-~~~
-sh bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
-~~~
-
-If, for some reason, [bit.ly](https://bit.ly/) is down, you can use the canonical URL.
-
-~~~
-sh bash -c "$(curl -fsSL https://raw.github.com/gubler/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
-~~~
-
 ## The "init" step
 A whole bunch of things will be installed, but _only_ if they aren't already.
-
-### OS X
-* Homebrew recipes
-  * ack 2
-  * bash 4
-  * cowsay
-  * git
-  * git-extras
-  * git-flow
-  * graphviz
-  * ffmpeg
-  * htop-osx
-  * hub
-  * hugo
-  * id3tool
-  * lesspipe
-  * man2html
-  * mercurial
-  * nmap
-  * sl
-  * ssh-copy-id
-  * terminal-notifier
-  * the_silver_searcher
-  * tree
-  * wget
-  * Anonymous Pro font (via Cask)
-  * H@ck font (via Cask)
-
-### Ubuntu
-* APT packages
-  * build-essential
-  * cowsay
-  * git-core
-  * htop
-  * id3tool
-  * libssl-dev
-  * mercurial
-  * nmap
-  * silversearcher-ag
-  * sl
-  * telnet
-  * tree
-
-### Both
-* Nave
-  * node (latest stable)
-    * npm
-    * bower
-    * jshint
-    * yo
-* rbenv
-  * ruby 2.1.0
-* gems
-  * bundler
-  * awesome_print
-  * pry
-* Python
-  * Pygments
-  * Sphinx Doc
-  * gmvault
 
 ## The ~/ "copy" step
 Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
@@ -171,7 +107,7 @@ In addition to the aforementioned [dotfiles][dotfiles] script, there are a few o
 * Look through the [bin][bin] subdirectory for a few more.
 
 ## Prompt
-Currentlt working with [@cowboy's awesome bash prompt](source/50_prompt.sh). It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
+Currently working with [@cowboy's awesome bash prompt](source/50_prompt.sh). It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
 
 Git repos display as **[branch:flags]** where flags are:
 
@@ -195,5 +131,5 @@ Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](htt
 [Cortex Podcast](https://www.relay.fm/cortex) wallpaper in reference directory by [GrafikSyndikat](https://grafiksyndikat.com/wallpaper/cortex-desktop/)
 
 ## License
-Copyright (c) 2014 Daryl Gubler  
+Copyright (c) 2016 Daryl Gubler  
 Licensed under the MIT license.

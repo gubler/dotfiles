@@ -29,6 +29,9 @@ brew 'wget'
 brew 'node'
 brew 'yarn'
 brew 'mas'
+brew 'rbenv'
+brew 'ruby-build'
+brew 'z'
 
 # PHP
 brew 'php71', args: ['with-debug']
@@ -40,6 +43,7 @@ brew 'mariadb'
 cask '1password'
 cask 'alfred'
 cask 'atom'
+cask 'captur'
 cask 'dash'
 cask 'dropbox'
 cask 'google-chrome'
@@ -57,7 +61,6 @@ cask 'omnifocus'
 cask 'path-finder'
 cask 'phpstorm'
 cask 'sequel-pro'
-cask 'snagit'
 cask 'sublime-text'
 cask 'taskpaper'
 cask 'textexpander'
@@ -83,6 +86,7 @@ cask 'font-inconsolata'
 mas 'Airmail 2', id:918858936
 mas 'Amphetamine', id:937984704
 mas 'Due', id:524373870
+mas 'Napkin - Image Annotation and Markup', id:581789185
 mas 'Patterns', id:429449079
 mas 'Sip', id: 507257563
-mas "Timing Automatic Time Tracker" id:431511738
+mas 'Timing Automatic Time Tracker' id:431511738
