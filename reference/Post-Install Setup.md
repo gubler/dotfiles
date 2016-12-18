@@ -4,6 +4,17 @@
 
 There are aliases that I create for work that I don't want in a public repository. During setup, a `.local_aliases.sh` file is created in your home directory that you can add aliases to that will not be added to the repository.
 
+## Install Extras
+
+There are several extras in the [/extras](/extras) to finish up the install:
+
+- [Vim Spf13 plugins suite](extras/10_vimSpf13.sh)
+- [macOS config](extras/20_osx_config.sh)
+- [macOS extra Homebrew applications](20_osx_homebrew_extra.sh)
+- [macOS keyfixer](20_osx_keyfixer.sh)
+- [macOS Sublime Text 3 setup](40_osx_sublime_text.sh)
+- [macOS iTem2 and Terminal config](50_osx_item_and_terminal.sh)
+
 ## gmvault
 
 You need to do the initial sync with gmvault manually so that the authorization tokens can be saved and the recurring task can then do a quick sync.
@@ -17,9 +28,3 @@ These steps load a launchd agent to run gmvault every 15 minutes. **NOTE:** The 
     * Line 17: Email Address to backup
     * Line 24/26: Change the path for log file
 3. Load the plist file: `launchctl load ~/Library/LaunchAgents/local.gmvault.plist`
-
-## Keyboard Config (Karabiner and Seil)
-
-I follow the instructions by Brett Terpstra ([here](http://brettterpstra.com/2015/12/18/a-hyper-key-that-can-still-yell/) and [here](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)) to remap my Caps Lock key to act as Escape when pressed or Hyper (Command-Shift-Option-Control) when held (make sure you change CapsLock to _No Action_ in Preferences -> Keyboard -> Modifier Keys on Mac OS X).
-
-The `private.xml` file that I use is in the `reference` folder, which also has a section for switching the modifier keys on my MS Sculpt Ergonomic keyboard.
