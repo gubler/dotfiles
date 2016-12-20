@@ -20,3 +20,8 @@ sudo chmod a+x /usr/local/bin/symfony
 e_header "Installing Laravel Valet"
 composer global require laravel/valet
 ~/.composer/vendor/bin/valet install
+
+# Create Projects Directory and park in Valet
+mkdir ~/Projects
+cd ~/Projects
+valet park

@@ -87,7 +87,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [TaskPaper 3](http://www.taskpaper.com/) [HBC]
 * [YNAB](https://www.youneedabudget.com/) - Money management
     - New version 5 is a web app that I create a Fluid app for
-    - Not positive I will be keeping this
 
 ## eBook
 * [calibre](http://calibre-ebook.com/) [HBC] - eBook manager
@@ -133,9 +132,9 @@ I try to have links to every program on the list, but I also list how I install 
 * [Shush](http://mizage.com/shush/) [MAS] - Push-to-speak or push-to-silence for audio input
 * [Spillo](http://bananafishsoftware.com/products/spillo/)[MAS] - Pinboard client
 * [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [HBC] - Create a bootable, whole-disk copy
-* [TextExpander](http://www.smilesoftware.com/TextExpander/) [HBC] - Expand keyboard snippets
 * [Timing](http://timingapp.com/) [MAS] - Track computer use
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [HBC] - Open zip (or other format) archives
+* [Typinator](http://www.ergonis.com/products/typinator/) [HBC] - Expand keyboard snippets
 
 ## PrefPanes
 * [Hazel](http://www.noodlesoft.com/hazel.php) [HBC] - move files according to riles

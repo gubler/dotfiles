@@ -1,3 +1,6 @@
+# Update pip and setuptools
+sudo pip install --upgrade pip setuptools
+
 # Install Pygments
 if [[ ! "$(type -P pygmentize)" ]]; then
   e_header "Installing Pygments"

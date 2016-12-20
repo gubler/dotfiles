@@ -10,9 +10,6 @@ PATH="~/.composer/vendor/bin:$PATH"
 
 export PATH
 
-# Set Java Home
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
 
@@ -77,6 +74,16 @@ function s() {
   fi
 }
 
+# `a` with no arguments opens current directory in Atom, otherwise opens the given
+# location
+function o() {
+  if [ $# -eq 0 ]; then
+    atom .
+  else
+    atom "$@"
+  fi
+}
+
 # `o` with no arguments opens current directory, otherwise opens the given
 # location
 function o() {
@@ -93,9 +100,9 @@ function composer() {
         echo "Could not find composer in path" >&2;
         return 1;
     } &&
-    mv /usr/local/etc/php/7.0/conf.d/ext-xdebug.ini /usr/local/etc/php/7.0/conf.dis;
+    mv /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini /usr/local/etc/php/7.0/conf.dis;
     $COMPOSER "$@";
     STATUS=$?;
-    mv /usr/local/etc/php/7.0/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.0/conf.d;
+    mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.0/conf.d;
     return $STATUS;
 }

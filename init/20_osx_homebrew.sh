@@ -34,9 +34,6 @@ fi
 # php directory for composer alias
 mkdir /usr/local/etc/php/7.1/conf.dis
 
-# Secure MariaDB
-mysql_secure_installation
-
 # bash
 if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
   e_header "Adding $binroot/bash to the list of acceptable shells"
@@ -51,3 +48,7 @@ if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; th
   sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
   e_arrow "Please exit and restart all your shells."
 fi
+
+# Secure MariaDB
+brew services start mariadb
+mysql_secure_installation

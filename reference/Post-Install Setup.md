@@ -1,5 +1,12 @@
 # Post-Install Config
 
+## Logins
+
+Log into the following apps:
+
+- 1Password
+- Dropbox (Suggest selective sync until the Apps directories are synced)
+
 ## Local Aliases
 
 There are aliases that I create for work that I don't want in a public repository. During setup, a `.local_aliases.sh` file is created in your home directory that you can add aliases to that will not be added to the repository.
