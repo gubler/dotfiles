@@ -100,9 +100,9 @@ function composer() {
         echo "Could not find composer in path" >&2;
         return 1;
     } &&
-    mv /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini /usr/local/etc/php/7.0/conf.dis;
+    mv /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini /usr/local/etc/php/7.1/conf.dis;
     $COMPOSER "$@";
     STATUS=$?;
-    mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.0/conf.d;
+    mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.1/conf.d;
     return $STATUS;
 }
