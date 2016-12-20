@@ -5,11 +5,7 @@
       beautifyEntireFileOnSave: false
   "atom-material-ui":
     colors:
-      abaseColor:
-        red: 92
-        green: 107
-        blue: 192
-        alpha: 1
+      abaseColor: "#5c6bc0"
       predefinedColor: "Indigo"
     fonts: {}
     tabs:
