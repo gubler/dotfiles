@@ -76,7 +76,7 @@ function s() {
 
 # `a` with no arguments opens current directory in Atom, otherwise opens the given
 # location
-function o() {
+function a() {
   if [ $# -eq 0 ]; then
     atom .
   else
@@ -105,4 +105,10 @@ function composer() {
     STATUS=$?;
     mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.1/conf.d;
     return $STATUS;
+}
+
+# `pw` provides a graphical password prompt for sudo
+# This is used for authenticating with a smart card
+function pw() {
+    osascript -e "do shell script \"$*\" with administrator privileges"
 }
