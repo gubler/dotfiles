@@ -78,6 +78,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [DevonThink Pro Office](http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html) [HBC] - Document Management
 * [Marked 2](http://marked2app.com/) [HBC] - Markdown viewer
 * [OmniFocus](http://www.omnigroup.com/omnifocus) [HBC] - Task manager
+  * [ofexport2](https://github.com/psidnell/ofexport2) [DL] - Export OmniFocus to multiple formats
 * [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [HBC] - Diagram generator
 * [Paprika](http://www.paprikaapp.com/) [MAS] - Recipe manager
 * [Path Finder](http://www.cocoatech.com/pathfinder/) [HBC] - Finder replacement
