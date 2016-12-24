@@ -4,9 +4,6 @@ is_osx || return 1
 # Exit if Composer is not installed.
 [[ ! "$(type -P composer)" ]] && e_error "Requires composer to install." && return 1
 
-# php directory for composer alias
-mkdir /usr/local/etc/php/7.1/conf.dis
-
 # Install Laravel Installer
 e_header "Installing Laravel Installer"
 composer global require "laravel/installer"
