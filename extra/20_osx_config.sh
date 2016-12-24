@@ -268,6 +268,10 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 echo ""
+echo "Move dock to right side of screen"
+defaults write com.apple.dock orientation -string left
+
+echo ""
 echo "Don’t automatically rearrange Spaces based on most recent use"
 defaults write com.apple.dock mru-spaces -bool false
 
@@ -287,6 +291,13 @@ echo ""
 echo "Enable spring loading for all Dock items"
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
+echo ""
+echo "Wipe all (default) app icons from the Dock"
+defaults write com.apple.dock persistent-apps -array
+
+echo ""
+echo "Show only open applications in the Dock"
+defaults write com.apple.dock static-only -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
