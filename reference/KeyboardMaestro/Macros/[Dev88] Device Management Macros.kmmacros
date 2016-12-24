@@ -77,9 +77,9 @@ end tell</string>
 				<key>CreationDate</key>
 				<real>503877675.99906099</real>
 				<key>ModificationDate</key>
-				<real>503878276.878218</real>
+				<real>504291669.07469702</real>
 				<key>Name</key>
-				<string>Mount Argosy</string>
+				<string>Mount NAS Argosy</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -112,7 +112,123 @@ end tell</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Mine</string>
+		<string>[Dev88] Device Management</string>
+		<key>ToggleMacroUID</key>
+		<string>A986F6B6-1C59-4304-AF1B-5304525B0993</string>
+		<key>UID</key>
+		<string>BCA589DC-4E63-48CD-9EB3-FA9BE0CA4B6A</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>470663440.35985202</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>jp.co.pfu.ScanSnap.V10L10</string>
+							<key>Name</key>
+							<string>ScanSnap Manager</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>470663440.35985202</real>
+				<key>ModificationDate</key>
+				<real>390195153.91760898</real>
+				<key>Name</key>
+				<string>ScanSnap Attached</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>Attach</key>
+						<true/>
+						<key>MacroTriggerType</key>
+						<string>USBDevice</string>
+						<key>Name</key>
+						<string>ScanSnap</string>
+						<key>TargetType</key>
+						<string>Containing</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>23084259-FC26-4578-8148-1FB1D871AF1A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>[Dev88] Device Management</string>
+		<key>ToggleMacroUID</key>
+		<string>A986F6B6-1C59-4304-AF1B-5304525B0993</string>
+		<key>UID</key>
+		<string>BCA589DC-4E63-48CD-9EB3-FA9BE0CA4B6A</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>470663440.35985202</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>Quit</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>jp.co.pfu.ScanSnap.V10L10</string>
+							<key>Name</key>
+							<string>ScanSnap Manager</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>QuitSpecificApp</string>
+						<key>Target</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>470663440.35985202</real>
+				<key>ModificationDate</key>
+				<real>390195161.151016</real>
+				<key>Name</key>
+				<string>ScanSnap Detatched</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>Attach</key>
+						<false/>
+						<key>MacroTriggerType</key>
+						<string>USBDevice</string>
+						<key>Name</key>
+						<string>ScanSnap</string>
+						<key>TargetType</key>
+						<string>Containing</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>2FA18D3C-89DA-45E0-9CE5-494FE0CD659C</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>[Dev88] Device Management</string>
 		<key>ToggleMacroUID</key>
 		<string>A986F6B6-1C59-4304-AF1B-5304525B0993</string>
 		<key>UID</key>

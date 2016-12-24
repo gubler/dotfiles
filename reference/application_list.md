@@ -210,14 +210,12 @@ I try to have links to every program on the list, but I also list how I install 
 
 ### Node & npm
 * [node](http://nodejs.org/)
-    * [nave](https://github.com/isaacs/nave)
 * [npm](https://npmjs.org/)
-    * [jshint](http://jshint.com/)
-    * yarn
+* [yarn](https://yarnpkg.com/)
 
 ## Sublime Text Packages
 
-These plugins are installed via [Package Control](https://packagecontol.io/) using the `extra/40_osx_sublime_text.sh` script.
+These plugins are installed via [Package Control](https://packagecontrol.io/) using the `extra/40_osx_sublime_text.sh` script.
 
 * [Alignment](https://packagecontrol.io/packages/Alignment)
 * [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
@@ -286,3 +284,4 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 ## Fonts
 * [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
+`
