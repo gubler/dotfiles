@@ -18,4 +18,3 @@ fi
 gem install bundler
 gem install awesome_print
 gem install pry
-gem install jekyll

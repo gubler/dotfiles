@@ -17,6 +17,7 @@ brew 'go'
 brew 'graphviz', args: ['with-pango']
 brew 'htop-osx'
 brew 'hub'
+brew 'hugo'
 brew 'lesspipe'
 brew 'man2html'
 brew 'sqlite'
