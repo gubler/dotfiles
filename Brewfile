@@ -39,7 +39,7 @@ brew 'z'
 brew 'php71'
 brew 'php71-xdebug'
 brew 'composer'
-brew 'mariadb'
+brew 'mariadb', restart_service: :changed
 
 # Casks
 ## Apps

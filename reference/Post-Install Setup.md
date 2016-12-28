@@ -22,16 +22,10 @@ There are several extras in the [/extras](/extras) to finish up the install:
 - [macOS Sublime Text 3 setup](40_osx_sublime_text.sh)
 - [macOS iTem2 and Terminal config](50_osx_item_and_terminal.sh)
 
-## gmvault
+## OfflineIMAP
 
-You need to do the initial sync with gmvault manually so that the authorization tokens can be saved and the recurring task can then do a quick sync.
+Email is backed up from Fastmail via OfflineIMAP. To set up OfflineIMAP:
 
-These steps load a launchd agent to run gmvault every 15 minutes. **NOTE:** The paths on Lines 16, 24, and 26 must be full paths. You _cannot_ leave the ~ for your home directory.
-
-1. Copy the `local.gmvault.plist` to `~/Library/LaunchAgents/`
-2. Modify:
-    * Line 11: The gmvault binary (`which gmvault`)
-    * Line 16: Directory to backup to
-    * Line 17: Email Address to backup
-    * Line 24/26: Change the path for log file
-3. Load the plist file: `launchctl load ~/Library/LaunchAgents/local.gmvault.plist`
+- Update `~/.offlineimaprc` (this was created during `.dotfiles` install). You will need to update the `remoteuser` and `remotepass` values.
+    - The configuration file is designed to sync email from Fastmail to `~/Mail/Fastmail`. If you are using a different provider or want to sync to a different location, you will need to modify `~/.offlineimaprc` appropriately.
+- Run `~/.dotfiles/extra/20_osx_homebrew_extra.sh`. This will install OfflineIMAP and start the service.

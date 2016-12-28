@@ -18,20 +18,25 @@
   core:
     disabledPackages: [
       "language-gfm"
+      "autocomplete-plus"
     ]
     projectHome: "/Users/dev88/Projects"
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
-      "base16-tomorrow-dark-theme"
+      "one-dark-ui"
+      "atom-material-syntax"
     ]
   editor:
     fontFamily: "Anonymous Pro"
     fontSize: 16
+    scrollPastEnd: true
+    showIndentGuide: true
     tabLength: 4
     tabType: "soft"
   "exception-reporting":
     userId: "4df49cbf-5995-c72b-56b2-7a599a942026"
   "highlight-line": {}
+  pigments:
+    markerType: "native-dot"
   welcome:
     showOnStartup: false
