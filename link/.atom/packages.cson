@@ -1,6 +1,6 @@
 'packages': [
+  'atom-material-syntax'
   'atom-open-marked'
-  'change-case'
   'docblockr'
   'file-icons'
   'git-plus'
@@ -11,6 +11,7 @@
   'language-markdown'
   'parcel'
   'php-twig'
+  'pigments'
   'set-syntax'
   'tabs-to-spaces'
   'tasks'

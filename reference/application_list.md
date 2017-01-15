@@ -112,8 +112,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [HBC] - Power up save dialogs
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS] - Track UPS, Fedex, and other deliveries
-* [Deluge](http://deluge-torrent.org/) [HBC] - BitTorrent Client
-    * [Deluge-Magnet-Handler](https://github.com/Lord-Kamina/Deluge-Magnet-Handler) [DL] - Associate magnet links with Deluge
 * [Dropbox](https://www.dropbox.com/) [HBC] - one folder that syncs
 * [Due](http://www.dueapp.com/mac.html) [MAS] - timer/reminder app that syncs with iOS
 * [Fantastical](http://flexibits.com/fantastical) [HBC] - Better calendar
@@ -135,6 +133,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [HBC] - Create a bootable, whole-disk copy
 * [Timing](http://timingapp.com/) [MAS] - Track computer use
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [HBC] - Open zip (or other format) archives
+* [Transmission](https://transmissionbt.com/) [HBC] - BitTorrent Client
 * [Typinator](http://www.ergonis.com/products/typinator/) [HBC] - Expand keyboard snippets
 
 ## PrefPanes
