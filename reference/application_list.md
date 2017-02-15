@@ -20,6 +20,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [HBC] - Create MKV video files. Also useful for ripping obstinate DVDs
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [ScreenFlow](http://www.telestream.net/screenflow/) [HBC] - Screen recoding software for screencasts
+* [SoundSource](https://rogueamoeba.com/soundsource/) [DL] - The sound control that should be built into MacOS
 * [VLC](http://www.videolan.org/vlc/index.html) [HBC] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [HBC] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
@@ -38,6 +39,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Codekit](https://incident57.com/codekit/) [HBC] - Web developer swiss army tool
 * [CodeRunner](http://krillapps.com/coderunner/) [HBC] - Simple code runner for quick tests
 * [Dash](http://kapeli.com/dash) [HBC] - Documentation viewer
+* [Docker](https://docs.docker.com/docker-for-mac/) [HBC] - Containers for Mac (Still testing this out)
 * [iTerm2](http://www.iterm2.com/) [HBC] - Better terminal than Apple's built-in terminal
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/) [HBC] - File diff tool
 * [MariaDB](https://mariadb.org/) [HBC] - Database server
@@ -284,4 +286,4 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 ## Fonts
 * [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
-`
+

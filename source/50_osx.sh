@@ -40,6 +40,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Pure Comedy
 alias nom="say -v cello i am a cat and i\'m small very small oh so small i am a cat and i\'m probably eating pancakes om nom nom nom nom nom nom om nom nom nom nom nom om nom nom nom nom nom nom nom om nom nom nom nom"
 
+# Initialize Bash Autocompletion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 # Export Localization.prefPane text substitution rules.
 function txt_sub_backup() {
   local prefs=~/Library/Preferences/.GlobalPreferences.plist
