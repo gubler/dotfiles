@@ -193,11 +193,10 @@ I try to have links to every program on the list, but I also list how I install 
 ## Command Line
 * [Homebrew](http://brew.sh/)
 * [git](http://git-scm.com/)
-* [Python](http://www.python.org/) 2.7.x
+* [Python](http://www.python.org/) 3.6.x
     * [Pygments](http://pygments.org/)
-    * [pygments-style-githug](https://pypi.python.org/pypi/pygments-style-github)
+    * [pygments-style-github](https://pypi.python.org/pypi/pygments-style-github)
     * [Sphinx](http://sphinx-doc.org)
-    * [gmvault](http://gmvault.org)
 
 ### Ruby and Gems
 * [Ruby](https://www.ruby-lang.org/)
@@ -206,9 +205,10 @@ I try to have links to every program on the list, but I also list how I install 
     * [Awesome Print](https://github.com/michaeldv/awesome_print)
     * [Bundler](http://bundler.io/)
     * [Pry](http://pryrepl.org/)
+    * [Jekyll](https://jekyllrb.com/)
 
 ### PHP
-* [PHP](http://php.net)
+* [PHP 7.1](http://php.net)
     * [xdebug](http://xdebug.org/)
 * [composer](http://getcomposer.org/)
 
@@ -288,4 +288,5 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 ## Fonts
 * [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
-
+* [Meslo LG for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) [HBC]
+* [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) [HBC]
