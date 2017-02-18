@@ -46,7 +46,7 @@ brew 'mariadb', restart_service: :changed
 ## Apps
 cask '1password'
 cask 'alfred'
-cask 'atom'
+cask 'cloak'
 cask 'dash'
 cask 'dropbox'
 cask 'google-chrome'
@@ -55,7 +55,7 @@ cask 'hyperswitch'
 cask 'iterm2'
 cask 'karabiner-elements'
 cask 'keyboard-maestro'
-cask 'macvim'
+cask 'little-snitch'
 cask 'marked'
 cask 'mattermost'
 cask 'moom'
@@ -65,15 +65,12 @@ cask 'path-finder'
 cask 'phpstorm'
 cask 'sequel-pro'
 cask 'snagit'
+cask 'soundsource'
 cask 'sublime-text'
 cask 'taskpaper'
 cask 'the-unarchiver'
 cask 'typinator'
 cask 'tower'
-cask 'vagrant'
-cask 'vagrant-manager'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
 
 ## Preference Panes
 cask 'hazel'
@@ -87,10 +84,10 @@ cask 'font-meslo-lg-for-powerline'
 cask 'font-inconsolata'
 
 # Mac App Store
+mas '1Blocker - Block ads, tracking scripts, anything', id:1107421413
 mas 'Airmail 2', id:918858936
 mas 'Amphetamine', id:937984704
 mas 'Due', id:524373870
-mas 'Napkin - Image Annotation and Markup', id:581789185
 mas 'Patterns', id:429449079
 mas 'Sip', id: 507257563
 mas 'Timing Automatic Time Tracker', id:431511738

@@ -20,6 +20,7 @@ cask 'colorpicker-skalacolor'
 ## Apps
 cask 'acorn'
 cask 'aerial'
+cask 'atom'
 cask 'audio-hijack'
 cask 'audiobook-builder'
 cask 'backblaze'
@@ -48,7 +49,6 @@ cask 'kaleidoscope'
 cask 'kindle'
 cask 'launchcontrol'
 cask 'levelator'
-cask 'little-snitch'
 cask 'metadatics'
 cask 'mountain'
 cask 'omnigraffle'
@@ -62,9 +62,14 @@ cask 'skype'
 cask 'soulver'
 cask 'steam'
 cask 'superduper'
+cask 'tableflip'
 cask 'transmit'
 cask 'panic-unison'
 cask 'transmission'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'vlc'
 cask 'vmware-fusion'
 cask 'xld'
@@ -78,6 +83,7 @@ mas 'iFlicks 2', id:731062389
 mas 'Keynote', id:409183694
 mas 'Microsoft Remote Desktop', id:715768417
 mas 'Murasaki', id:430300762
+mas 'Napkin - Image Annotation and Markup', id:581789185
 mas 'Numbers', id:409203825
 mas 'Pages', id:409201541
 mas 'Paprika Recipe Manager', id:451907568

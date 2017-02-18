@@ -20,7 +20,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [HBC] - Create MKV video files. Also useful for ripping obstinate DVDs
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [ScreenFlow](http://www.telestream.net/screenflow/) [HBC] - Screen recoding software for screencasts
-* [SoundSource](https://rogueamoeba.com/soundsource/) [DL] - The sound control that should be built into MacOS
+* [SoundSource](https://rogueamoeba.com/soundsource/) [HBC] - The sound control that should be built into MacOS
 * [VLC](http://www.videolan.org/vlc/index.html) [HBC] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [HBC] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
@@ -62,6 +62,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [HBC] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [HBC] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [HBC] - text editor
+* [TableFlip](http://tableflipapp.com/) [HBC] - Markdown table editor
 * [vim](http://www.vim.org/) [HBC] - when in doubt, fall back to vim
 
 ## Games
@@ -73,6 +74,7 @@ I try to have links to every program on the list, but I also list how I install 
         - [Easier Fishing Mod](http://stardewmods.com/resources/easier-fishing.39/) [DL] - Because fishing is a pain in the butt
 
 ## Productivity
+* [1Blocker](https://itunes.apple.com/us/app/1blocker-block-ads-tracking-scripts-anything/id1107421413?mt=12) [MAS] - Content Blocker for macOS
 * [1Password](https://agilebits.com/onepassword/mac) [HBC] - Password manager
 * [Airmail 2](http://airmailapp.com/) [MAS] - Email client
 * [Clarify](http://www.clarify-it.com/) [HBC] - Tutorial creator
