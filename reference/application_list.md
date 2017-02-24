@@ -251,6 +251,8 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 
 ## Atom Plugins
 
+Atom is a nice enough editor, but its _slow_ compared to Sublime. I keep testing it occasionally to see when it gets better.
+
 * atom-beautify
 * atom-material-ui
 * atom-open-marked
@@ -276,8 +278,7 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 
 ## PHPStorm Plugins (installed via PHPStorm)
 * [.gitignore Support](https://github.com/hsz/idea-gitignore)
-* [Codeivate](http://www.codeivate.com/)
-* Dash
+* [Dash](https://github.com/gdelmas/IntelliJDashPlugin)
 * IdeaVim - Testing this, not sure if will remain in use
 * [Material Theme](https://github.com/equinusocio/material-theme)
 * Open in Marked
