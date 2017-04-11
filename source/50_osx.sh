@@ -28,6 +28,9 @@ alias phing=vendor/bin/phing
 # Alias symfony console in projects
 alias sf=bin/console
 
+# Alias for vagrant
+alias v=vagrant
+
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
 
@@ -39,6 +42,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Pure Comedy
 alias nom="say -v cello i am a cat and i\'m small very small oh so small i am a cat and i\'m probably eating pancakes om nom nom nom nom nom nom om nom nom nom nom nom om nom nom nom nom nom nom nom om nom nom nom nom"
+
+# Initialize Bash Autocompletion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Export Localization.prefPane text substitution rules.
 function txt_sub_backup() {
@@ -76,7 +82,7 @@ function s() {
 
 # `a` with no arguments opens current directory in Atom, otherwise opens the given
 # location
-function o() {
+function a() {
   if [ $# -eq 0 ]; then
     atom .
   else
@@ -105,4 +111,10 @@ function composer() {
     STATUS=$?;
     mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.1/conf.d;
     return $STATUS;
+}
+
+# `pw` provides a graphical password prompt for sudo
+# This is used for authenticating with a smart card
+function pw() {
+    osascript -e "do shell script \"$*\" with administrator privileges"
 }

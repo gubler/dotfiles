@@ -6,17 +6,369 @@
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>467032296.65440398</real>
-		<key>IsActive</key>
-		<true/>
+		<real>504290345.19832098</real>
 		<key>Macros</key>
 		<array>
 			<dict>
 				<key>Actions</key>
 				<array>
 					<dict>
-						<key>IsActive</key>
+						<key>KeyCode</key>
+						<integer>0</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>CopyClipboard</string>
+						<key>SourceNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>SourceNamedClipboardUID</key>
+						<string>FB064CD3-273C-4D17-8AE7-6085AB14AD66</string>
+						<key>SourceUseNamedClipboard</key>
+						<false/>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>Markdown Ref Links</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>020A05C3-3FBB-4372-A0AA-A0A563D8C0C7</string>
+						<key>TargetUseNamedClipboard</key>
 						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%NamedClipboard%Markdown Ref Links%</string>
+						<key>Variable</key>
+						<string>MD_CONTENT</string>
+					</dict>
+					<dict>
+						<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
+						<string>Markdown Ref Links</string>
+						<key>ClipboardTargetNamedClipboardUID</key>
+						<string>020A05C3-3FBB-4372-A0AA-A0A563D8C0C7</string>
+						<key>ClipboardTargetUseNamedClipboard</key>
+						<true/>
+						<key>DisplayKind</key>
+						<string>Clipboard</string>
+						<key>IncludeStdErr</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>PlugIn</string>
+						<key>PlugInFolderName</key>
+						<string>km-execute_ruby_script</string>
+						<key>PlugInParameters</key>
+						<dict>
+							<key>Ruby Code</key>
+							<string>require 'shellwords'
+
+if RUBY_VERSION.to_f &gt; 1.9
+	input = ENV.fetch("KMVAR_MD_CONTENT").dup.force_encoding('utf-8')
+else
+	input = ENV.fetch("KMVAR_MD_CONTENT").dup
+end
+
+def find_headers(lines)
+    in_headers = false
+    lines.each_with_index {|line, i|
+        if line =~ /^\w[^\:\[]+\:( .*?)?$/
+            in_headers = true
+        elsif in_headers === true
+            return i
+        else
+            return false
+        end
+    }
+end
+
+links = input.scan(/\((https?:\/\/([^\)]+))\)/)
+refs = input.scan(/^ {0,3}\[[^\^]([^\]]+)\]: (\S+)$/)
+lines = input.split("\n")
+
+bottom = lines[0..-1].join("\n").gsub(/^\[[^\^]([^\]]+)\]: (\S+)\n?/,'')
+
+norepeat = []
+norepeatlinks = []
+output = []
+
+refs.each {|ref|
+	name = ref[0]
+	next if norepeatlinks.include? ref[1]
+	while norepeat.include? name
+		if name =~ / ?[0-9]$/
+			name.next!
+		else 
+			name = name + " 2"
+		end
+	end
+	output &lt;&lt; {'orig' =&gt; ref[0], 'title' =&gt; name, 'link' =&gt; ref[1]}
+	norepeat.push name
+	norepeatlinks.push ref[1]
+}
+
+links.each {|url| 
+		next if norepeatlinks.include? url[0]
+		domain = url[0].match(/https?:\/\/([^\/]+)/)
+		parts = domain[1].split('.')
+		name = case parts.length
+			when 1
+				parts[0]
+			when 2
+				parts[0]
+			else parts[1]
+		end
+	while norepeat.include? name
+		if name =~ / ?[0-9]$/
+			name.next!
+		else 
+			name = name + " 2"
+		end
+	end
+	output &lt;&lt; {'orig' =&gt; url[0], 'title' =&gt; name, 'link' =&gt; url[0] }
+	norepeat.push name
+	norepeatlinks.push url[0]
+}
+output = output.sort {|a,b| a['title'] &lt;=&gt; b['title']}
+o = []
+
+output.each_with_index { |x,i| 
+	o.push("[#{x['title']}]: #{x['link']}")
+	bottom = bottom.gsub(/\((#{Shellwords.escape(x['orig'])}|#{Shellwords.escape(x['link'])})\)/,"[#{x['title']}]").gsub(/\[#{Shellwords.escape(x['orig'])}\]/,"[#{x['title']}]")
+}
+puts bottom + "\n\n#{o.join("\n")}\n"</string>
+						</dict>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Paste</string>
+						<key>MacroActionType</key>
+						<string>ClipboardSwitcherMacroAction</string>
+						<key>Name</key>
+						<string>020A05C3-3FBB-4372-A0AA-A0A563D8C0C7</string>
+						<key>RedundandDisplayName</key>
+						<string>Markdown Ref Links</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>504274417.86040998</real>
+				<key>ModificationDate</key>
+				<real>504290209.78560698</real>
+				<key>Name</key>
+				<string>1. [md] Inline Links to Ref</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>40</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A116AA72-92A3-4B56-BFC8-F42E511D9B8D</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>[Dev88] Text Manipulation [^⌥⌘K ]</string>
+		<key>ToggleMacroUID</key>
+		<string>D4BC3BF7-652B-478C-9612-C1BD4EBDDAE9</string>
+		<key>UID</key>
+		<string>6CE270B7-09A7-428C-A0C7-4CFB9341C003</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>504290345.19832098</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>CopyClipboard</string>
+						<key>SourceNamedClipboardRedundantDisplayName</key>
+						<string>Default Clipboard</string>
+						<key>SourceNamedClipboardUID</key>
+						<string>FB064CD3-273C-4D17-8AE7-6085AB14AD66</string>
+						<key>SourceUseNamedClipboard</key>
+						<false/>
+						<key>TargetNamedClipboardRedundantDisplayName</key>
+						<string>TitleCase</string>
+						<key>TargetNamedClipboardUID</key>
+						<string>EFE66C07-136E-4060-A7DF-FAE39A4F20EF</string>
+						<key>TargetUseNamedClipboard</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%NamedClipboard%TitleCase%</string>
+						<key>Variable</key>
+						<string>TITLE_CASE</string>
+					</dict>
+					<dict>
+						<key>ClipboardTargetNamedClipboardRedundantDisplayName</key>
+						<string>TitleCase</string>
+						<key>ClipboardTargetNamedClipboardUID</key>
+						<string>EFE66C07-136E-4060-A7DF-FAE39A4F20EF</string>
+						<key>ClipboardTargetUseNamedClipboard</key>
+						<true/>
+						<key>DisplayKind</key>
+						<string>Clipboard</string>
+						<key>IncludeStdErr</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>PlugIn</string>
+						<key>PlugInFolderName</key>
+						<string>km-execute_ruby_script</string>
+						<key>PlugInParameters</key>
+						<dict>
+							<key>Ruby Code</key>
+							<string>class String
+  def titlecase
+    small_words = %w(a an and as at but by en for if in of on or the to with v v. via vs vs.)
+    
+    x = split(" ").map do |word|
+      # note: word could contain non-word characters!
+      # downcase all small_words, capitalize the rest
+      small_words.include?(word.gsub(/\W/, "").downcase) ? word.downcase! : word.smart_capitalize!
+      word
+    end
+    # capitalize first and last words
+    x.first.to_s.smart_capitalize!
+    x.last.to_s.smart_capitalize!
+    # small words after colons are capitalized
+    x.join(" ").gsub(/:\s?(\W*#{small_words.join("|")}\W*)\s/) { ": #{$1.smart_capitalize} " }
+  end
+  
+  def titlecase!
+    replace(titlecase)
+  end
+  
+  def smart_capitalize
+    # ignore any leading crazy characters and capitalize the first real character
+    if self =~ /^['"\(\[']*([a-z])/
+      i = index($1)
+      x = self[i,self.length]
+      # word with capitals and periods mid-word are left alone
+      self[i,1] = self[i,1].upcase unless x =~ /[A-Z]/ or x =~ /\.\w+/
+    end
+    self
+  end
+  
+  def smart_capitalize!
+    replace(smart_capitalize)
+  end
+end
+
+ENV.fetch("KMVAR_TITLE_CASE").dup.titlecase</string>
+						</dict>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Paste</string>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ClipboardSwitcherMacroAction</string>
+						<key>Name</key>
+						<string>EFE66C07-136E-4060-A7DF-FAE39A4F20EF</string>
+						<key>RedundandDisplayName</key>
+						<string>TitleCase</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>504273754.57320702</real>
+				<key>ModificationDate</key>
+				<real>504290341.05245</real>
+				<key>Name</key>
+				<string>2. Title Case Selection</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>40</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F6F148F9-A6EF-4508-8B4A-9C0A3D701AF1</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>[Dev88] Text Manipulation [^⌥⌘K ]</string>
+		<key>ToggleMacroUID</key>
+		<string>D4BC3BF7-652B-478C-9612-C1BD4EBDDAE9</string>
+		<key>UID</key>
+		<string>6CE270B7-09A7-428C-A0C7-4CFB9341C003</string>
+	</dict>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>504290345.19832098</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -35,8 +387,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<string>Note: You can customize 'EDIT_ANYWHERE_FILE'</string>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -49,8 +399,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 					<dict>
 						<key>ActionName</key>
 						<string>Store to the name of the active application to the variable ‘EditAnywhereApp’</string>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -63,8 +411,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 					<dict>
 						<key>ActionName</key>
 						<string>Type the ⌘A Keystroke (This should trigger 'Select All Text')</string>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
@@ -79,8 +425,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 					<dict>
 						<key>ActionName</key>
 						<string>Type the ⌘A Keystroke (This should trigger 'Select All Text')</string>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
@@ -93,8 +437,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<false/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -105,8 +447,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<true/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
@@ -121,22 +461,16 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 					<dict>
 						<key>Action</key>
 						<string>ByTyping</string>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
 						<string>InsertText</string>
-						<key>Paste</key>
-						<false/>
 						<key>Text</key>
 						<string>(Waiting for EditAnywhere)</string>
 					</dict>
 					<dict>
 						<key>ActionName</key>
 						<string>Type the ⌘A Keystroke (This should trigger 'Select All Text')</string>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>KeyCode</key>
@@ -149,8 +483,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<false/>
 					</dict>
 					<dict>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -167,10 +499,6 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<string>None</string>
 						<key>IncludeStdErr</key>
 						<true/>
-						<key>IsActive</key>
-						<true/>
-						<key>IsDisclosed</key>
-						<true/>
 						<key>MacroActionType</key>
 						<string>ExecuteShellScript</string>
 						<key>Path</key>
@@ -178,23 +506,23 @@ Do not change the variable name (EDIT_ANYWHERE_FILE) just change the part in the
 						<key>Text</key>
 						<string>#!/bin/zsh -f
 
+## This is the app that you want to use as your external editor
+## Note that it should not include the '.app' suffix
+##
+## Examples:
+##  APP='BBEdit'
+##  APP='TextWrangler'
+##  APP='MultiMarkdown Composer'
+##  APP='Sublime Text'
+##  APP='Atom'
 
-    ## This is the app that you want to use as your external editor
-    ## Note that it should not include the '.app' suffix
-    ##
-    ## Examples:
-    ##  APP='BBEdit'
-    ##  APP='TextWrangler'
-    ##  APP='MultiMarkdown Composer'
-    ##  APP='Sublime Text'
-    ##
-APP='Sublime Text'
+APP='Atom'
 
-    ## OS X no longer has a good way to ensure that GUI apps like
-    ## Keyboard Maestro have access to your $PATH so I often just create
-    ## a text file in my $HOME which I can use in all my scripts. This
-    ## checks to see if that file exists, and if it does not exist, it
-    ## will use the PATH as defined in the second half of the if/else
+## OS X no longer has a good way to ensure that GUI apps like
+## Keyboard Maestro have access to your $PATH so I often just create
+## a text file in my $HOME which I can use in all my scripts. This
+## checks to see if that file exists, and if it does not exist, it
+## will use the PATH as defined in the second half of the if/else
 
 if [[ -e "$HOME/.path" ]]
 then
@@ -202,9 +530,6 @@ then
 else
     PATH=/usr/local/scripts:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
 fi
-
-
-
 
 ####|####|####|####|####|####|####|####|####|####|####|####|####|####|####
 #
@@ -234,88 +559,6 @@ NAME="[Edit Anywhere via Keyboard Maestro]"
     ## Change this if necessary
     ## Used for pbcopy and pbpaste
 LANG=en_US.UTF-8
-
-zmodload zsh/datetime ## needed for strftime
-
-function timestamp { strftime "%Y-%m-%d--%H.%M.%S" "$EPOCHSECONDS" }
-
-    # This gives us a unique reference point for when the script was launched
-TIME=`strftime "%Y-%m-%d--%H.%M.%S" "$EPOCHSECONDS"`
-
-
-if (( $+commands[growlnotify] ))
-then
-        ## We found the growlnotify tool installed
-    GROWLNOTIFY_FOUND='yes'
-
-        ## We only check to see if Growl.app is running IFF we have
-        ## found growlnotify because otherwise there's no point caring.
-
-    if [ "`pgrep -x Growl`" = "" ]
-    then
-            ## Growl is NOT running
-        GROWL_RUNNING='no'
-    else
-            ## Growl IS running
-        GROWL_RUNNING='yes'
-    fi
-
-else
-        ## We did NOT find the growlnotify tool installed
-    GROWLNOTIFY_FOUND='no'
-
-        ## We just set this to 'no' because it doesn't matter, if the
-        ## growlnotify tool isn't found too.
-    GROWL_RUNNING='no'
-fi
-
-
-if [ "$GROWL_RUNNING" = "yes" -a "$GROWLNOTIFY_FOUND" = "yes" ]
-then
-    ## If growlnotify is installed AND Growl.app is running, use Growl for notifications
-
-    function msg
-    {
-        growlnotify \
-        --appIcon "$APP" \
-        --identifier "$NAME" \
-        --message "$@" \
-        --title "$NAME"
-
-    } ## end of msg/growl
-
-
-elif (( $+commands[terminal-notifier] ))
-then
-    ## OTHERWISE, use terminal-notifier for notifications, if it is installed.
-
-    function msg
-    {
-        if [[ -e "/Applications/$APP.app/Contents/Info.plist" ]]
-        then
-                ## If there is an app plist where we'd expect it to be, try to get the Bundle identifier from it
-
-            TN_BUNDLE_ID=`defaults read /Applications/${APP}.app/Contents/Info CFBundleIdentifier`
-        fi
-
-                ## If we were not able to get a bundle ID, use Keyboard Maestro's
-        [[ "$TN_BUNDLE_ID" == "" ]] &amp;&amp; TN_BUNDLE_ID='com.stairways.keyboardmaestro.editor'
-
-        terminal-notifier \
-            -title "$NAME" \
-            -subtitle "`timestamp`" \
-            -group "$NAME" \
-            -sender "$TN_BUNDLE_ID" \
-            -activate "$TN_BUNDLE_ID" \
-            -message "$@"
-    } ## end of msg/terminal-notifier
-
-else
-
-    function msg { echo "$NAME: $@" | tee -a "${TMPDIR-/tmp/}${NAME}.$TIME.log" }
-
-fi
-
 
 ###########################################################################################
 ###########################################################################################
@@ -390,6 +633,15 @@ else
     CL_SUBL='no'
 fi
 
+if (( $+commands[atom] ))
+then
+        ## We found the command line subl tool
+    CL_ATOM='yes'
+else
+        ## We did NOT find the command line subl tool
+    CL_ATOM='no'
+fi
+
 if [[ "$CL_BBEDIT" = "yes" &amp;&amp; "$APP:l" == "bbedit" ]]
 then
         ## IFF the user wants to use BBEdit and they have the bbedit
@@ -408,22 +660,38 @@ then
         --wait \
         -- "$FILE" \
      || open -n -e -W "$FILE"
-# else if app is Sublime Text
-elif [[ "$CL_SUBL" = "yes" &amp;&amp; "$APP:l" == "sublime text" ]] 
+# else if app is Atom
+elif [[ "$CL_ATOM" = "yes" &amp;&amp; "$APP:l" == "atom" ]] 
 then
         ## IFF the user wants to use Sublime Text and they have the subl
         ## command line tool installed, then we will use the subl tool
 
         ## if Sublime Text is not running, launch it
-    pgrep -xq "Sublime Text" || (open -a "Sublime Text" &amp;&amp; sleep 3)
+    pgrep -xq "Atom" || (open -a "Atom" &amp;&amp; sleep 3)
 
         ## We will try to open the app with the subl command,
         ## but if it fails we will open TextEdit
-    subl \
+    atom \
         --new-window \
         --wait \
         -- "$FILE" \
      || open -n -e -W "$FILE"
+# else if app is Atom
+elif [[ "$CL_SUBL" = "yes" &amp;&amp; "$APP:l" == "sublime text" ]] 
+then
+       ## IFF the user wants to use Sublime Text and they have the subl
+       ## command line tool installed, then we will use the subl tool
+
+       ## if Sublime Text is not running, launch it
+   pgrep -xq "Sublime Text" || (open -a "Sublime Text" &amp;&amp; sleep 3)
+
+       ## We will try to open the app with the subl command,
+       ## but if it fails we will open TextEdit
+   subl \
+       --new-window \
+       --wait \
+       -- "$FILE" \
+    || open -n -e -W "$FILE"
 
 else
         ## if we get here, either the app is NOT BBEdit or Sublime Text
@@ -520,7 +788,7 @@ pbcopy &lt; "$FILE"
         ## This will be 'txt' unless you changed $FILE
     EXT="$FILE:e"
 
-/bin/mv -n "$FILE" "$HOME/.Trash/$SHORT.`timestamp`.$EXT"
+/bin/mv -n "$FILE" "$HOME/.Trash/$SHORT.$EXT"
 
 exit 0
 #EOF</string>
@@ -563,10 +831,6 @@ exit 0
 						<key>ElseActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>KeyCode</key>
 								<integer>9</integer>
 								<key>MacroActionType</key>
@@ -577,8 +841,6 @@ exit 0
 								<false/>
 							</dict>
 						</array>
-						<key>IsActive</key>
-						<true/>
 						<key>IsDisclosed</key>
 						<false/>
 						<key>MacroActionType</key>
@@ -586,10 +848,6 @@ exit 0
 						<key>ThenActions</key>
 						<array>
 							<dict>
-								<key>IsActive</key>
-								<true/>
-								<key>IsDisclosed</key>
-								<true/>
 								<key>MacroActionType</key>
 								<string>SelectMenuItem</string>
 								<key>Menu</key>
@@ -607,12 +865,10 @@ exit 0
 				</array>
 				<key>CreationDate</key>
 				<real>459387347.72605699</real>
-				<key>IsActive</key>
-				<true/>
 				<key>ModificationDate</key>
-				<real>460643104.23079503</real>
+				<real>504291453.08367801</real>
 				<key>Name</key>
-				<string>Edit Anywhere</string>
+				<string>3. Edit Anywhere</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
@@ -631,11 +887,11 @@ exit 0
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Global Macro Group</string>
+		<string>[Dev88] Text Manipulation [^⌥⌘K ]</string>
 		<key>ToggleMacroUID</key>
-		<string>9B092CF4-83B4-43D4-9DE3-2C7C51251592</string>
+		<string>D4BC3BF7-652B-478C-9612-C1BD4EBDDAE9</string>
 		<key>UID</key>
-		<string>DA8512F7-F323-46B1-8319-752E0495CFD0</string>
+		<string>6CE270B7-09A7-428C-A0C7-4CFB9341C003</string>
 	</dict>
 </array>
 </plist>

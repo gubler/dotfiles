@@ -1,0 +1,30 @@
+[general]
+
+metadata = ~/.offlineimap
+accounts = fastmail
+
+# TTYUI         -- a text-based (terminal) interface
+# Basic         -- Noninteractive interface suitable for cron'ing
+ui = ttyui
+
+maxsyncaccounts = 4
+socktimeout = 60
+
+[Account fastmail]
+localrepository = fastmail-local
+remoterepository = fastmail-remote
+
+[Repository fastmail-local]
+type = Maildir
+localfolders = ~/Mail/Fastmail
+
+[Repository fastmail-remote]
+type = IMAP
+remotehost = imap.fastmail.com
+remoteuser = FASTMAIL_EMAIL
+remotepass = FASTMAIL_PASSWORD
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/cert.pem
+maxsize = 20000000
+folderfilter = lambda foldername: foldername not in ['Trash', 'Spam']

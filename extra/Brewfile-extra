@@ -1,5 +1,8 @@
 cask_args appdir: '/Applications'
 
+# Brew
+brew offlineimap, restart_service: :changed
+
 # Casks
 ## Quicklook Generators
 cask 'betterzipql'
@@ -16,7 +19,23 @@ cask 'colorpicker-skalacolor'
 
 ## Apps
 cask 'acorn'
+cask 'cloak'
+cask 'dash'
+cask 'hammerspoon'
+cask 'hyperswitch'
+cask 'karabiner-elements'
+cask 'keyboard-maestro'
+cask 'little-snitch'
+cask 'marked'
+cask 'mattermost'
+cask 'moom'
+cask 'nvalt'
+cask 'phpstorm'
+cask 'sequel-pro'
+cask 'snagit'
+cask 'tower'
 cask 'aerial'
+cask 'atom'
 cask 'audio-hijack'
 cask 'audiobook-builder'
 cask 'backblaze'
@@ -32,7 +51,6 @@ cask 'codekit'
 cask 'coderunner'
 cask 'daisydisk'
 cask 'default-folder-x'
-cask 'deluge'
 cask 'devonthink-pro-office'
 cask 'droplr'
 cask 'fantastical'
@@ -46,7 +64,6 @@ cask 'kaleidoscope'
 cask 'kindle'
 cask 'launchcontrol'
 cask 'levelator'
-cask 'little-snitch'
 cask 'metadatics'
 cask 'mountain'
 cask 'omnigraffle'
@@ -57,13 +74,17 @@ cask 'screenflow'
 cask 'scrivener'
 cask 'simple-comic'
 cask 'skype'
-cask 'slack-beta'
-cask 'snagit'
 cask 'soulver'
 cask 'steam'
 cask 'superduper'
+cask 'tableflip'
 cask 'transmit'
 cask 'panic-unison'
+cask 'transmission'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'vlc'
 cask 'vmware-fusion'
 cask 'xld'
@@ -77,6 +98,7 @@ mas 'iFlicks 2', id:731062389
 mas 'Keynote', id:409183694
 mas 'Microsoft Remote Desktop', id:715768417
 mas 'Murasaki', id:430300762
+mas 'Napkin - Image Annotation and Markup', id:581789185
 mas 'Numbers', id:409203825
 mas 'Pages', id:409201541
 mas 'Paprika Recipe Manager', id:451907568

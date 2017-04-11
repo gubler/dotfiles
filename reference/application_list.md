@@ -20,6 +20,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [HBC] - Create MKV video files. Also useful for ripping obstinate DVDs
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [ScreenFlow](http://www.telestream.net/screenflow/) [HBC] - Screen recoding software for screencasts
+* [SoundSource](https://rogueamoeba.com/soundsource/) [HBC] - The sound control that should be built into MacOS
 * [VLC](http://www.videolan.org/vlc/index.html) [HBC] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [HBC] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
 
@@ -38,6 +39,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Codekit](https://incident57.com/codekit/) [HBC] - Web developer swiss army tool
 * [CodeRunner](http://krillapps.com/coderunner/) [HBC] - Simple code runner for quick tests
 * [Dash](http://kapeli.com/dash) [HBC] - Documentation viewer
+* [Docker](https://docs.docker.com/docker-for-mac/) [HBC] - Containers for Mac (Still testing this out)
 * [iTerm2](http://www.iterm2.com/) [HBC] - Better terminal than Apple's built-in terminal
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/) [HBC] - File diff tool
 * [MariaDB](https://mariadb.org/) [HBC] - Database server
@@ -60,6 +62,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [HBC] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [HBC] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [HBC] - text editor
+* [TableFlip](http://tableflipapp.com/) [HBC] - Markdown table editor
 * [vim](http://www.vim.org/) [HBC] - when in doubt, fall back to vim
 
 ## Games
@@ -71,6 +74,7 @@ I try to have links to every program on the list, but I also list how I install 
         - [Easier Fishing Mod](http://stardewmods.com/resources/easier-fishing.39/) [DL] - Because fishing is a pain in the butt
 
 ## Productivity
+* [1Blocker](https://itunes.apple.com/us/app/1blocker-block-ads-tracking-scripts-anything/id1107421413?mt=12) [MAS] - Content Blocker for macOS
 * [1Password](https://agilebits.com/onepassword/mac) [HBC] - Password manager
 * [Airmail 2](http://airmailapp.com/) [MAS] - Email client
 * [Clarify](http://www.clarify-it.com/) [HBC] - Tutorial creator
@@ -78,6 +82,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [DevonThink Pro Office](http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html) [HBC] - Document Management
 * [Marked 2](http://marked2app.com/) [HBC] - Markdown viewer
 * [OmniFocus](http://www.omnigroup.com/omnifocus) [HBC] - Task manager
+  * [ofexport2](https://github.com/psidnell/ofexport2) [DL] - Export OmniFocus to multiple formats
 * [OmniGraffle Professional](http://www.omnigroup.com/omnigraffle/) [HBC] - Diagram generator
 * [Paprika](http://www.paprikaapp.com/) [MAS] - Recipe manager
 * [Path Finder](http://www.cocoatech.com/pathfinder/) [HBC] - Finder replacement
@@ -111,8 +116,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [HBC] - Power up save dialogs
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS] - Track UPS, Fedex, and other deliveries
-* [Deluge](http://deluge-torrent.org/) [HBC] - BitTorrent Client
-    * [Deluge-Magnet-Handler](https://github.com/Lord-Kamina/Deluge-Magnet-Handler) [DL] - Associate magnet links with Deluge
 * [Dropbox](https://www.dropbox.com/) [HBC] - one folder that syncs
 * [Due](http://www.dueapp.com/mac.html) [MAS] - timer/reminder app that syncs with iOS
 * [Fantastical](http://flexibits.com/fantastical) [HBC] - Better calendar
@@ -134,6 +137,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [SuperDuper!](http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html) [HBC] - Create a bootable, whole-disk copy
 * [Timing](http://timingapp.com/) [MAS] - Track computer use
 * [The Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) [HBC] - Open zip (or other format) archives
+* [Transmission](https://transmissionbt.com/) [HBC] - BitTorrent Client
 * [Typinator](http://www.ergonis.com/products/typinator/) [HBC] - Expand keyboard snippets
 
 ## PrefPanes
@@ -189,11 +193,10 @@ I try to have links to every program on the list, but I also list how I install 
 ## Command Line
 * [Homebrew](http://brew.sh/)
 * [git](http://git-scm.com/)
-* [Python](http://www.python.org/) 2.7.x
+* [Python](http://www.python.org/) 3.6.x
     * [Pygments](http://pygments.org/)
-    * [pygments-style-githug](https://pypi.python.org/pypi/pygments-style-github)
+    * [pygments-style-github](https://pypi.python.org/pypi/pygments-style-github)
     * [Sphinx](http://sphinx-doc.org)
-    * [gmvault](http://gmvault.org)
 
 ### Ruby and Gems
 * [Ruby](https://www.ruby-lang.org/)
@@ -202,22 +205,21 @@ I try to have links to every program on the list, but I also list how I install 
     * [Awesome Print](https://github.com/michaeldv/awesome_print)
     * [Bundler](http://bundler.io/)
     * [Pry](http://pryrepl.org/)
+    * [Jekyll](https://jekyllrb.com/)
 
 ### PHP
-* [PHP](http://php.net)
+* [PHP 7.1](http://php.net)
     * [xdebug](http://xdebug.org/)
 * [composer](http://getcomposer.org/)
 
 ### Node & npm
 * [node](http://nodejs.org/)
-    * [nave](https://github.com/isaacs/nave)
 * [npm](https://npmjs.org/)
-    * [jshint](http://jshint.com/)
-    * yarn
+* [yarn](https://yarnpkg.com/)
 
 ## Sublime Text Packages
 
-These plugins are installed via [Package Control](https://packagecontol.io/) using the `extra/40_osx_sublime_text.sh` script.
+These plugins are installed via [Package Control](https://packagecontrol.io/) using the `extra/40_osx_sublime_text.sh` script.
 
 * [Alignment](https://packagecontrol.io/packages/Alignment)
 * [Bracket Highlighter](https://packagecontrol.io/packages/BracketHighlighter)
@@ -249,6 +251,8 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 
 ## Atom Plugins
 
+Atom is a nice enough editor, but its _slow_ compared to Sublime. I keep testing it occasionally to see when it gets better.
+
 * atom-beautify
 * atom-material-ui
 * atom-open-marked
@@ -274,8 +278,7 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 
 ## PHPStorm Plugins (installed via PHPStorm)
 * [.gitignore Support](https://github.com/hsz/idea-gitignore)
-* [Codeivate](http://www.codeivate.com/)
-* Dash
+* [Dash](https://github.com/gdelmas/IntelliJDashPlugin)
 * IdeaVim - Testing this, not sure if will remain in use
 * [Material Theme](https://github.com/equinusocio/material-theme)
 * Open in Marked
@@ -286,3 +289,5 @@ These plugins are installed via [Package Control](https://packagecontol.io/) usi
 ## Fonts
 * [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
+* [Meslo LG for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) [HBC]
+* [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) [HBC]

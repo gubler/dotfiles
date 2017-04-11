@@ -13,9 +13,3 @@ if [[ ! "$(type -P sphinx-build)" ]]; then
   e_header "Installing Sphinx"
   sudo pip install Sphinx
 fi
-
-# Install gmvault
-if [[ ! "$(type -P gmvault)" ]]; then
-  e_header "Installing gmvault"
-  sudo pip install gmvault
-fi

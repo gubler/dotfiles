@@ -5,4 +5,6 @@
 echo ""
 echo "Install Extra Homebrew apps"
 
-brew bundle --file=extra/Brewfile-extra
+brew bundle --file=$DOTFILES/extra/Brewfile-extra
+
+brew services start offlineimap
