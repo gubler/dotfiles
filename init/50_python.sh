@@ -13,3 +13,9 @@ if [[ ! "$(type -P sphinx-build)" ]]; then
   e_header "Installing Sphinx"
   sudo pip install Sphinx
 fi
+
+# Install Mutagen
+if [[ ! "$(type -P mutagen-inspect)" ]]; then
+  e_header "Installing Mutagen"
+  sudo pip install mutagen
+fi

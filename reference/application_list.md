@@ -57,7 +57,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [VMware Fusion](http://www.vmware.com/products/fusion/) [HBC] - More robust virtual machine software
 
 ## Editors
-* [Atom](https://atom.io/) [HBC] - text editor
 * [nvALT](http://brettterpstra.com/projects/nvalt/) [HBC] - quick notes manager/editor
 * [PHPStorm](https://www.jetbrains.com/phpstorm/) [HBC] - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [HBC] - long form writing tool
@@ -95,14 +94,12 @@ I try to have links to every program on the list, but I also list how I install 
 
 ## eBook
 * [calibre](http://calibre-ebook.com/) [HBC] - eBook manager
-* [Murasaki](http://genjiapp.com/mac/murasaki/index_en.html) [MAS] - ePub reader
 * [Simple Comic](http://dancingtortoise.com/simplecomic/) [HBC] - comic book reader
 
 ## Social
 * [Mattermost](https://about.mattermost.com/) [HBC] - Chat client
 * [Slack](https://slack.com/) [MAS] - team chat client
 * [Skype](http://www.skype.com) [HBC] - internet phone calls
-* [TweetBot](http://tapbots.com/software/tweetbot/mac/) [MAS] - Twitter client
 * [Unison](https://download.panic.com/unison/) [HBC] - Usenet client
 
 ## Utilities
@@ -123,7 +120,6 @@ I try to have links to every program on the list, but I also list how I install 
 * [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS] - Battery manager
 * [Google Chrome](https://www.google.com/chrome/) [HBC] - preferred browser
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [HBC] - Resource usage (CPU, memory, network, etc) graphs in the menubar
-* [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) [HBC] - Used to remap F19 to Hyper (command-control-option-shift)
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [HBC] - Super-powered keyboard macros
 * [LaunchControl](http://www.soma-zone.com/LaunchControl/) [HBC] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [HBC]
@@ -143,6 +139,7 @@ I try to have links to every program on the list, but I also list how I install 
 ## PrefPanes
 * [Hazel](http://www.noodlesoft.com/hazel.php) [HBC] - move files according to riles
 * [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/) [HBC] - Set what app opens what files
+* [Witch](https://manytricks.com/witch/) [HBC] - Replacement app switcher (⌘⇥)
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
@@ -197,6 +194,7 @@ I try to have links to every program on the list, but I also list how I install 
     * [Pygments](http://pygments.org/)
     * [pygments-style-github](https://pypi.python.org/pypi/pygments-style-github)
     * [Sphinx](http://sphinx-doc.org)
+    * [Mutagen](https://mutagen.readthedocs.org/)
 
 ### Ruby and Gems
 * [Ruby](https://www.ruby-lang.org/)
@@ -249,33 +247,6 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 * [Table Editor](https://packagecontrol.io/packages/Table%20Editor)
 * [Trimmer](https://packagecontrol.io/packages/Trimmer)
 
-## Atom Plugins
-
-Atom is a nice enough editor, but its _slow_ compared to Sublime. I keep testing it occasionally to see when it gets better.
-
-* atom-beautify
-* atom-material-ui
-* atom-open-marked
-* change-case
-* color-picker
-* docblockr
-* emmet
-* file-icons
-* git-plus
-* highlight-line
-* indentation-indicator
-* language-dotfiles
-* language-generic-config
-* language-markdown
-* less-than-slash
-* minimap
-* parcel
-* php-twig
-* set-syntax
-* tabs-to-spaces
-* tasks
-* trailing-spaces
-
 ## PHPStorm Plugins (installed via PHPStorm)
 * [.gitignore Support](https://github.com/hsz/idea-gitignore)
 * [Dash](https://github.com/gdelmas/IntelliJDashPlugin)
@@ -291,3 +262,12 @@ Atom is a nice enough editor, but its _slow_ compared to Sublime. I keep testing
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
 * [Meslo LG for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) [HBC]
 * [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) [HBC]
+
+
+## Work Only
+
+These programs are only for my work computers (which also aren't on the latest version of OS X/macOS).
+
+- [Contexts](https://contexts.co) [DL] - Used instead of Witch for application switching because the work computers are on an older version of macOS.
+- [Karabiner](https://pqrs.org/osx/karabiner/) [DL] - Fixes MS Sculpt Keyboard modifiers keys (in association with the `private.xml` file)
+- [Seil](https://pqrs.org/osx/karabiner/seil.html.en) [DL] - Works with Karabiner to convert Caps Lock to a Hyper (⌘⌥^⇧) key. Need to go into Settings → Keyboard → Modifier Keys and set Caps Lock to "No Action".

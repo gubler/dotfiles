@@ -21,9 +21,6 @@ cask 'colorpicker-skalacolor'
 cask 'acorn'
 cask 'cloak'
 cask 'dash'
-cask 'hammerspoon'
-cask 'hyperswitch'
-cask 'karabiner-elements'
 cask 'keyboard-maestro'
 cask 'little-snitch'
 cask 'marked'
@@ -35,7 +32,6 @@ cask 'sequel-pro'
 cask 'snagit'
 cask 'tower'
 cask 'aerial'
-cask 'atom'
 cask 'audio-hijack'
 cask 'audiobook-builder'
 cask 'backblaze'
@@ -44,7 +40,6 @@ cask 'base'
 cask 'battle-net'
 cask 'bettertouchtool'
 cask 'calibre'
-cask 'cheatsheet'
 cask 'chronosync'
 cask 'clarify'
 cask 'codekit'
@@ -97,8 +92,6 @@ mas 'FruitJuice', id:671736912
 mas 'iFlicks 2', id:731062389
 mas 'Keynote', id:409183694
 mas 'Microsoft Remote Desktop', id:715768417
-mas 'Murasaki', id:430300762
-mas 'Napkin - Image Annotation and Markup', id:581789185
 mas 'Numbers', id:409203825
 mas 'Pages', id:409201541
 mas 'Paprika Recipe Manager', id:451907568
@@ -106,4 +99,3 @@ mas 'Pixelmator', id:407963104
 mas 'Reeder', id:880001334
 mas 'Shush', id:496437906
 mas 'Spillo', id:873245660
-mas 'Tweetbot', id:557168941
