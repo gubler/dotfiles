@@ -46,6 +46,7 @@ brew 'mariadb', restart_service: :changed
 ## Apps
 cask '1password'
 cask 'alfred'
+cask 'devonthink-pro-office'
 cask 'dropbox'
 cask 'google-chrome'
 cask 'iterm2'
@@ -67,6 +68,19 @@ cask 'font-anonymous-pro'
 cask 'font-hack'
 cask 'font-meslo-lg-for-powerline'
 cask 'font-inconsolata'
+
+## Quicklook Generators
+cask 'betterzipql'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'ttscoff-mmd-quicklook'
+
+## Color Pickers
+cask 'colorpicker-developer'
+cask 'colorpicker-skalacolor'
 
 # Mac App Store
 mas '1Blocker - Block ads, tracking scripts, anything', id:1107421413

@@ -14,6 +14,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [HBC] - Convert piles of MP3 or M4A files into a M4B audiobook file
 * [Fission](https://www.rogueamoeba.com/fission/) [HBC] - Quick audio editing
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS] - Add metadata and prepare for videos for iTunes playback
+* [Hermes](http://hermesapp.org/) [HBC] - Pandora client
 * [Levelator](http://web.archive.org/web/20130729204551id_/http://www.conversationsnetwork.org/levelator/) [HBC] - Fix levels in audio files (makes podcast sound less bad)
 * [MediaHuman Audio Converter](http://www.mediahuman.com/audio-converter/) [DL] - Convert M4A audio files to MP3s
 * [Metadatics](http://markvapps.com/metadatics) [HBC] - ID3 tag editing for mp3 files
@@ -39,7 +40,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Codekit](https://incident57.com/codekit/) [HBC] - Web developer swiss army tool
 * [CodeRunner](http://krillapps.com/coderunner/) [HBC] - Simple code runner for quick tests
 * [Dash](http://kapeli.com/dash) [HBC] - Documentation viewer
-* [Docker](https://docs.docker.com/docker-for-mac/) [HBC] - Containers for Mac (Still testing this out)
+* [Docker](https://docs.docker.com/docker-for-mac/) [HBC] - Containers for Mac
 * [iTerm2](http://www.iterm2.com/) [HBC] - Better terminal than Apple's built-in terminal
 * [Kaleidoscope](http://www.kaleidoscopeapp.com/) [HBC] - File diff tool
 * [MariaDB](https://mariadb.org/) [HBC] - Database server
@@ -57,8 +58,8 @@ I try to have links to every program on the list, but I also list how I install 
 * [VMware Fusion](http://www.vmware.com/products/fusion/) [HBC] - More robust virtual machine software
 
 ## Editors
-* [nvALT](http://brettterpstra.com/projects/nvalt/) [HBC] - quick notes manager/editor
-* [PHPStorm](https://www.jetbrains.com/phpstorm/) [HBC] - PHP IDE
+* [JetBrains Toolbox](https://www.jetbrains.com/toolbox/) [HBC] - Manages JetBrains applications
+    * [PHPStorm](https://www.jetbrains.com/phpstorm/) - PHP IDE
 * [Scrivener](http://www.literatureandlatte.com/scrivener.php) [HBC] - long form writing tool
 * [Sublime Text 3](http://www.sublimetext.com/3) [HBC] - text editor
 * [TableFlip](http://tableflipapp.com/) [HBC] - Markdown table editor
@@ -110,6 +111,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Bartender 2](http://www.macbartender.com/) [HBC] - Wrangle menubar apps
 * [BetterTouchTool](http://www.boastr.net/) [HBC] - Input utility
 * [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [HBC] - File sync tool
+* [Contexts](https://contexts.co) [HBC] - Replacement app switcher (⌘⇥)
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
 * [Default Folder X](http://stclairsoft.com/DefaultFolderX/) [HBC] - Power up save dialogs
 * [Deliveries](http://junecloud.com/software/mac/deliveries.html) [MAS] - Track UPS, Fedex, and other deliveries
@@ -120,6 +122,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS] - Battery manager
 * [Google Chrome](https://www.google.com/chrome/) [HBC] - preferred browser
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [HBC] - Resource usage (CPU, memory, network, etc) graphs in the menubar
+* [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements/pull/170) - using an alternate build from the linked merge request.
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [HBC] - Super-powered keyboard macros
 * [LaunchControl](http://www.soma-zone.com/LaunchControl/) [HBC] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [HBC]
@@ -139,7 +142,6 @@ I try to have links to every program on the list, but I also list how I install 
 ## PrefPanes
 * [Hazel](http://www.noodlesoft.com/hazel.php) [HBC] - move files according to riles
 * [rcDefaultApp](http://www.rubicode.com/Software/RCDefaultApp/) [HBC] - Set what app opens what files
-* [Witch](https://manytricks.com/witch/) [HBC] - Replacement app switcher (⌘⇥)
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
@@ -267,7 +269,5 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 ## Work Only
 
 These programs are only for my work computers (which also aren't on the latest version of OS X/macOS).
-
-- [Contexts](https://contexts.co) [DL] - Used instead of Witch for application switching because the work computers are on an older version of macOS.
 - [Karabiner](https://pqrs.org/osx/karabiner/) [DL] - Fixes MS Sculpt Keyboard modifiers keys (in association with the `private.xml` file)
 - [Seil](https://pqrs.org/osx/karabiner/seil.html.en) [DL] - Works with Karabiner to convert Caps Lock to a Hyper (⌘⌥^⇧) key. Need to go into Settings → Keyboard → Modifier Keys and set Caps Lock to "No Action".
