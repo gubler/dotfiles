@@ -122,7 +122,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [FruitJuice](https://itunes.apple.com/us/app/fruitjuice-active-battery/id671736912?mt=12) [MAS] - Battery manager
 * [Google Chrome](https://www.google.com/chrome/) [HBC] - preferred browser
 * [iStat Menus](http://bjango.com/mac/istatmenus/) [HBC] - Resource usage (CPU, memory, network, etc) graphs in the menubar
-* [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements/pull/170) - using an alternate build from the linked merge request.
+* [Karabiner Elements](https://github.com/tekezo/) [HBC] - See [Post-Install instructions](Post-Install Setup.md).
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [HBC] - Super-powered keyboard macros
 * [LaunchControl](http://www.soma-zone.com/LaunchControl/) [HBC] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [HBC]
