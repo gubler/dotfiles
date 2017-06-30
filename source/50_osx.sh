@@ -28,8 +28,11 @@ alias phing=vendor/bin/phing
 # Alias symfony console in projects
 alias sf=bin/console
 
-# Alias for vagrant
+# Aliases for vagrant
 alias v=vagrant
+alias vu="vagrant up"
+alias vus="vagrant up && vagrant ssh"
+alias vh="vagrant halt"
 
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
