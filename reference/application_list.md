@@ -12,6 +12,7 @@ I try to have links to every program on the list, but I also list how I install 
 ## Audio/Video
 * [Audio Hijack](https://www.rogueamoeba.com/audiohijack/) [HBC] - How I record audio for podcasts (or pretty much _any_ audio recording)
 * [Audiobook Builder](http://www.splasm.com/audiobookbuilder/) [HBC] - Convert piles of MP3 or M4A files into a M4B audiobook file
+* [Discord](https://discordapp.com/) [HBC] - Text and Audio Chat
 * [Fission](https://www.rogueamoeba.com/fission/) [HBC] - Quick audio editing
 * [iFlicks 2](http://www.iflicksapp.com/) [MAS] - Add metadata and prepare for videos for iTunes playback
 * [Hermes](http://hermesapp.org/) [HBC] - Pandora client
@@ -67,9 +68,14 @@ I try to have links to every program on the list, but I also list how I install 
 
 ## Games
 * [Battle.net](http://battle.net) [HBC] - Blizzard's game platform
-    * [Hearthstone](http://us.battle.net/hearthstone/en/) - Collectible Card Game
+    * [World of Warcraft](https://worldofwarcraft.com/en-us/) - MMO
+        - Mods installed via [Twitch app](https://app.twitch.tv/) [DL]
+            + BadBoy
+            + Bagnon
+            + Titan Panel
+            + Titan Panel [Mount]
+            + Titan Panel [Professions] Multi
 * [Steam](http://store.steampowered.com/) [HBC] - Valve's game platform
-    * [Civilization VI](http://www.civilization.com/) - Empire simulation game
     * [Stardew Valley](http://stardewvalley.net/) - Farm simulator
         - [Easier Fishing Mod](http://stardewmods.com/resources/easier-fishing.39/) [DL] - Because fishing is a pain in the butt
 
@@ -149,6 +155,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
+* [Plex Speed](https://chrome.google.com/webstore/detail/plex-speed/kegkeieegiecchgneffbcbjknmjminjj)
 * [Privacy Badger](https://www.eff.org/privacybadger)
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
