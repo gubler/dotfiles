@@ -14,7 +14,8 @@ fi
 # Directory listing
 if [[ "$(type -P tree)" ]]; then
   alias ll='tree --dirsfirst -aLpughDFiC 1'
-  alias l='ls -alh'
+  alias l='exa -alh'
+  alias lt='exa -lhT'
   alias lsd='ll -d'
   alias l.='ls -dalh .* --color=auto'
   alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
