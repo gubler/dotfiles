@@ -45,7 +45,7 @@ def slugify(theString):
 
 onlyfiles = [f for f in listdir(args.dir) if isfile(join(args.dir, f))]
 
-pattern = re.compile("^.*\.mp3$")
+pattern = re.compile("^.*\.mp3$", re.IGNORECASE)
 
 for mp3file in onlyfiles:
     path = args.dir + '/' + mp3file
