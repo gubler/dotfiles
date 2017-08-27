@@ -28,9 +28,25 @@ alias phing=vendor/bin/phing
 # Alias symfony console in projects
 alias sf=bin/console
 
+# Alias for Laravel
+artisan() {
+  if [ -f bin/artisan ]; then
+    php bin/artisan "$@"
+  else
+    php artisan "$@"
+  fi
+}
+
+alias las='artisan serve'
+alias lat='artisan tinker'
+alias lam='artisan migrate'
+alias lamf='artisan migrate:refresh'
+alias lamfs='artisan migrate:refresh --seed'
+
 # Aliases for vagrant
 alias v=vagrant
 alias vu="vagrant up"
+alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
 alias vh="vagrant halt"
 
