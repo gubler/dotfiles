@@ -7,11 +7,11 @@ echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
 echo ""
-echo "Use Material Theme by default in Terminal.app"
-open "${HOME}/.dotfiles/reference/MaterialTheme.terminal"
+echo "Use Snazzy Theme by default in Terminal.app"
+open "${HOME}/.dotfiles/reference/Snazzy.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "MaterialTheme"
-defaults write com.apple.terminal "Startup Window Settings" -string "MaterialTheme"
+defaults write com.apple.terminal "Default Window Settings" -string "Snazzy"
+defaults write com.apple.terminal "Startup Window Settings" -string "Snazzy"
 
 echo ""
 echo ""

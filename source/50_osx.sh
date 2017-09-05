@@ -53,6 +53,10 @@ alias vh="vagrant halt"
 # Make 'less' more.
 [[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
 
+# enable fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 
@@ -64,6 +68,9 @@ alias nom="say -v cello i am a cat and i\'m small very small oh so small i am a 
 
 # Initialize Bash Autocompletion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Setup fuck
+eval "$(thefuck --alias)"
 
 # Export Localization.prefPane text substitution rules.
 function txt_sub_backup() {
