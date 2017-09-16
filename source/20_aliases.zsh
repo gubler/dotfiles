@@ -1,3 +1,6 @@
+alias l='exa -alh'
+alias lt='exa -lhT'
+alias c='colorize'
 
 # Git shortcuts
 

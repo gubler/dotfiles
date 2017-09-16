@@ -2,13 +2,9 @@
 is_osx || return 1
 
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
-PATH="/usr/local/sbin:$(path_remove /usr/local/sbin)"
+PATH="/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:$PATH"
 
-# Add Composer global to path
-PATH="~/.composer/vendor/bin:$PATH"
-
-export PATH
+export -U PATH
 
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
@@ -50,13 +46,6 @@ alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
 alias vh="vagrant halt"
 
-# Make 'less' more.
-[[ "$(type -P lesspipe.sh)" ]] && eval "$(lesspipe.sh)"
-
-# enable fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
-
 # Start ScreenSaver. This will lock the screen if locking is enabled.
 alias ss="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 
@@ -66,11 +55,8 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Pure Comedy
 alias nom="say -v cello i am a cat and i\'m small very small oh so small i am a cat and i\'m probably eating pancakes om nom nom nom nom nom nom om nom nom nom nom nom om nom nom nom nom nom nom nom om nom nom nom nom"
 
-# Initialize Bash Autocompletion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-# Setup fuck
-eval "$(thefuck --alias)"
+# Flush Directory Service cache
+alias flush="dscacheutil -flushcache"
 
 # Export Localization.prefPane text substitution rules.
 function txt_sub_backup() {
