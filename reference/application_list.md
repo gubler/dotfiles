@@ -269,8 +269,8 @@ These plugins are installed via [Package Control](https://packagecontrol.io/) us
 
 ## Fonts
 * [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro) [HBC]
+* [Anonymous Pro Nerd Font](https://github.com/ryanoasis/nerd-fonts) [HBC]
 * [Hack](http://sourcefoundry.org/hack/) [HBC]
-* [Meslo LG for Powerline](https://github.com/powerline/fonts/tree/master/Meslo) [HBC]
 * [Inconsolata](http://levien.com/type/myfonts/inconsolata.html) [HBC]
 
 

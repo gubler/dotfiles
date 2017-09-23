@@ -78,6 +78,8 @@ cask 'witch'
 
 ## Fonts
 cask 'font-anonymous-pro'
+cask 'font-anonymouspro-nerd-font'
+cask 'font-hack'
 cask 'font-inconsolata'
 
 ## Quicklook Generators

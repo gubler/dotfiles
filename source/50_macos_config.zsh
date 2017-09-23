@@ -113,11 +113,12 @@ function o() {
 }
 
 # run composer without xdebug enabled
+COMPOSER="$(which composer)" || {
+    echo "Could not find composer in path" >&2;
+    return 1;
+}
+
 function composer() {
-    COMPOSER="$(which composer)" || {
-        echo "Could not find composer in path" >&2;
-        return 1;
-    } &&
     mv /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini /usr/local/etc/php/7.1/conf.dis;
     $COMPOSER "$@";
     STATUS=$?;
