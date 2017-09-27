@@ -74,6 +74,7 @@ cask 'xld'
 
 # Mac App Store
 mas 'Affinity Designer', id:824171161
+mas 'Calca', id:635758264
 mas 'Day One', id:1055511498
 mas 'Deliveries', id:924726344
 mas 'FruitJuice', id:671736912

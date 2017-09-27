@@ -84,6 +84,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [1Blocker](https://itunes.apple.com/us/app/1blocker-block-ads-tracking-scripts-anything/id1107421413?mt=12) [MAS] - Content Blocker for macOS
 * [1Password](https://agilebits.com/onepassword/mac) [HBC] - Password manager
 * [Airmail 2](http://airmailapp.com/) [MAS] - Email client
+* [Calca](http://calca.io/) [MAS] - Text editor that loves math and gives you answers as you type
 * [Clarify](http://www.clarify-it.com/) [HBC] - Tutorial creator
 * [Day One 2](http://dayoneapp.com/) [MAS] - Journaling
 * [DevonThink Pro Office](http://www.devontechnologies.com/products/devonthink/devonthink-pro-office.html) [HBC] - Document Management

@@ -3,6 +3,7 @@ tap 'caskroom/fonts'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'homebrew/homebrew-php'
+tap 'buo/cask-upgrade'
 
 # Homebrew
 brew 'ack'
