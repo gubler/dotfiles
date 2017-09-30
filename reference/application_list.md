@@ -22,7 +22,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [MKVTools](http://www.emmgunn.com/mkvtools-home/) [HBC] - Create MKV video files. Also useful for ripping obstinate DVDs
 * [Ondesoft AudioBook Converter](http://www.ondesoft.com/audiobook_converter/) [DL] - Remove DRM from purchased audiobooks for archiving
 * [ScreenFlow](http://www.telestream.net/screenflow/) [HBC] - Screen recoding software for screencasts
-* [Softorino YouTube Converter 2](https://softorino.com/youtube-converter-2/) [DL] Download videos and audio from YouTube and other sites
+* [Softorino YouTube Converter 2](https://softorino.com/youtube-converter-2/) [HBC] Download videos and audio from YouTube and other sites
 * [SoundSource](https://rogueamoeba.com/soundsource/) [HBC] - The sound control that should be built into MacOS
 * [VLC](http://www.videolan.org/vlc/index.html) [HBC] - Play pretty much any video or audio file
 * [XLD](http://tmkk.undo.jp/xld/index_e.html) [HBC] - Convert lossless audio (FLAC or BIN/CUE) files to MP3s
