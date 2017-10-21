@@ -135,6 +135,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Keyboard Maestro](http://www.keyboardmaestro.com/main/) [HBC] - Super-powered keyboard macros
 * [LaunchControl](http://www.soma-zone.com/LaunchControl/) [HBC] - Launchd manager
 * [Little Snitch](https://www.obdev.at/products/littlesnitch/download.html) [HBC]
+* [Markdown Service Tools](http://brettterpstra.com/projects/markdown-service-tools/) [HBC] - Makrdown text manipulation services
 * [Microsoft Remote Desktop](https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12) [MAS] - Remote desktop for windows machines
 * [Moom](http://manytricks.com/moom/) [HBC] - window manager
     * Moom preferences can be setup by copying the `com.manytricks.Moom.plist` file to `{home}/Library/Preferences` and running `killall cfprefsd` and then launching Moom.
