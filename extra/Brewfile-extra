@@ -8,6 +8,7 @@ cask_args appdir: '/Applications'
 
 ## Apps
 cask 'acorn'
+cask 'cardhop'
 cask 'cloak'
 cask 'private-internet-access'
 cask 'dash'

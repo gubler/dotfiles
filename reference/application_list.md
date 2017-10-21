@@ -118,6 +118,7 @@ I try to have links to every program on the list, but I also list how I install 
 * [Backblaze](https://www.backblaze.com/) [HBC] - Offsite Backup
 * [Bartender 2](http://www.macbartender.com/) [HBC] - Wrangle menubar apps
 * [BetterTouchTool](http://www.boastr.net/) [HBC] - Input utility
+* [CardHop](https://flexibits.com/cardhop) [HBC] - Contacts manager
 * [ChronoSync](http://www.econtechnologies.com/pages/cs/chrono_overview.html) [HBC] - File sync tool
 * [Contexts](https://contexts.co) [HBC] - Replacement app switcher (⌘⇥)
 * [DaisyDisk 2](http://www.daisydiskapp.com/) [MAS] - Disk space usage display
