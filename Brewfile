@@ -7,8 +7,8 @@ tap 'buo/cask-upgrade'
 
 # Homebrew
 brew 'ack'
-brew 'bash-completion'
-brew 'bash'
+# brew 'bash-completion'
+# brew 'bash'
 brew 'curl'
 brew 'exa'
 brew 'fd'
@@ -18,7 +18,7 @@ brew 'git'
 brew 'git-extras'
 brew 'git-flow'
 brew 'go'
-brew 'graphviz', args: ['with-pango']
+# brew 'graphviz', args: ['with-pango']
 brew 'htop'
 brew 'httpie'
 brew 'hub'
@@ -65,11 +65,11 @@ cask 'iterm2'
 cask 'karabiner-elements'
 cask 'omnifocus'
 cask 'path-finder'
-cask 'soundsource'
+# cask 'soundsource'
 cask 'spectacle'
 cask 'sublime-text'
-cask 'taskpaper'
-cask 'timing'
+# cask 'taskpaper'
+# cask 'timing'
 cask 'the-unarchiver'
 cask 'typinator'
 
@@ -102,6 +102,6 @@ cask 'colorpicker-skalacolor'
 mas 'Airmail 2', id:918858936
 mas 'Amphetamine', id:937984704
 mas 'Due', id:524373870
-mas 'Patterns', id:429449079
+# mas 'Patterns', id:429449079
 mas 'Sip', id: 507257563
-mas 'SnippetsLab', id: 1006087419
+# mas 'SnippetsLab', id: 1006087419
