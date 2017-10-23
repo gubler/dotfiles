@@ -155,16 +155,32 @@ I try to have links to every program on the list, but I also list how I install 
 
 ## Chrome Extensions
 * [1Password](https://agilebits.com/extensions/mac/index.html)
-* [ChromeLogger](https://craig.is/writing/chrome-logger)
+* [Accessiblity Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb)
+* [Clip to DEVONthink](https://chrome.google.com/webstore/detail/clip-to-devonthink/pjoafdokmbmkpolhcnmnkgaicbajigcc)
+* [DuckDuckGo](https://chrome.google.com/webstore/detail/duckduckgo-for-chrome/bkdgflcldnnnapblkhphbgpggdiikppg)
+* [FakeSpot](https://chrome.google.com/webstore/detail/fakespot-analyze-fake-ama/nakplnnackehceedgkgkokbgbmfghain)
 * [HoverZoom](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl)
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
+* [h264ify](https://chrome.google.com/webstore/detail/h264ify/aleakchihdccplidncghkekgioiakgal)
 * [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
+* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
 * [Plex Speed](https://chrome.google.com/webstore/detail/plex-speed/kegkeieegiecchgneffbcbjknmjminjj)
 * [Privacy Badger](https://www.eff.org/privacybadger)
 * [Reddit Enhancement Suite](http://redditenhancementsuite.com/)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * [Xdebug Helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc)
 * [XML Tree](https://chrome.google.com/webstore/detail/xml-tree/gbammbheopgpmaagmckhpjbfgdfkpadb)
+
+## Safari Extensions
+
+* 1Password
+* HoverSee
+* Xdebug Helper
+* Clip to DEVONthink
+* Reddit Enhancement Suite
+* Fakespot
+* Refined for Github
+* uBlock Origin
 
 ## Quicklook Generators
 * [BetterZip](http://macitbetter.com/BetterZip-Quick-Look-Generator/) [HBC]
