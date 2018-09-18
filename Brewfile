@@ -7,9 +7,11 @@ tap 'buo/cask-upgrade'
 
 # Homebrew
 brew 'ack'
+brew 'bat'
 # brew 'bash-completion'
 # brew 'bash'
 brew 'curl'
+brew 'diff-so-fancy'
 brew 'exa'
 brew 'fd'
 brew 'ffmpeg'
@@ -26,8 +28,9 @@ brew 'hugo'
 brew 'jq'
 brew 'lesspipe'
 brew 'man2html'
-brew 'mencoder'
+# brew 'mencoder'
 brew 'm-cli'
+brew 'ndcu'
 brew 'neofetch'
 brew 'sqlite'
 brew 'ssh-copy-id'
@@ -37,21 +40,24 @@ brew 'tmux'
 brew 'reattach-to-user-namespace'
 brew 'ripgrep'
 brew 'pandoc'
+brew 'prettyping'
 brew 'python3'
 brew 'tree'
 brew 'trash'
 brew 'tldr'
 brew 'wget'
 brew 'node'
-brew 'yarn'
 brew 'mas'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'z'
+brew 'zsh'
+brew 'antigen'
 
 # PHP
-brew 'php71'
-brew 'php71-xdebug'
+brew 'php@7.2'
+# Replace with pecl install xdebug
+# brew 'php@7.1-xdebug'
 brew 'composer'
 
 # Casks
@@ -99,9 +105,8 @@ cask 'colorpicker-skalacolor'
 
 # Mac App Store
 # mas '1Blocker - Block ads, tracking scripts, anything', id:1107421413
-mas 'Airmail 2', id:918858936
-mas 'Amphetamine', id:937984704
+# mas 'Airmail 2', id:918858936
+# mas 'Amphetamine', id:937984704
 mas 'Due', id:524373870
 # mas 'Patterns', id:429449079
 mas 'Sip', id: 507257563
-# mas 'SnippetsLab', id: 1006087419

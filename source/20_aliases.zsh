@@ -1,6 +1,15 @@
 alias l='exa -alh'
 alias lt='exa -lhT'
-alias c='colorize'
+
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias find="fd"
+alias c="bat"
+alias cat="bat"
+alias ping='prettyping --nolegend'
+alias top="sudo htop"
+alias help='tldr'
+
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 # Git shortcuts
 

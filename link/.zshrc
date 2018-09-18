@@ -35,3 +35,5 @@ source $HOME/.dotfiles/source/20_aliases.zsh
 source $HOME/.dotfiles/source/50_macos_config.zsh
 source $HOME/.dotfiles/source/50_ubuntu_config.zsh
 source $HOME/.local_aliases.zsh
+
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"

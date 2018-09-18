@@ -18,9 +18,21 @@
       panelContrast: true
       panelShadows: true
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "language-gfm"
       "autocomplete-plus"
+      "tree-view"
     ]
     projectHome: "/Users/dev88/Projects"
     telemetryConsent: "no"
@@ -30,11 +42,10 @@
     ]
   editor:
     fontFamily: "Anonymous Pro"
-    fontSize: 16
+    fontSize: 18
     scrollPastEnd: true
     showIndentGuide: true
     tabLength: 4
-    tabType: "soft"
   "exception-reporting":
     userId: "4df49cbf-5995-c72b-56b2-7a599a942026"
   "file-icons": {}
@@ -42,6 +53,12 @@
     general:
       _analyticsUserId: "aa5617e8-a95c-4f0d-8790-4872b99bb0cb"
   "highlight-line": {}
+  "ide-php":
+    phpPath: "/usr/local/bin/php"
+  nuclide:
+    use: {}
+  "one-dark-ui":
+    fontSize: 14
   pigments:
     markerType: "native-dot"
   welcome:

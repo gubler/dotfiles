@@ -107,13 +107,13 @@ echo ""
 echo "Prevent Photos app from opening when devices are connected"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-echo ""
-echo "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
-/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+# echo ""
+# echo "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
+# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
 echo ""
 echo "Set wallpaper"
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "~/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/dev88/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #

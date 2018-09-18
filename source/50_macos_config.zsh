@@ -2,7 +2,7 @@
 is_osx || return 1
 
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH="/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$HOME/Library/Python/3.7/bin:$PATH"
 
 export -U PATH
 
@@ -23,21 +23,6 @@ alias phing=vendor/bin/phing
 
 # Alias symfony console in projects
 alias sf=bin/console
-
-# Alias for Laravel
-artisan() {
-  if [ -f bin/artisan ]; then
-    php bin/artisan "$@"
-  else
-    php artisan "$@"
-  fi
-}
-
-alias las='artisan serve'
-alias lat='artisan tinker'
-alias lam='artisan migrate'
-alias lamf='artisan migrate:refresh'
-alias lamfs='artisan migrate:refresh --seed'
 
 # Aliases for vagrant
 alias v=vagrant
@@ -92,6 +77,9 @@ function s() {
   fi
 }
 
+# add support for ctrl+o to open selected file in sublime
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(s {})+abort'"
+
 # `a` with no arguments opens current directory in Atom, otherwise opens the given
 # location
 function a() {
@@ -116,18 +104,4 @@ function o() {
 COMPOSER="$(which composer)" || {
     echo "Could not find composer in path" >&2;
     return 1;
-}
-
-function composer() {
-    mv /usr/local/etc/php/7.1/conf.d/ext-xdebug.ini /usr/local/etc/php/7.1/conf.dis;
-    $COMPOSER "$@";
-    STATUS=$?;
-    mv /usr/local/etc/php/7.1/conf.dis/ext-xdebug.ini /usr/local/etc/php/7.1/conf.d;
-    return $STATUS;
-}
-
-# `pw` provides a graphical password prompt for sudo
-# This is used for authenticating with a smart card
-function pw() {
-    osascript -e "do shell script \"$*\" with administrator privileges"
 }
