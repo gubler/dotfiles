@@ -1,0 +1,94 @@
+cask_args appdir: '/Applications'
+
+# Brew
+# brew offlineimap, restart_service: :changed
+# brew 'mariadb', restart_service: :changed
+
+# Casks
+
+## Apps
+cask 'acorn'
+cask 'cardhop'
+cask 'encryptme'
+cask 'private-internet-access'
+cask 'dash'
+cask 'keyboard-maestro'
+cask 'little-snitch'
+cask 'marked'
+cask 'mattermost'
+# cask 'moom'
+cask 'jetbrains-toolbox'
+cask 'sequel-pro'
+cask 'snagit'
+cask 'tower'
+cask 'aerial'
+# cask 'audio-hijack'
+cask 'audiobook-builder'
+cask 'backblaze'
+cask 'bartender'
+# cask 'base'
+cask 'battle-net'
+cask 'bettertouchtool'
+cask 'calibre'
+cask 'chronosync'
+cask 'clarify'
+# cask 'codekit'
+cask 'coderunner'
+cask 'daisydisk'
+cask 'default-folder-x'
+cask 'droplr'
+cask 'fantastical'
+# cask 'firefox'
+cask 'fission'
+cask 'fluid'
+cask 'google-hangouts'
+cask 'google-photos-backup'
+cask 'istat-menus'
+cask 'kaleidoscope'
+cask 'kindle'
+cask 'launchcontrol'
+# cask 'levelator'
+cask 'markdown-service-tools'
+cask 'metadatics'
+cask 'mountain'
+cask 'omnigraffle'
+cask 'paw'
+cask 'pdfpenpro'
+# cask 'powermate'
+cask 'screenflow'
+# cask 'scrivener'
+cask 'simple-comic'
+# cask 'skype'
+cask 'soulver'
+cask 'steam'
+cask 'superduper'
+# cask 'tableflip'
+cask 'transmit'
+cask 'panic-unison'
+cask 'transmission'
+cask 'vagrant'
+cask 'vagrant-manager'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'vlc'
+# cask 'iina'
+cask 'vmware-fusion'
+cask 'xld'
+
+# Mac App Store
+mas 'Affinity Designer', id:824171161
+mas 'Calca', id:635758264
+mas 'Day One', id:1055511498
+mas 'Deliveries', id:924726344
+mas 'FruitJuice', id:671736912
+mas 'iFlicks 2', id:731062389
+# mas 'Keynote', id:409183694
+mas 'Microsoft Remote Desktop', id:715768417
+# mas 'Numbers', id:409203825
+# mas 'Pages', id:409201541
+mas 'Paprika Recipe Manager', id:451907568
+# mas 'Pixelmator', id:407963104
+mas 'Reeder 3', id:880001334
+mas 'Shush', id:496437906
+mas 'Spillo', id:873245660
+mas 'Speedtest by Ookla', id: 1153157709

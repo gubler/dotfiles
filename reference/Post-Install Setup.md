@@ -1,25 +1,42 @@
 # Post-Install Config
 
+## Logins
+
+Log into the following apps:
+
+- 1Password
+- Dropbox (Suggest selective sync until the Apps directories are synced)
+
+## Karabiner Elements (Map Hyper Key)
+
+Start Karabiner Elements and check for Beta Updates. You need at least v0.91.3.
+Once you have installed the update you can copy over the config file:
+
+```sh
+mkdir -p ~/.config/karabiner/ && cp ~/.dotfiles/reference/karabiner.json $_
+```
+
+The end result is that the Caps-Lock becomes Escape when typed or becomes Hyper (command-control-option-shift) when held.
+
 ## Local Aliases
 
 There are aliases that I create for work that I don't want in a public repository. During setup, a `.local_aliases.sh` file is created in your home directory that you can add aliases to that will not be added to the repository.
 
-## gmvault
+## Install Extras
 
-You need to do the initial sync with gmvault manually so that the authorization tokens can be saved and the recurring task can then do a quick sync.
+There are several extras in the [/extras](/extras) to finish up the install:
 
-These steps load a launchd agent to run gmvault every 15 minutes. **NOTE:** The paths on Lines 16, 24, and 26 must be full paths. You _cannot_ leave the ~ for your home directory.
+- [Vim Spf13 plugins suite](extras/10_vimSpf13.sh)
+- [macOS config](extras/20_osx_config.sh)
+- [macOS extra Homebrew applications](20_osx_homebrew_extra.sh)
+- [macOS keyfixer](20_osx_keyfixer.sh)
+- [macOS Sublime Text 3 setup](40_osx_sublime_text.sh)
+- [macOS iTem2 and Terminal config](50_osx_item_and_terminal.sh)
 
-1. Copy the `local.gmvault.plist` to `~/Library/LaunchAgents/`
-2. Modify:
-    * Line 11: The gmvault binary (`which gmvault`)
-    * Line 16: Directory to backup to
-    * Line 17: Email Address to backup
-    * Line 24/26: Change the path for log file
-3. Load the plist file: `launchctl load ~/Library/LaunchAgents/local.gmvault.plist`
+## OfflineIMAP
 
-## Keyboard Config (Karabiner and Seil)
+Email is backed up from Fastmail via OfflineIMAP. To set up OfflineIMAP:
 
-I follow the instructions by Brett Terpstra ([here](http://brettterpstra.com/2015/12/18/a-hyper-key-that-can-still-yell/) and [here](http://brettterpstra.com/2012/12/08/a-useful-caps-lock-key/)) to remap my Caps Lock key to act as Escape when pressed or Hyper (Command-Shift-Option-Control) when held (make sure you change CapsLock to _No Action_ in Preferences -> Keyboard -> Modifier Keys on Mac OS X).
-
-The `private.xml` file that I use is in the `reference` folder, which also has a section for switching the modifier keys on my MS Sculpt Ergonomic keyboard.
+- Update `~/.offlineimaprc` (this was created during `.dotfiles` install). You will need to update the `remoteuser` and `remotepass` values.
+    - The configuration file is designed to sync email from Fastmail to `~/Mail/Fastmail`. If you are using a different provider or want to sync to a different location, you will need to modify `~/.offlineimaprc` appropriately.
+- Run `~/.dotfiles/extra/20_osx_homebrew_extra.sh`. This will install OfflineIMAP and start the service.

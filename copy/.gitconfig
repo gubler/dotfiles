@@ -1,5 +1,5 @@
 [user]
-  name = Daryl Gubler
+  name = NAME
   email = EMAIL
 [core]
   autocrlf = input
@@ -40,7 +40,7 @@
 [merge]
   log = true
 [difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff git \"$LOCAL\" \"$REMOTE\"
 [rerere]
   enabled = 1
 [url "git@github.com:"]
@@ -57,5 +57,5 @@
   insteadOf = "gist:"
 [url "git@heroku.com:"]
   insteadOf = "heroku:"
-[url "https://"]   
-    insteadOf = git://
+# [url "https://"]
+#     insteadOf = git://

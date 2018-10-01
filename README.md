@@ -1,154 +1,152 @@
 # Dotfiles
 
-My OS X / Ubuntu dotfiles.
+My macOS/ Ubuntu dotfiles.
+
+### TL;DR
+
+1. **Fork this repo to your own account.**
+1. For macOS:
+    - ```xcode-select --install```
+    - Log into Mac App Store
+1. ```export github_user=YOUR_GITHUB_USER_NAME```
+1. ```bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc```
+1. Update ```~/.gitconfig``` with your name and email
+1. Read the [post-install document](reference/Post-Install Setup.md)
 
 ## What This Is
 
-I've been futzing around with bash and zsh for years and moving bits and peices of my configurations around from machine to machine and platform to platform. After seeing all of the work put into various [dotfile repos](http://dotfiles.github.io/), I finally forked several and merged them into what I wanted.
+I've been futzing around with bash and zsh for years and moving bits and pieces of my configurations around from machine to machine and platform to platform. After seeing all of the work put into various [dotfile repos](http://dotfiles.github.io/), I finally forked several and merged them into what I wanted.
 
 The core of the system is by [@cowboy](https://github.com/cowboy/dotfiles/): execute a single command to "bootstrap" a new system to pull down all of my dotfiles and configs, as well as install all the tools I commonly use. In addition, be able to re-execute that command at any time to synchronize anything that might have changed. Finally, make it easy to re-integrate changes back in, so that other machines could be updated.
 
 The command is [dotfiles][dotfiles].
 
-[dotfiles]: bin/dotfiles
-[bin]: https://github.com/cowboy/dotfiles/tree/master/bin
-
 ## What, exactly, does the "dotfiles" command do?
 
-It's really not very complicated. When [dotfiles][dotfiles] is run, it does a few things:
+When [dotfiles][dotfiles] is run _for the first time_, it does a few things:
 
-1. Git is installed if necessary, via APT or Homebrew (which is installed if necessary).
-2. This repo is cloned into the `~/.dotfiles` directory (or updated if it already exists).
-2. Files in `init` are executed (in alphanumeric order, hence the "50_" names).
-3. Files in `copy` are copied into `~/`.
-4. Files in `link` are linked into `~/`.
+1. In Ubuntu, Git is installed if necessary via APT (it's already there in macOS).
+1. This repo is cloned into your user directory, under `~/.dotfiles`.
+1. Files in `/copy` are copied into `~/`. ([read more](#the-copy-step))
+1. Files in `/link` are symlinked into `~/`. ([read more](#the-link-step))
+1. You are prompted to choose scripts in `/init` to be executed. The installer attempts to only select relevant scripts, based on the detected OS and the script filename.
+1. Your chosen init scripts are executed (in alphanumeric order, hence the funky names). ([read more](#the-init-step))
 
-Note:
+On subsequent runs, step 1 is skipped, step 2 just updates the already-existing repo, and step 5 remembers what you selected the last time. The other steps are the same.
 
-* The `backups` folder only gets created when necessary. Any files in `~/` that would have been overwritten by `copy` or `link` get backed up there.
-* Files in `bin` are executable shell scripts (Eg. [~/.dotfiles/bin](bin) is added into the path).
-* Files in `source` get sourced whenever a new shell is opened (in alphanumeric order, hence the "50_" names).
-* Files in `conf` just sit there. If a config file doesn't _need_ to go in `~/`, put it in there.
-* Files in `caches` are cached files, only used by some scripts. This folder will only be created if necessary.
+### Other subdirectories
 
-### What about the other folders?
+* The `/backups` directory gets created when necessary. Any files in `~/` that would have been overwritten by files in `/copy` or `/link` get backed up there.
+* The `/bin` directory contains executable shell scripts (including the [dotfiles][dotfiles] script) and symlinks to executable shell scripts. This directory is added to the path.
+* The `/caches` directory contains cached files, used by some scripts or functions.
+* The `/conf` directory just exists. If a config file doesn't **need** to go in `~/`, reference it from the `/conf` directory.
+* The `/extra` are scripts to be run once. They aren't hooked into the regular dotfiles command due to either needing input during execution or taking a long, long time to run.
+* The `/reference` holds extra config files as well as an [app list](references/application_list.md) that includes apps, plugins, browser extensions, etc...
+* The `/source` directory contains files that are sourced whenever a new shell is opened (in alphanumeric order, hence the funky names).
+* The `/test` directory contains unit tests for especially complicated bash functions.
+* The `/vendor` directory contains third-party libraries.
 
-* `libs` is for submoduled applications
-* `extra` are scripts to be run once. They aren't hooked into the regular dotfiles command due to either needing input during execution or taking a long, long time to run.
-* `reference` holds extra config files as well as an [app log](references/application_list.md) that includes apps, plugins, browser extensions, etc...
+### The "copy" step
+Any file in the `/copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [copy/.gitconfig](copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
+
+### The "link" step
+Any file in the `/link` subdirectory gets symlinked into `~/` with `ln -s`. Edit one or the other, and you change the file in both places. Don't link files containing sensitive data, or you might accidentally commit that data! If you're linking a directory that might contain sensitive data (like `~/.ssh`) add the sensitive files to your [.gitignore](.gitignore) file!
+
+### The "init" step
+Scripts in the `/init` subdirectory will be executed. A whole bunch of things will be installed, but _only_ if they aren't already.
+
+#### macOS
+
+* Minor XCode init via the [init/10_osx_xcode.sh](init/10_osx_xcode.sh) script.
+* Homebrew via the [init/20_osx_homebrew.sh](init/20_osx_homebrew.sh) script. This script also installs (via the [Brewfile](Brewfile)):
+  * Recipes
+  * Casks
+  * Fonts
+
+#### Ubuntu
+* APT packages via the [init/20_ubuntu_apt.sh](init/20_ubuntu_apt.sh) script
+
+#### Both
+* Node.js, npm and yarn via the [init/50_node.sh](init/50_node.sh) script
+* Ruby, gems and rbenv via the [init/50_ruby.sh](init/50_ruby.sh) script
+* Vim plugins via the [init/50_vim.sh](init/50_vim.sh) script
+
+## Hacking my dotfiles
+
+Because the [dotfiles][dotfiles] script is completely self-contained, you should be able to delete everything else from your dotfiles repo fork, and it will still work. The only thing it really cares about are the `/copy`, `/link` and `/init` subdirectories, which will be ignored if they are empty or don't exist.
+
+If you modify things and notice a bug or an improvement, [file an issue](https://github.com/gubler/dotfiles/issues) or [a pull request](https://github.com/gubler/dotfiles/pulls) and let me know.
+
+Also, before installing, be sure to [read my gently-worded note](#heed-this-critically-important-warning-before-you-install).
 
 ## Installation
 **Note:** Before running this, you may have to set Git to use HTTPS instead of GIT due to corporate firewalls (or whatever other reasons you may have). If so, run:
-~~~
+
+```sh
 git config --global url."https://".insteadOf git://
-~~~
+```
 
-**This is also configured in the `.gitignore` file in this repo** because of my work. See the section below on **Updating the `.gitignore` file after install.
-
-### OS X Notes
+### macOS Notes
 
 * You need to be an administrator (for `sudo`).
-* You need to have installed [XCode](https://developer.apple.com/downloads/index.action?=xcode) or, at the very minimum, the [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a _much smaller_ download thank XCode.
+* You need to have [XCode](https://developer.apple.com/downloads/index.action?=xcode) or, at the very minimum, the [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a much smaller download.
+
+The easiest way to install the XCode Command Line Tools in macOS 10.9+ is to open up a terminal, type `xcode-select --install` and [follow the prompts](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 
 ### Ubuntu Notes
 
 * You need to be an administrator (for `sudo`).
-* You might want to set up your ubuntu server [like I do it](/cowboy/dotfiles/wiki/ubuntu-setup), but then again, you might not.
-* Either way, you should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
+* You should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
 
+### Heed this critically important warning before you install
+
+**If you're not me, please _do not_ install dotfiles directly from this repo!**
+
+Why? Because I often completely break this repo while updating. Which means that if I do that and you run the `dotfiles` command, your home directory will burst into flames, and you'll have to go buy a new computer. No, not really, but it will be very messy.
+
+### Actual installation (for you)
+
+1. [Read my gently-worded note](#heed-this-critically-important-warning-before-you-install)
+1. Fork this repo
+1. Open a terminal/shell and do this:
+
+```sh
+export github_user=YOUR_GITHUB_USER_NAME
+
+bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
+```
+
+Since you'll be using the [dotfiles][dotfiles] command on subsequent runs, you'll only have to export the `github_user` variable for the initial install.
+
+There's a lot of stuff that requires admin access via `sudo`, so be warned that you might need to enter your password here or there.
+
+### Actual installation (for me)
+
+```sh
+bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
+```
 ### After Installation
 
 After you run the install, you will need to:
 
-* configure the `.gitignore` file that is copied to your home directory.
+* Configure the `.gitconfig` file that is copied to your home directory.
   - Set your name and email address at the top of the file
-  - If you want to use the `git://` protocol instead of `https://`, you will need to delete the following from the bottom of the file:
+  - If you want to use the `https://` protocol instead of `git://`, you will need to uncomment the following from the bottom of the file:
   ~~~
   [url "https://"]
     insteadOf = git://
   ~~~
 
 * Either copy your SSH keys from wherever you _securely_ store them or generate new ones with:
-~~~
+
+```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-~~~
+```
 
-I have some additional post-install configuration instructions in `refence/Post-Install Setup.md`.
-
-### Actual Installation
-
-~~~
-sh bash -c "$(curl -fsSL https://bit.ly/gubler_dotfiles)" && source ~/.bashrc
-~~~
-
-If, for some reason, [bit.ly](https://bit.ly/) is down, you can use the canonical URL.
-
-~~~
-sh bash -c "$(curl -fsSL https://raw.github.com/gubler/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
-~~~
+I have some additional [post-install configuration instructions](refence/Post-Install Setup.md).
 
 ## The "init" step
 A whole bunch of things will be installed, but _only_ if they aren't already.
-
-### OS X
-* Homebrew recipes
-  * ack 2
-  * bash 4
-  * cowsay
-  * git
-  * git-extras
-  * git-flow
-  * graphviz
-  * ffmpeg
-  * htop-osx
-  * hub
-  * hugo
-  * id3tool
-  * lesspipe
-  * man2html
-  * mercurial
-  * nmap
-  * sl
-  * ssh-copy-id
-  * terminal-notifier
-  * the_silver_searcher
-  * tree
-  * wget
-  * Anonymous Pro font (via Cask)
-  * H@ck font (via Cask)
-
-### Ubuntu
-* APT packages
-  * build-essential
-  * cowsay
-  * git-core
-  * htop
-  * id3tool
-  * libssl-dev
-  * mercurial
-  * nmap
-  * silversearcher-ag
-  * sl
-  * telnet
-  * tree
-
-### Both
-* Nave
-  * node (latest stable)
-    * npm
-    * bower
-    * jshint
-    * yo
-* rbenv
-  * ruby 2.1.0
-* gems
-  * bundler
-  * awesome_print
-  * pry
-* Python
-  * Pygments
-  * Sphinx Doc
-  * gmvault
 
 ## The ~/ "copy" step
 Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
@@ -161,7 +159,7 @@ Any file in the `link` subdirectory gets symbolically linked with `ln -s` into `
 Your .ssh folder is in the `link` directory, but rsa keys (public and private) as well as `known_hosts` and `authorized_keys` are ignored.
 
 ## Aliases and Functions
-To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/gubler/dotfiles/tree/master/source). I even have [@cowboy's fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
+To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](/source). I even have [@cowboy's fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
 
 ## Scripts
 In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bash scripts][bin].
@@ -171,7 +169,7 @@ In addition to the aforementioned [dotfiles][dotfiles] script, there are a few o
 * Look through the [bin][bin] subdirectory for a few more.
 
 ## Prompt
-Currentlt working with [@cowboy's awesome bash prompt](source/50_prompt.sh). It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
+Currently working with [@cowboy's awesome bash prompt](source/50_prompt.sh). It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
 
 Git repos display as **[branch:flags]** where flags are:
 
@@ -195,5 +193,5 @@ Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](htt
 [Cortex Podcast](https://www.relay.fm/cortex) wallpaper in reference directory by [GrafikSyndikat](https://grafiksyndikat.com/wallpaper/cortex-desktop/)
 
 ## License
-Copyright (c) 2014 Daryl Gubler  
+Copyright (c) 2016 Daryl Gubler  
 Licensed under the MIT license.
