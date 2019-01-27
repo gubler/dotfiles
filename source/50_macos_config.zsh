@@ -9,9 +9,6 @@ export -U PATH
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
 
-# Replace git with hub
-alias git=hub
-
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
@@ -39,6 +36,8 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Pure Comedy
 alias nom="say -v cello i am a cat and i\'m small very small oh so small i am a cat and i\'m probably eating pancakes om nom nom nom nom nom nom om nom nom nom nom nom om nom nom nom nom nom nom nom om nom nom nom nom"
+
+alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
