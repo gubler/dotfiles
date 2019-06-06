@@ -6,12 +6,10 @@ antigen use oh-my-zsh
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle colorize
-antigen bundle dotenv
+# antigen bundle dotenv
 antigen bundle Tarrasch/zsh-autoenv
 antigen bundle gulp
 antigen bundle history-substring-search
-antigen bundle httpie
-antigen bundle laravel5
 antigen bundle marked2
 antigen bundle phing
 antigen bundle rbenv
@@ -23,7 +21,8 @@ antigen bundle yarn
 antigen bundle z
 
 # Load the theme.
-antigen theme candy
+# antigen theme candy
+antigen theme denysdovhan/spaceship-prompt
 
 # Tell Antigen that you're done.
 antigen apply

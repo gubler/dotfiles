@@ -50,13 +50,13 @@ brew 'node'
 brew 'mas'
 brew 'rbenv'
 brew 'ruby-build'
-brew 'vitetris'
 brew 'z'
 brew 'zsh'
 brew 'antigen'
+brew 'm4b-tool'
 
 # PHP
-brew 'php@7.2'
+brew 'php'
 brew 'composer'
 
 # Casks
