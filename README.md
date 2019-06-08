@@ -39,11 +39,7 @@ On subsequent runs, step 1 is skipped, step 2 just updates the already-existing 
 * The `/backups` directory gets created when necessary. Any files in `~/` that would have been overwritten by files in `/copy` or `/link` get backed up there.
 * The `/bin` directory contains executable shell scripts (including the [dotfiles][dotfiles] script) and symlinks to executable shell scripts. This directory is added to the path.
 * The `/caches` directory contains cached files, used by some scripts or functions.
-* The `/conf` directory just exists. If a config file doesn't **need** to go in `~/`, reference it from the `/conf` directory.
-* The `/extra` are scripts to be run once. They aren't hooked into the regular dotfiles command due to either needing input during execution or taking a long, long time to run.
-* The `/reference` holds extra config files as well as an [app list](references/application_list.md) that includes apps, plugins, browser extensions, etc...
-* The `/source` directory contains files that are sourced whenever a new shell is opened (in alphanumeric order, hence the funky names).
-* The `/test` directory contains unit tests for especially complicated bash functions.
+* The `/reference` holds extra config files
 * The `/vendor` directory contains third-party libraries.
 
 ### The "copy" step
@@ -62,14 +58,6 @@ Scripts in the `/init` subdirectory will be executed. A whole bunch of things wi
   * Recipes
   * Casks
   * Fonts
-
-#### Ubuntu
-* APT packages via the [init/20_ubuntu_apt.sh](init/20_ubuntu_apt.sh) script
-
-#### Both
-* Node.js, npm and yarn via the [init/50_node.sh](init/50_node.sh) script
-* Ruby, gems and rbenv via the [init/50_ruby.sh](init/50_ruby.sh) script
-* Vim plugins via the [init/50_vim.sh](init/50_vim.sh) script
 
 ## Hacking my dotfiles
 
@@ -92,11 +80,6 @@ git config --global url."https://".insteadOf git://
 * You need to have [XCode](https://developer.apple.com/downloads/index.action?=xcode) or, at the very minimum, the [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a much smaller download.
 
 The easiest way to install the XCode Command Line Tools in macOS 10.9+ is to open up a terminal, type `xcode-select --install` and [follow the prompts](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
-
-### Ubuntu Notes
-
-* You need to be an administrator (for `sudo`).
-* You should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
 
 ### Heed this critically important warning before you install
 
@@ -158,34 +141,11 @@ Any file in the `link` subdirectory gets symbolically linked with `ln -s` into `
 
 Your .ssh folder is in the `link` directory, but rsa keys (public and private) as well as `known_hosts` and `authorized_keys` are ignored.
 
-## Aliases and Functions
-To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](/source). I even have [@cowboy's fancy prompt](source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
-
 ## Scripts
 In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bash scripts][bin].
 
 * [dotfiles][dotfiles] - (re)initialize dotfiles. It might ask for your password (for `sudo`).
-* [src](link/.bashrc#L6-15) - (re)source all files in `source` directory
 * Look through the [bin][bin] subdirectory for a few more.
-
-## Prompt
-Currently working with [@cowboy's awesome bash prompt](source/50_prompt.sh). It shows git and svn repo status, a timestamp, error exit codes, and even changes color depending on how you've logged in.
-
-Git repos display as **[branch:flags]** where flags are:
-
-**?** untracked files  
-**!** changed (but unstaged) files  
-**+** staged files
-
-SVN repos display as **[rev1:rev2]** where rev1 and rev2 are:
-
-**rev1** last changed revision  
-**rev2** revision
-
-Check it out:
-
-![The awesome bash prompt](http://farm8.staticflickr.com/7142/6754488927_563dd73553_b.jpg)
-
 
 ## Credits
 Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](https://github.com/mathiasbynens/dotfiles) and [@paulirish](https://github.com/paulirish/dotfiles). I'm just riding on the hard work they've done (especially @cowboy).
@@ -193,5 +153,5 @@ Modified from [@cowboy](https://github.com/cowboy/dotfiles), [@mathiasbynes](htt
 [Cortex Podcast](https://www.relay.fm/cortex) wallpaper in reference directory by [GrafikSyndikat](https://grafiksyndikat.com/wallpaper/cortex-desktop/)
 
 ## License
-Copyright (c) 2016 Daryl Gubler  
+Copyright (c) 2019 Daryl Gubler  
 Licensed under the MIT license.

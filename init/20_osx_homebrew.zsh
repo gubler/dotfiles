@@ -14,8 +14,6 @@ e_header "Updating Homebrew"
 brew doctor
 brew update
 
-brew tap Homebrew/bundle
-
 # Install packages from Brewfile
 brew bundle
 
@@ -30,24 +28,6 @@ if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop
   sudo chown root:wheel "$binroot/htop"
   sudo chmod u+s "$binroot/htop"
 fi
-
-# php directory for composer alias
-mkdir /usr/local/etc/php/7.1/conf.dis
-
-# bash
-# if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
-#   e_header "Adding $binroot/bash to the list of acceptable shells"
-#   echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
-# fi
-# if [ -f $(brew --prefix)/etc/bash_completion ]; then
-#   e_header "bash-completions"
-#   . $(brew --prefix)/etc/bash_completion
-# fi
-# if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
-#   e_header "Making $binroot/bash your default shell"
-#   sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
-#   e_arrow "Please exit and restart all your shells."
-# fi
 
 # zsh
 if [[ "$(type -P $binroot/zsh)" && "$(cat /etc/shells | grep -q "$binroot/zsh")" ]]; then
