@@ -81,6 +81,7 @@ alias gca='git commit -v -a'
 # Symfony/PHP
 alias phing=vendor/bin/phing
 alias sf=bin/console
+alias sfs='symfony serve'
 
 # Vagrant
 alias v=vagrant
