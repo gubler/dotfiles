@@ -6,12 +6,22 @@ function is_osx() {
 
 
 # Load ZSH PLUGINS & Z DIRECTORY NAVIGATOR
-source $HOME/.dotfiles/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $HOME/.dotfiles/bin/z/z.sh
-source $HOME/.dotfiles/zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.dotfiles/zsh_plugins/zsh-you-should-use/you-should-use.plugin.zsh
-source $HOME/.dotfiles/zsh_plugins/zsh-lux/zsh-lux.plugin.zsh
 source $HOME/.dotfiles/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.dotfiles/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.dotfiles/zsh_plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source $HOME/.dotfiles/bin/z/z.sh
+
+# Autocomplete configuration
+zstyle ':completion:*' completer _complete
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+autoload -Uz compinit
+compinit
+
+# SUBSTRING SEARCH CONFIG
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 
 # THEME
 source $HOME/.dotfiles/zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
