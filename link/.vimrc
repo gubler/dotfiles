@@ -35,6 +35,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'StanAngeloff/php.vim'
+Plug 'takac/vim-hardtime'
 Plug 'connorholyday/vim-snazzy'
 
 call plug#end()
