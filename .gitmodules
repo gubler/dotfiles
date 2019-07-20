@@ -13,3 +13,6 @@
 [submodule "bin/z"]
 	path = bin/z
 	url = https://github.com/rupa/z.git
+[submodule "zsh_plugins/spaceship-prompt"]
+	path = zsh_plugins/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git

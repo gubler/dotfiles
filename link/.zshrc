@@ -24,8 +24,9 @@ bindkey '^[[B' history-substring-search-down
 
 
 # THEME
-source $HOME/.dotfiles/zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
-source $HOME/.dotfiles/zsh_plugins/purepower
+fpath=( "$HOME/.dotfiles/zsh_plugins/zfunctions" $fpath )
+autoload -U promptinit; promptinit
+prompt spaceship
 
 # CONFIG
 
@@ -71,10 +72,13 @@ export LC_ALL="en_US.UTF-8"
 # Make 'less' more.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# MAKE FZF USE RIPGREP
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
 # ALIASES
 alias l='exa -alh'
 alias lt='exa -lhT'
-
+alias :q='exit'
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias find="fd"
 alias c="bat"
@@ -94,7 +98,7 @@ alias sf=bin/console
 alias sfs='symfony serve'
 
 # Vagrant
-alias v=vagrant
+alias vm=vagrant
 alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"

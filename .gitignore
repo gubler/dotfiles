@@ -1,6 +1,7 @@
 # Lots of junk goes in here.
 /caches/
 /backups/
+/tags
 
 # Top secret stuff!
 /link/.ssh/*
@@ -8,22 +9,16 @@
 
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
-
-# Don't commit Atom packages
-/link/.atom/**/*
-!/link/.atom/*.cson
-!/link/.atom/*.less
-!/link/.atom/*.coffee
-!/link/.atom/*.txt
-
-# Don't commit karabiner logs
-/link/.karabiner.d/log/*
-!/link/.karabiner.d/log/.gitkeep
-
-# Don't commit rbenv temp files.
-/link/.rbenv/shims/
-/link/.rbenv/versions/
-/link/.rbenv/version
+/link/.vim/swap
+!/link/.vim/swap/.gitignore
+/link/.vim/backup
+!/link/.vim/backup/.gitignore
+/link/.vim/tags
+!/link/.vim/tags/.gitignore
+/link/.vim/undo
+!/link/.vim/undo/.gitignore
+/link/.vim/viminfo
+/link/.vim/.netrwhist
 
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*

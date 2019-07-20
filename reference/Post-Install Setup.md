@@ -19,3 +19,10 @@ There are several scripts in the `post_install_scripts` folder for finishing set
 - [macOS keyfixer](post_install_scripts/20_osx_keyfixer.sh)
 - [macOS Sublime Text 3 setup](post_install_scripts/40_osx_sublime_text.sh)
 - [macOS iTem2 and Terminal config](post_install_scripts/50_osx_item_and_terminal.sh)
+
+After configuring Terminal, set the following preferences:
+
+-  Termanal Menu > View > Allow Mouse Reporting
+-  Terminal Menu > Preferences > Keyboard > Scroll alternate screen
+
+This allows scrolling in vim buffers with the mouse.
