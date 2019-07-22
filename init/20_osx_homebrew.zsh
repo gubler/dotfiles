@@ -41,5 +41,9 @@ if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/zsh" ]]; the
 fi
 
 # Secure MariaDB
-brew services start mariadb
-mysql_secure_installation
+# brew services start mariadb
+# mysql_secure_installation
+
+# Install Symfony CLI
+curl -sS https://get.symfony.com/cli/installer | bash
+

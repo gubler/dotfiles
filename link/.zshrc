@@ -1,154 +1,50 @@
-# Functions
+# SET DOTFILES ROOT
+export DOTFILES_ROOT=$HOME/.config/dotfiles
 
-function is_osx() {
-  [[ "$OSTYPE" =~ ^darwin ]] || return 1
-}
+# FIX PATH
+PATH="/usr/local/bin:/usr/local/sbin:$DOTFILES_ROOT/bin:$HOME/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export -U PATH
+
+# CONFIG Z
+
+export _Z_DATA=$HOME/.local/.z
+
+# LOAD ZSH PLUGINS & Z DIRECTORY NAVIGATOR
+source $DOTFILES_ROOT/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $DOTFILES_ROOT/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $DOTFILES_ROOT/zsh_plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source $DOTFILES_ROOT/zsh_plugins/sublime-text.zsh
+source $DOTFILES_ROOT/bin/z/z.sh
+
+# SUBSTRING SEARCH CONFIG
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# THEME
+fpath=( "$DOTFILES_ROOT/zsh_plugins/zfunctions" $fpath )
+autoload -U promptinit; promptinit
+prompt spaceship
+
+# CONFIG
+source $DOTFILES_ROOT/zsh_source/00_config.zsh
+
+# ALIASES
+source $DOTFILES_ROOT/zsh_source/01_aliases.zsh
+
+if [ is_osx ]; then
+    source $DOTFILES_ROOT/zsh_source/02_macos.zsh
+else
+    source $DOTFILES_ROOT/zsh_source/03_linux.zsh
+fi
 
 
-# Load ZSH PLUGINS & Z DIRECTORY NAVIGATOR
-source $HOME/.dotfiles/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.dotfiles/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $HOME/.dotfiles/zsh_plugins/zsh-you-should-use/you-should-use.plugin.zsh
-source $HOME/.dotfiles/bin/z/z.sh
+# Load local aliases
+source $HOME/.local_zsh_config.zsh
 
 # Autocomplete configuration
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 autoload -Uz compinit
-compinit
+compinit -u -d $HOME/.local/zsh/zcompdump
 
-# SUBSTRING SEARCH CONFIG
-
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-
-# THEME
-fpath=( "$HOME/.dotfiles/zsh_plugins/zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt spaceship
-
-# CONFIG
-
-# Editor Config
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-    export EDITOR='subl -w'
-    export LESSEDIT='subl %f'
-else
-    export EDITOR='vim'
-fi
-
-export VISUAL="$EDITOR"
-
-## Command history configuration
-if [ -z "$HISTFILE" ]; then
-    HISTFILE=$HOME/.zsh_history
-fi
-
-HISTSIZE=10000
-SAVEHIST=10000
-
-# Show history
-case $HIST_STAMPS in
-  "mm/dd/yyyy") alias history='fc -fl 1' ;;
-  "dd.mm.yyyy") alias history='fc -El 1' ;;
-  "yyyy-mm-dd") alias history='fc -il 1' ;;
-  *) alias history='fc -l 1' ;;
-esac
-
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups # ignore duplication command history list
-setopt hist_ignore_space
-setopt hist_verify
-setopt inc_append_history
-setopt share_history # share command history data
-
-# Prefer US English and use UTF-8
-export LANG="en_US"
-export LC_ALL="en_US.UTF-8"
-
-# Make 'less' more.
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# MAKE FZF USE RIPGREP
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-
-# ALIASES
-alias l='exa -alh'
-alias lt='exa -lhT'
-alias :q='exit'
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
-alias find="fd"
-alias c="bat"
-alias ping='prettyping --nolegend'
-alias top="sudo htop"
-
-# Git shortcuts
-alias g='git'
-function gc() { git checkout "${@:-master}"; } # Checkout master by default
-alias gco='gc'
-alias gst='git status'
-alias gca='git commit -v -a'
-
-# Symfony/PHP
-alias phing=vendor/bin/phing
-alias sf=bin/console
-alias sfs='symfony serve'
-
-# Vagrant
-alias vm=vagrant
-alias vu="vagrant up"
-alias vs="vagrant ssh"
-alias vus="vagrant up && vagrant ssh"
-alias vh="vagrant halt"
-
-# Fun
-alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
-alias weather="curl wttr.in"
-
-# Apt Package Search
-alias apt-search="apt-cache search"
-
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-    # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-    PATH="/usr/local/bin:/usr/local/sbin:$HOME/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:$PATH"
-
-    export -U PATH
-
-    # Trim new lines and copy to clipboard
-    alias pbc="tr -d '\n' | pbcopy"
-    alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
-    alias yt=youtube-dl
-    alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-
-    # Flush Directory Service cache
-    alias flushdns="dscacheutil -flushcache"
-
-    # `s` with no arguments opens the current directory in Sublime Text, otherwise
-    # opens the given location
-    function s() {
-      if [ $# -eq 0 ]; then
-        subl .
-      else
-        subl "$@"
-      fi
-    }
-
-    # add support for ctrl+o to open selected file in sublime
-    export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(s {})+abort'"
-
-    # `o` with no arguments opens current directory, otherwise opens the given
-    # location
-    function o() {
-      if [ $# -eq 0 ]; then
-        open .
-      else
-        open "$@"
-      fi
-    }
-fi
-
-# Load local aliases
-source $HOME/.local_aliases.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
