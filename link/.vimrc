@@ -62,6 +62,16 @@ Plug 'maximbaz/lightline-ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'terryma/vim-multiple-cursors'
+Plug 'hecal3/vim-leader-guide'
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'kristijanhusak/deoplete-phpactor'
+endif
 
 call plug#end()
 
@@ -158,7 +168,7 @@ nnoremap <C-H> <C-W><C-H>
 " ----------------------------
 
 " AUTOCOMPLETE
-" let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 " ----------------------------
 
@@ -209,3 +219,25 @@ nnoremap <F5> :UndotreeToggle<cr>
 " This can go away when I'm better at vim motion
 let g:hardtime_default_on=1
 
+" Leader guide configuration.
+let g:lmap =  {}
+call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
+nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
+
+let g:lmap.k = {
+      \'name': 'PhpActor',
+      \'b': ['call phpactor#ClassExpand()', 'ExpandClass'],
+      \'c': ['call phpactor#CopyFile()', 'Copy file'],
+      \'d': ['call phpactor#GotoDefinition()', 'Go to definition'],
+      \'e': ['call phpactor#mxtractMethod()', 'Extract method'],
+      \'f': ['call phpactor#FindReferences()', 'Find references'],
+      \'k': ['call phpactor#ContextMenu()', 'Menu'],
+      \'h': ['call phpactor#Hover()', 'Hover'],
+      \'i': ['call phpactor#ClassInflect()', 'Inflect'],
+      \'l': ['call phpactor#ClassNew()', 'New class'],
+      \'m': ['call phpactor#MoveFile()', 'Move file'],
+      \'n': ['call phpactor#Navigate()', 'Navigate'],
+      \'t': ['call phpactor#Transform()', 'Transform/Complete'],
+      \'u': ['call phpactor#UseAdd()', 'UseAdd'],
+      \}
