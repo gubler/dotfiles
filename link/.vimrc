@@ -57,8 +57,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'TaDaa/vimade'
 Plug 'majutsushi/tagbar'
-Plug 'w0rp/ale'
-Plug 'maximbaz/lightline-ale'
+" Plug 'w0rp/ale'
+" Plug 'maximbaz/lightline-ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'terryma/vim-multiple-cursors'
@@ -72,6 +72,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'kristijanhusak/deoplete-phpactor'
 endif
+Plug 'kristijanhusak/deoplete-phpactor'
 
 call plug#end()
 
@@ -169,6 +170,8 @@ nnoremap <C-H> <C-W><C-H>
 
 " AUTOCOMPLETE
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {}
+let g:deoplete#sources.php = ['omni', 'phpactor', 'buffer']
 
 " ----------------------------
 
