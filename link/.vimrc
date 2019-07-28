@@ -57,8 +57,8 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'TaDaa/vimade'
 Plug 'majutsushi/tagbar'
-" Plug 'w0rp/ale'
-" Plug 'maximbaz/lightline-ale'
+Plug 'w0rp/ale'
+Plug 'maximbaz/lightline-ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
 " Plug 'terryma/vim-multiple-cursors'
@@ -244,3 +244,9 @@ let g:lmap.k = {
       \'t': ['call phpactor#Transform()', 'Transform/Complete'],
       \'u': ['call phpactor#UseAdd()', 'UseAdd'],
       \}
+
+let g:ale_linters = {
+\   'php': ['php'],
+\}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'normal'
