@@ -196,6 +196,12 @@ let g:lightline.active = { 'right': [['lineinfo'], ['percent'], ['fileencoding',
 
 " ----------------------------
 
+"Jump back to last edited buffer
+nnoremap <C-b> <C-^>
+inoremap <C-b> <esc><C-^>
+
+" ----------------------------
+
 " COMMANDS
 
 " Toggle FZF
