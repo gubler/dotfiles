@@ -205,7 +205,7 @@ inoremap <C-b> <esc><C-^>
 " COMMANDS
 
 " Toggle FZF
-nmap ; :Buffers<CR>
+nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>f :Find<CR>
