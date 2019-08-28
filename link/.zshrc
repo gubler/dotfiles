@@ -24,6 +24,8 @@ bindkey '^[[B' history-substring-search-down
 fpath=( "$DOTFILES_ROOT/zsh_plugins/zfunctions" $fpath )
 autoload -U promptinit; promptinit
 prompt spaceship
+spaceship_vi_mode_enable
+export KEYTIMEOUT=1
 
 # CONFIG
 source $DOTFILES_ROOT/zsh_source/00_config.zsh
