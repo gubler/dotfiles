@@ -11,10 +11,10 @@ export _Z_DATA=$HOME/.local/.z
 
 # LOAD ZSH PLUGINS & Z DIRECTORY NAVIGATOR
 source $DOTFILES_ROOT/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $DOTFILES_ROOT/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source $DOTFILES_ROOT/zsh_plugins/zsh-you-should-use/you-should-use.plugin.zsh
 source $DOTFILES_ROOT/zsh_plugins/sublime-text.zsh
 source $DOTFILES_ROOT/bin/z/z.sh
+source $DOTFILES_ROOT/zsh_plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # SUBSTRING SEARCH CONFIG
 bindkey '^[[A' history-substring-search-up
