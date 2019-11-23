@@ -64,3 +64,6 @@ alias sfcc="rm -rf /dev/shm/app && sf cache:clear"
 # FUN
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
 alias weather="curl wttr.in"
+
+# Run m4b-tool via docker (must have built image first)
+alias m4b-tool='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd)":/mnt m4b-tool'
