@@ -20,6 +20,9 @@
 /link/.vim/viminfo
 /link/.vim/.netrwhist
 
+# Don't commit tmux ressurect files
+/link/.tmux/resurrect/
+
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 
