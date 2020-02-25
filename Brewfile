@@ -11,6 +11,7 @@ brew 'composer'
 brew 'curl'
 brew 'exa'
 brew 'fd'
+brew 'fpp'
 brew 'ffmpeg'
 brew 'fzf'
 brew 'git'
@@ -34,9 +35,10 @@ brew 'reattach-to-user-namespace'
 brew 'ripgrep'
 brew 'ssh-copy-id'
 brew 'tldr'
-brew "tmux", args: ['--with-utf8proc']
-brew "universal-ctags", args: ['HEAD']
-brew "wget", args: ['enable-iri']
+brew 'tmux', args: ['--with-utf8proc']
+brew 'universal-ctags', args: ['HEAD']
+brew 'urlview'
+brew 'wget', args: ['enable-iri']
 brew 'yarn'
 brew 'zsh'
 

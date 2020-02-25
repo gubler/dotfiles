@@ -13,3 +13,6 @@
 [submodule "zsh_plugins/spaceship-prompt"]
 	path = zsh_plugins/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git
+[submodule "link/.tmux/plugins/tpm"]
+	path = link/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git

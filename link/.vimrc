@@ -7,13 +7,11 @@ set wildmenu                 " display tab completions as a menu
 set cursorline               " highlight current line
 set encoding=UTF-8           " use UTF-8
 set scrolloff=4              " vertical scroll offset
-set sidescrolloff=5          " horizonal scroll offset
-" set backspace=indent,eol,start " make backspace work like other editors
+set sidescrolloff=5          " horizontal scroll offset
+set backspace=indent,eol,start " make backspace work like other editors
 set viminfo+=n~/.vim/viminfo " move .viminfo file to .vim dir
 set mouse=n                  " use the mouse in normal mode
-set clipboard=unnamed        " use system clipboard by default
 set ttyfast                  " faster redrawing
-
 
 " ----------------------------
 
@@ -29,7 +27,7 @@ set writebackup                    " protect against crash-during write
 set nobackup                       " but do not persist backup after successful write
 set backupcopy=auto                " use rename-and-write-new method whenever safe
 set backupdir^=$HOME/.vim/backup// " set backup files to single location
-set undofile                       " persistend undo
+set undofile                       " persist undo
 set undodir^=$HOME/.vim/undo//     " save undo files to single location
 set undolevels=1000                " levels of undo to save
 
@@ -38,7 +36,8 @@ set undolevels=1000                " levels of undo to save
 " PLUG
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-slash'
@@ -47,33 +46,25 @@ Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'takac/vim-hardtime'
 Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-dadbod'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'TaDaa/vimade'
 Plug 'majutsushi/tagbar'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'maximbaz/lightline-ale'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'terryma/vim-multiple-cursors'
+Plug 'airblade/vim-gitgutter'
 Plug 'hecal3/vim-leader-guide'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'kristijanhusak/deoplete-phpactor'
-endif
-Plug 'kristijanhusak/deoplete-phpactor'
-
+Plug 'mhinz/vim-startify'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 " ----------------------------
@@ -82,6 +73,19 @@ call plug#end()
 
 " <space>-w to save
 nnoremap <leader>w :w<cr>
+
+" enable and disable spelling
+nmap <silent> <leader>s :set spell!<CR>
+
+" auto-save
+let g:auto_save = 1         " enable by default
+let g:auto_save_silent = 1  " do not display the auto-save notification
+
+" ----------------------------
+
+" Jump back to last edited buffer
+nnoremap <C-b> <C-^>
+inoremap <C-b> <esc><C-^>
 
 " ----------------------------
 
@@ -92,6 +96,7 @@ nnoremap <leader>w :w<cr>
 " Do not index .git or sql files
 " nnoremap <leader>ct :!ctags -Rf .git/tags --tag-relative --extras=+f --exclude=.git --languages=-sql<cr><cr>
 let g:gutentags_cache_dir=expand('$HOME/.vim/tags/')
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.json', '*.xml', '*.phar', '*.ini', '*.rst', '*.md', '*vendor/*/test*', '*vendor/*/Test*', '*vendor/*/fixture*', '*vendor/*/Fixture*', '*var/cache*', '*var/log*']
 " ----------------------------
 
 " FOLDING
@@ -99,7 +104,6 @@ set foldenable          " enable folding
 set foldlevelstart=0   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 :autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
-" nnoremap <space> za     " space open/closes folds
 
 " ----------------------------
 
@@ -114,7 +118,7 @@ set shiftround " round indentation to multiples of 'shiftwidth'
 " ----------------------------
 
 " INDENTATION
-" filetype indent on
+" file type indent on
 set wrap
 set linebreak
 
@@ -170,8 +174,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " AUTOCOMPLETE
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources = {}
-let g:deoplete#sources.php = ['omni', 'phpactor', 'buffer']
 
 " ----------------------------
 
@@ -194,6 +196,20 @@ let g:lightline.component_type = {
 
 let g:lightline.active = { 'right': [['lineinfo'], ['percent'], ['fileencoding', 'filetype'], [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+" No longer need to show the mode since it is displayed with LightLine
+set noshowmode
+
 " ----------------------------
 
 "Jump back to last edited buffer
@@ -205,16 +221,16 @@ inoremap <C-b> <esc><C-^>
 " COMMANDS
 
 " Toggle FZF
-nmap <Leader>b :Buffers<CR>
+nmap ; :Buffers<CR>
 nmap <Leader>t :Files<CR>
-nmap <Leader>r :Tags<CR>
-nmap <Leader>f :Find<CR>
+nmap <Leader>a :Tags<CR>
+nmap <Leader>r :Find<CR>
 " Add a :Find command that searches files with FZF and ripgrep
 " via https://medium.com/@crashybang/supercharge-vim-with-fzf-and-ripgrep-d4661fc853d2
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
 " Toggle NerdTree
-map <Leader>n :NERDTreeToggle<CR>
+" map <silent> <Leader>n :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=30
 let NERDTreeBookmarksFile='$HOME/.local/NERDTreeBookmarks'  " where to save bookmarks file
 let NERDTreeIgnore=['^\.idea$[[dir]]', '^\.git$[[dir]]']    " ignore .git and .idea directories
@@ -226,7 +242,9 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 " Enable HardTime by default
 " This can go away when I'm better at vim motion
-let g:hardtime_default_on=1
+let g:hardtime_default_on=0
+let g:hardtime_ignore_quickfix = 1
+let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
 
 " Leader guide configuration.
 let g:lmap =  {}
@@ -234,6 +252,8 @@ call leaderGuide#register_prefix_descriptions("<Space>", "g:lmap")
 nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
 vnoremap <silent> <leader> :<c-u>LeaderGuideVisual '<Space>'<CR>
 
+let g:lmap.s = ['set spell!', 'Spellcheck Toggle']
+let g:lmap.n = ['NERDTreeToggle', 'NERDTree Toggle']
 let g:lmap.k = {
       \'name': 'PhpActor',
       \'b': ['call phpactor#ClassExpand()', 'ExpandClass'],
@@ -250,9 +270,65 @@ let g:lmap.k = {
       \'t': ['call phpactor#Transform()', 'Transform/Complete'],
       \'u': ['call phpactor#UseAdd()', 'UseAdd'],
       \}
+let g:lmap.f = { 'name' : 'File Menu' }
+let g:lmap.o = { 'name' : 'Open Stuff' }
+" Provide commands and descriptions for existing mappings
+nmap <silent> <leader>fd :e $MYVIMRC<CR>
+let g:lmap.f.d = ['e $MYVIMRC', 'Open vimrc']
 
+nmap <silent> <leader>fs :so %<CR>
+let g:lmap.f.s = ['so %', 'Source file']
+
+nmap <silent> <leader>oo  :copen<CR>
+let g:lmap.o.o = ['copen', 'Open quickfix']
+
+nmap <silent> <leader>ol  :lopen<CR>
+let g:lmap.o.l = ['lopen', 'Open" locationlist']
+
+" Create new menus not based on
+" existing mappings:
+let g:lmap.g = {
+            \'name' : 'Git Menu',
+            \'s' : ['Gstatus', 'Git Status'],
+            \'p' : ['Gpull', 'Git Pull'],
+            \'u' : ['Gpush', 'Git Push'],
+            \'c' : ['Gcommit', 'Git Commit'],
+            \'d' : ['Gdiff', 'Git Diff'],
+            \'w' : ['Gwrite', 'Git Write'],
+            \'h' : {'name': 'Git Hunks',
+                \'p': ['GitGutterPreviewHunk', 'Preview'],
+                \'s': ['GitGutterStageHunk', 'Stage'],
+                \'u': ['GitGutterUndoHunk', 'UNstage'],
+            \}
+            \}
+
+let g:gitgutter_map_keys = 0
+
+
+function! s:my_displayfunc()
+    let g:leaderGuide#displayname =
+                \ substitute(g:leaderGuide#displayname, '\c<cr>$', '', '')
+    let g:leaderGuide#displayname = 
+                \ substitute(g:leaderGuide#displayname, '^<Plug>', '', '')
+endfunction
+
+let g:leaderGuide_displayfunc = [function("s:my_displayfunc")]
 let g:ale_linters = {
 \   'php': ['php'],
 \}
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
+
+" set phpactor to do autocomplete for OmniComplete
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+autocmd CompleteDone * pclose
+
+" Delete Fugitive buffers on leaving them
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
