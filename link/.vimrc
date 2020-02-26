@@ -65,6 +65,7 @@ Plug 'hecal3/vim-leader-guide'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 Plug 'mhinz/vim-startify'
 Plug '907th/vim-auto-save'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " ----------------------------
@@ -332,3 +333,6 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" ignore EditorConfig in fugitive windows
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
