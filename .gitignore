@@ -9,13 +9,13 @@
 
 # Don't commit Vim plugins, vim-plug will install them.
 /link/.vim/plugged
-/link/.vim/swap
+/link/.vim/swap/*
 !/link/.vim/swap/.gitignore
-/link/.vim/backup
+/link/.vim/backup/*
 !/link/.vim/backup/.gitignore
-/link/.vim/tags
+/link/.vim/tags/*
 !/link/.vim/tags/.gitignore
-/link/.vim/undo
+/link/.vim/undo/*
 !/link/.vim/undo/.gitignore
 /link/.vim/viminfo
 /link/.vim/.netrwhist
@@ -29,8 +29,7 @@
 
 !reference/**/*
 
-
-!/link/.vimrc.local
 !/copy/.local_aliases.sh
+!/copy/.vimrc.local
 
 .DS_Store

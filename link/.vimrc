@@ -1,3 +1,10 @@
+" FUNCTION TO SOURCE FILE IF IT EXISTS
+function! SourceIfExists(file)
+    if filereadable(expand(a:file))
+        exe 'source' a:file
+    endif
+endfunction
+
 " BASIC CONFIG
 set nocompatible             " not compatible with plain vi
 set hidden                   " hide buffers without saving them
@@ -44,7 +51,6 @@ Plug 'junegunn/vim-slash'
 Plug 'itchyny/lightline.vim'
 Plug 'rayburgemeestre/phpfolding.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'takac/vim-hardtime'
 Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
@@ -63,9 +69,11 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'hecal3/vim-leader-guide'
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
-Plug 'mhinz/vim-startify'
 Plug '907th/vim-auto-save'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'amiorin/vim-project'
+Plug 'justinmk/vim-sneak'
+Plug 'kshenoy/vim-signature'
 call plug#end()
 
 " ----------------------------
@@ -125,7 +133,7 @@ set linebreak
 
 set breakindent
 set breakindentopt=sbr
-set showbreak=↪\  
+set showbreak=↪\
 
 " Toggle wrapping with Wrap and Nowrap
 command! -nargs=* Wrap set wrap linebreak breakindent showbreak=↪\  breakindentopt=sbr
@@ -222,7 +230,7 @@ inoremap <C-b> <esc><C-^>
 " COMMANDS
 
 " Toggle FZF
-nmap ; :Buffers<CR>
+nmap <Leader>b :Buffers<CR>
 nmap <Leader>t :Files<CR>
 nmap <Leader>a :Tags<CR>
 nmap <Leader>r :Find<CR>
@@ -240,12 +248,6 @@ let NERDTreeShowHidden=1                                    " show hidden files 
 
 nmap <F8> :TagbarToggle<CR>
 nnoremap <F5> :UndotreeToggle<cr>
-
-" Enable HardTime by default
-" This can go away when I'm better at vim motion
-let g:hardtime_default_on=0
-let g:hardtime_ignore_quickfix = 1
-let g:hardtime_ignore_buffer_patterns = [ "CustomPatt[ae]rn", "NERD.*" ]
 
 " Leader guide configuration.
 let g:lmap =  {}
@@ -309,7 +311,7 @@ let g:gitgutter_map_keys = 0
 function! s:my_displayfunc()
     let g:leaderGuide#displayname =
                 \ substitute(g:leaderGuide#displayname, '\c<cr>$', '', '')
-    let g:leaderGuide#displayname = 
+    let g:leaderGuide#displayname =
                 \ substitute(g:leaderGuide#displayname, '^<Plug>', '', '')
 endfunction
 
@@ -336,3 +338,6 @@ vmap <C-Down> ]egv
 
 " ignore EditorConfig in fugitive windows
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Source local .vimrc if it exists
+call SourceIfExists("~/.vimrc.local")

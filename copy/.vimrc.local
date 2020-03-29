@@ -1,0 +1,24 @@
+" LOCAL VIMRC
+" ADD ONLY LOCALLY RELEVANT SETTINGS
+
+
+
+
+
+" PROJECT CONFIG
+let g:project_use_nerdtree = 0
+
+set rtp+=~/.vim/bundle/vim-project/
+" CHANGE ~/Projects to your local project root or remove for $HOME
+call project#rc("~/Projects")
+
+" For each project (title can be omitted):
+"
+" relative to project root
+"
+" Project 'relative path', 'title'
+"
+" absolute path
+"
+" Project '~/project', 'title'
+
