@@ -975,4 +975,26 @@ hr {
   blockquote {
     color: #aaaaaa;
   }
+
+  pre {
+    background-color: #494949;
+    color: #efefef;
+  }
+
+  kbd {
+    background-color: #494949;
+    color: #efefef;
+  }
+  table tr {
+    background-color: #333333;
+    border-top: 1px solid #c6cbd1;
+  }
+  
+  table tr:nth-child(2n) {
+    background-color: #575656;
+  }
+  
+  img {
+    background-color: #333333;
+  }
 }
