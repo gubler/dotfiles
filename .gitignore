@@ -19,6 +19,7 @@
 !/link/.vim/undo/.gitignore
 /link/.vim/viminfo
 /link/.vim/.netrwhist
+/link/.vim/viminfo.tmp*
 
 # Don't commit tmux ressurect files
 /link/.tmux/resurrect/
