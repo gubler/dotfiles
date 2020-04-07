@@ -23,7 +23,7 @@ set ttyfast                  " faster redrawing
 " ----------------------------
 
 " GUI SETTINGS
-set gfn=AnonymiceNerdFontComplete-:h18
+set guifont AnonymicePowerline\ Nerd\ Font:h18
 
 " ----------------------------
 
