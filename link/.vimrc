@@ -282,6 +282,9 @@ let g:lmap.f.d = ['e $MYVIMRC', 'Open vimrc']
 nmap <silent> <leader>fs :so %<CR>
 let g:lmap.f.s = ['so %', 'Source file']
 
+nmap <silent> <leader>fm :set filetype=markdown<CR>
+let g:lmap.f.m = ['set filetype=markdown', 'Markdown syntax']
+
 nmap <silent> <leader>oo  :copen<CR>
 let g:lmap.o.o = ['copen', 'Open quickfix']
 
