@@ -29,7 +29,8 @@
 
 !reference/**/*
 
-!/copy/.local_aliases.sh
+!/copy/.zshrc.local
 !/copy/.vimrc.local
+!/copy/.tmux.conf.local
 
 .DS_Store
