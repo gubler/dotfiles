@@ -74,6 +74,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'amiorin/vim-project'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
+Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 " ----------------------------
@@ -279,6 +280,9 @@ let g:lmap.o = { 'name' : 'Open Stuff' }
 nmap <silent> <leader>fd :e $MYVIMRC<CR>
 let g:lmap.f.d = ['e $MYVIMRC', 'Open vimrc']
 
+nmap <silent> <leader>fi :IndentGuideToggle<CR>
+let g:lmap.f.d = ['IndentGuideToggle', 'Toggle Indent Guide']
+
 nmap <silent> <leader>fs :so %<CR>
 let g:lmap.f.s = ['so %', 'Source file']
 
@@ -341,6 +345,11 @@ vmap <C-Down> ]egv
 
 " ignore EditorConfig in fugitive windows
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" enable Indent Guides by default
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 " Source local .vimrc if it exists
 call SourceIfExists("~/.vimrc.local")
