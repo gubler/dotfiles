@@ -37,6 +37,8 @@ fi
 if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/zsh" ]]; then
   e_header "Making $binroot/zsh your default shell"
   sudo chsh -s "$binroot/zsh" "$USER" >/dev/null 2>&1
+  e_header "Adding Oh My ZSH"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc
   e_arrow "Please exit and restart all your shells."
 fi
 

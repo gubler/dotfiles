@@ -34,15 +34,6 @@ if [[ "command -v htop" ]]; then
     alias top='htop'
 fi
 
-# VAGRANT
-if [[ "command -v vagrant" ]]; then
-    alias va='vagrant'
-    alias vu='vagrant up'
-    alias vs='vagrant ssh'
-    alias vus='vagrant up && vagrant ssh'
-    alias vh='vagrant halt'
-fi
-
 # GIT
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
@@ -63,12 +54,12 @@ alias sfcc="rm -rf /dev/shm/app && sf cache:clear"
 
 # tmux
 
-alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
-alias ts='tmux new-session -s'
-alias tl='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
+# alias ta='tmux attach -t'
+# alias tad='tmux attach -d -t'
+# alias ts='tmux new-session -s'
+# alias tl='tmux list-sessions'
+# alias tksv='tmux kill-server'
+# alias tkss='tmux kill-session -t'
 
 # FUN
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"

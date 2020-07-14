@@ -5,21 +5,20 @@ tap 'buo/cask-upgrade'
 tap "universal-ctags/universal-ctags"
 
 # Homebrew
-brew 'ack'
 brew 'bat'
 brew 'composer'
 brew 'curl'
 brew 'exa'
 brew 'fd'
-brew 'fpp'
 brew 'ffmpeg'
 brew 'fzf'
 brew 'git'
 brew 'go'
-brew 'htop'
+brew 'gotop'
 brew 'httpie'
 brew 'hugo'
 brew 'jq'
+brew 'lazydocker'
 brew 'lesspipe'
 brew 'm-cli'
 brew 'mariadb', restart_service: :changed
@@ -30,17 +29,23 @@ brew 'node'
 brew 'pandoc'
 brew 'php'
 brew 'prettyping'
-brew 'python3'
+brew 'python@3.9'
 brew 'reattach-to-user-namespace'
 brew 'ripgrep'
+brew 'sqlite'
 brew 'ssh-copy-id'
+brew 'starship'
 brew 'tldr'
 brew 'tmux', args: ['--with-utf8proc']
 brew 'universal-ctags', args: ['HEAD']
-brew 'urlview'
+brew 'vim'
+brew 'webp'
 brew 'wget', args: ['enable-iri']
 brew 'yarn'
+brew 'youtube-dl'
 brew 'zsh'
+brew 'zsh-syntax-highlighting'
+brew 'zsh-history-substring-search'
 
 # Casks
 ## Apps
