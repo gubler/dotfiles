@@ -30,8 +30,8 @@ if [[ "command -v prettyping" ]]; then
     alias ping='prettyping --nolegend'
 fi
 
-if [[ "command -v htop" ]]; then
-    alias top='htop'
+if [[ "command -v gotop" ]]; then
+    alias top='gotop'
 fi
 
 # GIT
