@@ -57,7 +57,7 @@
   insteadOf = "gist:"
 [url "git@heroku.com:"]
   insteadOf = "heroku:"
-# [url "https://"]
-#     insteadOf = git://
 [commit]
     template = ~/.git-commit-template
+[init]
+	defaultBranch = main
