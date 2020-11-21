@@ -6,7 +6,6 @@ if [ is_osx ]; then
     alias flushdns="dscacheutil -flushcache"
 
     # Dokku alias
-    alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
     alias yt=youtube-dl
     alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
 
