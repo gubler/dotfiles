@@ -35,7 +35,10 @@ ZSH_THEME="candy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf tmux vi-mode z)
+export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_ITERM2=true
+
+plugins=(fzf tmux vi-mode z)
 
 source $ZSH/oh-my-zsh.sh
 

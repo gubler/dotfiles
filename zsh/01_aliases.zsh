@@ -34,6 +34,14 @@ if [[ "command -v gotop" ]]; then
     alias top='gotop'
 fi
 
+if [[ "command -v lazydocker" ]]; then
+    alias ld='lazydocker'
+fi
+
+if [[ "command -v lazygit" ]]; then
+    alias gg='lazygit'
+fi
+
 # GIT
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
