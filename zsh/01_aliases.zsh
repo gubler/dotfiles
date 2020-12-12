@@ -48,7 +48,8 @@ function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
 alias gst='git status'
 alias gca='git commit -v -a'
-alias gpom='git push origin master'
+alias gpo='git push origin'
+alias gpom='git push origin main'
 
 # PHP & SYMFONY
 alias phing=vendor/bin/phing
