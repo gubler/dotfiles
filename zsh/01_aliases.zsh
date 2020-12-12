@@ -1,6 +1,6 @@
 # FIX LS
 if [[ "command -v exa" ]]; then
-    alias l='exa -alh'
+    alias l='exa -alh --icons'
     alias lt='exa -lhT'
 else
     alias l='ls -lah'
