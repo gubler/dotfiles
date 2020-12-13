@@ -42,3 +42,9 @@ export LC_ALL="en_US.UTF-8"
 
 # MAKE FZF USE RIPGREP
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
+# CONFIG NNN
+export NNN_PLUG='z:fzcd;f:finder;o:fzopen;d:diffs;p:preview-tui;i:imgview'
+export NNN_FCOLORS='c1e22d2e006033f7c6d6abc4'
+export NNN_FIFO="/tmp/nnn.fifo"
+

@@ -67,3 +67,23 @@ alias weather="curl wttr.in"
 
 # Run m4b-tool via docker (must have built image first)
 alias m4b-tool='docker run -it --rm -u $(id -u):$(id -g) -v "$(pwd)":/mnt m4b-tool'
+
+
+# NNN configuration
+alias ls='nnn -e'
+alias nnn='nnn -e'
+
+# Docker Compose
+alias dcom='docker run --rm --interactive --tty --volume `pwd`:/app odev/composer'
+alias dcomi='docker run --rm --interactive --tty --volume `pwd`:/app odev/composer --ignore-platform-reqs'
+alias dnpm='docker run --rm --interactive --tty -v `pwd`:/usr/src/app -w /usr/src/app odev/node npm'
+alias dnpx='docker run --rm --interactive --tty -v `pwd`:/usr/src/app -w /usr/src/app odev/node npx'
+alias dsc='docker-compose exec php bin/console'
+alias dce='docker-compose exec'
+
+# LazyGit/LazyDocker
+alias ld='lazydocker'
+alias gg='lazygit'
+
+# TMUX
+alias ta='tmux attach -t'

@@ -35,14 +35,14 @@ ZSH_THEME="candy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf tmux vi-mode z)
+plugins=(git fzf vi-mode z)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # FIX PATH
-PATH="/usr/local/bin:/usr/local/sbin:$DOTFILES_ROOT/bin:$HOME/.bin:$HOME/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$DOTFILES_ROOT/bin:$HOME/.bin:$HOME/.cargo/bin:$HOME/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:$PATH"
 export -U PATH
 
 # # CONFIG
