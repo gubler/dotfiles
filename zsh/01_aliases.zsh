@@ -1,6 +1,6 @@
 # FIX LS
 if [[ "command -v exa" ]]; then
-    alias l='exa -alh'
+    alias l='exa -alh --icons'
     alias lt='exa -lhT'
 else
     alias l='ls -lah'
@@ -34,13 +34,22 @@ if [[ "command -v gotop" ]]; then
     alias top='gotop'
 fi
 
+if [[ "command -v lazydocker" ]]; then
+    alias ld='lazydocker'
+fi
+
+if [[ "command -v lazygit" ]]; then
+    alias gg='lazygit'
+fi
+
 # GIT
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
 alias gst='git status'
 alias gca='git commit -v -a'
-alias gpom='git push origin master'
+alias gpo='git push origin'
+alias gpom='git push origin main'
 
 # PHP & SYMFONY
 alias phing=vendor/bin/phing
