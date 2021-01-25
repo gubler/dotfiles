@@ -17,8 +17,7 @@ There are several scripts in the `post_install_scripts` folder for finishing set
 
 - [macOS config](post_install_scripts/20_macos_config.sh)
 - [macOS keyfixer](post_install_scripts/20_macos_keyfixer.sh)
-- [macOS Sublime Text 3 setup](post_install_scripts/40_macos_sublime_text.sh)
-- [macOS Terminal config](post_install_scripts/50_macos_terminal.sh)
+- [macOS iTerm and Terminal config](post_install_scripts/50_macos_iterm_and_terminal.sh)
 
 After configuring Terminal, set the following preferences:
 
