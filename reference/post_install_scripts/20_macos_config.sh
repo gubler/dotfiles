@@ -96,6 +96,10 @@ echo "Save screenshots as PNGs"
 defaults write com.apple.screencapture type -string "png"
 
 echo ""
+echo "Disable floating thumbnail after screenshot"
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
+
+echo ""
 echo "Disable automatic termination of inactive apps"
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
@@ -162,7 +166,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 echo ""
-echo "Allowing text selection in Quick Look/Preview in Finder by default"
+echo "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+echo ""
+echo "Allowing text selection in Quick Look/Preview in Finder by default (does not work in Mojave or later)"
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 echo ""
@@ -172,10 +180,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo ""
 echo "Use column view in all Finder windows by default"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-
-echo ""
-echo "Avoiding the creation of .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 echo ""
 echo "Set Downloads as the default location for new Finder windows"
@@ -208,9 +212,19 @@ defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
-echo ""
-echo "Do not show recent tags"
+# Hide icons for hard drives, servers, and removable media from the desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# Finder showX settings
 defaults write com.apple.finder ShowRecentTags -bool false
+defaults write com.apple.finder ShowSidebar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowTabView -bool true
+defaults write com.apple.finder ShowPreviewPane -bool true
+defaults write com.apple.finder ShowPathbar -bool true
 
 echo ""
 echo "Show the ~/Library folder"
@@ -219,14 +233,6 @@ chflags nohidden ~/Library
 echo ""
 echo "Show the /Volumes folder"
 sudo chflags nohidden /Volumes
-
-echo ""
-echo "Avoid creating .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-echo ""
-echo "Allow text selection in Quick Look"
-defaults write com.apple.finder QLEnableTextSelection -bool true
 
 echo ""
 echo "Disable window animations and Get Info animations"
