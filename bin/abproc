@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    echo "No target provided."
+    exit 1
+fi
+
+target=$1
+
+# if a directory, process through m4b
+if [ -d "$target" ]; then
+    # Check if docker is running
+    if (! docker stats --no-stream &> /dev/null); then
+        echo "Docker is not running - please start it first."
+        exit 1
+    fi
+
+    outfile=$target.mp3
+
+    # m4b-tool merge
+    docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):/mnt m4b-tool merge $target --jobs=4 --audio-bitrate=48k --audio-format=mp3 --audio-codec=libmp3lame --output-file=$outfile
+
+    # update target filename
+    target=$outfile
+fi
+
+name=$(echo $target | cut -f 1 -d '.')
+
+# Run file through ffmpeg
+ffmpeg -i $target -b:a 48k -c:a libmp3lame tmp.mp3
+trash $target
+mv tmp.mp3 $name.mp3
