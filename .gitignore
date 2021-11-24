@@ -17,6 +17,7 @@ auto-save-list/
 
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
+!.stow-local-ignore
 
 !reference/**/*
 
