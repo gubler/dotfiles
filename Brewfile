@@ -101,6 +101,7 @@ mas 'Drafts' id:1435957248
 mas 'Due', id:524373870
 mas 'iFlicks 3', id: 1274494218
 mas 'Magnet', id: 441258766
+mas 'Metadatics', id: id554883654
 mas 'Microsoft Remote Desktop', id:1295203466
 mas 'Numbers', id:409203825
 mas 'Paprika Recipe Manager 3', id:1303222628
