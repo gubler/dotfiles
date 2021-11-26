@@ -371,7 +371,8 @@
       'org-babel-load-languages
       '((emacs-lisp . t)
       (python . t)
-      (php . t)))
+      (php . t)
+      (shell . t)))
 
   (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
@@ -379,7 +380,7 @@
   ;; This is needed as of Org 9.2
   (require 'org-tempo)
 
-  (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+  (add-to-list 'org-structure-template-alist '("sh" . "src sh"))
   (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
   (add-to-list 'org-structure-template-alist '("py" . "src python"))
   (add-to-list 'org-structure-template-alist '("php" . "src php")))
@@ -387,7 +388,10 @@
 ;; Automatically tangle our Emacs.org config file when we save it
 (defun dlg/org-babel-tangle-config ()
   (when (string-equal (buffer-file-name)
-                      (expand-file-name "~/.dotfiles/Emacs.org"))
+                      (or
+                       (expand-file-name "~/.dotfiles/Emacs.org")
+		         (expand-file-name "~/.dotfiles/ZSH.org")
+                       ))
     ;; Dynamic scoping to the rescue
     (let ((org-confirm-babel-evaluate nil))
       (org-babel-tangle))))
@@ -611,3 +615,18 @@
 
 ;; Make gc pauses faster by decreasing the threshold.
 (setq gc-cons-threshold (* 2 1000 1000))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (list org-directory))
+ '(org-directory "~/Org")
+ '(package-selected-packages
+   '(dired-hide-dotfiles dired-open all-the-icons-dired dired-single eshell-git-prompt eterm-256color rainbow-delimiters evil-nerd-commenter forge magit counsel-projectile projectile company-box company pyvenv python-mode php-mode typescript-mode dap-mode lsp-ivy lsp-treemacs lsp-ui lsp-mode markdown-mode web-mode org-roam ob-php visual-fill-column org-bullets hydra helpful ivy-prescient counsel ivy-rich ivy which-key doom-modeline all-the-icons doom-themes evil-collection evil general no-littering auto-package-update use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

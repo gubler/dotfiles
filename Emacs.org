@@ -555,7 +555,8 @@ To execute or export code in =org-mode= code blocks, you'll need to set up =org-
           'org-babel-load-languages
           '((emacs-lisp . t)
           (python . t)
-          (php . t)))
+          (php . t)
+          (shell . t)))
 
       (push '("conf-unix" . conf-unix) org-src-lang-modes))
 
@@ -573,7 +574,7 @@ You can add more =src= block templates below by copying one of the lines and cha
       ;; This is needed as of Org 9.2
       (require 'org-tempo)
 
-      (add-to-list 'org-structure-template-alist '("sh" . "src shell"))
+      (add-to-list 'org-structure-template-alist '("sh" . "src sh"))
       (add-to-list 'org-structure-template-alist '("el" . "src emacs-lisp"))
       (add-to-list 'org-structure-template-alist '("py" . "src python"))
       (add-to-list 'org-structure-template-alist '("php" . "src php")))
@@ -589,7 +590,10 @@ This snippet adds a hook to =org-mode= buffers so that =dlg/org-babel-tangle-con
   ;; Automatically tangle our Emacs.org config file when we save it
   (defun dlg/org-babel-tangle-config ()
     (when (string-equal (buffer-file-name)
-                        (expand-file-name "~/.dotfiles/Emacs.org"))
+                        (or
+                         (expand-file-name "~/.dotfiles/Emacs.org")
+		           (expand-file-name "~/.dotfiles/ZSH.org")
+                         ))
       ;; Dynamic scoping to the rescue
       (let ((org-confirm-babel-evaluate nil))
         (org-babel-tangle))))
