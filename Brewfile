@@ -106,6 +106,7 @@ mas 'Numbers', id:409203825
 mas 'Paprika Recipe Manager 3', id:1303222628
 mas 'Pixelmator Pro', id:1289583905
 mas 'Simple Comic', id: 1497435571
+mas 'ShellHistory', id: id1564015476
 mas 'StopTheMadness', id: 1376402589
 mas 'Streaks', id:1493327990
 mas 'WireGuard', id: 1451685025
