@@ -11,6 +11,21 @@ packages/
 auto-save-list/
 .emacs.d/network-security.data
 
+# Vim stuff
+
+/.vim/plugged
+/.vim/swap/*
+!/.vim/swap/.gitignore
+/.vim/backup/*
+!/.vim/backup/.gitignore
+/.vim/tags/*
+!/.vim/tags/.gitignore
+/.vim/undo/*
+!/.vim/undo/.gitignore
+/.vim/viminfo
+/.vim/.netrwhist
+/.vim/viminfo.tmp*
+
 # Top secret stuff!
 .ssh/*
 !.ssh/config

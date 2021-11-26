@@ -1,11 +1,7 @@
-# SET ARCHITECTURE
-# ARCHITECTURE=$(uname -p)
-# SET OS
-# OPERATING_SYSTE=$(uname -a)
 # SET DOTFILES ROOT
 DOTFILES_ROOT=$HOME/.dotfiles
 
-if [ $(unama -p) == "arm" ]; then
+if [ $(uname -p) = "arm" ]; then
   HOMEBREW_ROOT="/opt/homebrew"
 else
   HOMEBREW_ROOT="/usr/local"
@@ -49,6 +45,22 @@ setopt hist_ignore_dups # ignore duplication command history list
 setopt hist_ignore_space # do not store commands with leading spaces to history
 setopt hist_verify # load history expansions into editing buffer instead of executing them directly
 setopt share_history # share command history data
+
+# adding shhist to PATH, so we can use it from Terminal
+PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
+
+# creating an unique session id for each terminal session
+__shhist_session="${RANDOM}"
+
+# prompt function to record the history
+__shhist_prompt() {
+    local __exit_code="${?:-1}"
+    fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
+    return ${__exit_code}
+}
+
+# integrating prompt function in prompt
+precmd_functions=(__shhist_prompt $precmd_functions)
 
 # Prefer US English and use UTF-8
 export LANG="en_US"

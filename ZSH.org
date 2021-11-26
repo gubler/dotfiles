@@ -12,14 +12,10 @@ These are used in later sections to configure paths, aliases, etc.
 
 #+begin_src sh 
 
-  # SET ARCHITECTURE
-  # ARCHITECTURE=$(uname -p)
-  # SET OS
-  # OPERATING_SYSTE=$(uname -a)
   # SET DOTFILES ROOT
   DOTFILES_ROOT=$HOME/.dotfiles
 
-  if [ $(unama -p) == "arm" ]; then
+  if [ $(uname -p) = "arm" ]; then
     HOMEBREW_ROOT="/opt/homebrew"
   else
     HOMEBREW_ROOT="/usr/local"
@@ -99,6 +95,30 @@ This builds up my PATH
   setopt hist_ignore_space # do not store commands with leading spaces to history
   setopt hist_verify # load history expansions into editing buffer instead of executing them directly
   setopt share_history # share command history data
+
+#+end_src
+
+** Shell History Setup
+
+I use [[https://loshadki.app/shellhistory/][ShellHistory]] to make my entire shell history searchable and shared across computers.
+
+#+begin_src sh
+
+  # adding shhist to PATH, so we can use it from Terminal
+  PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
+
+  # creating an unique session id for each terminal session
+  __shhist_session="${RANDOM}"
+
+  # prompt function to record the history
+  __shhist_prompt() {
+      local __exit_code="${?:-1}"
+      fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
+      return ${__exit_code}
+  }
+
+  # integrating prompt function in prompt
+  precmd_functions=(__shhist_prompt $precmd_functions)
 
 #+end_src
 
@@ -283,7 +303,7 @@ Replace =ls= with =exa= and set default options (and icons).
 
 #+begin_src sh
 
-  export STARSHIP_CONFIG=$DOTFILES_ROOT/config/starship/starship.toml
+  export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
   eval "$(starship init zsh)"
 
 #+end_src

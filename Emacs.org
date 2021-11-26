@@ -11,6 +11,16 @@ In this document I've added links in many places that lead you to documentation 
 
 * Table of Contents
 
+* Early Init
+
+Newer emacs supports an =early-init.el= file that load much earlier in the loading process. I use this to set the initial background color to black so that I am not constantly blinded by a bright white screen before my theme loads.
+
+#+begin_src emacs-lisp :tangle ./.emacs.d/early-init.el :mkdirp yes
+
+  (add-to-list 'default-frame-alist '(background-color . "#000000"))
+
+#+end_src
+
 * Startup Performance
 
 Make startup faster by reducing the frequency of garbage collection and then use a hook to measure Emacs startup time.
