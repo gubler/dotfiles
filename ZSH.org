@@ -192,7 +192,7 @@ Replace =ls= with =exa= and set default options (and icons).
 
 #+end_src
 
-**  App Replacements
+** App Replacements
 
 #+begin_src sh
 
@@ -218,6 +218,11 @@ Replace =ls= with =exa= and set default options (and icons).
 
   if [[ "command -v lazygit" ]]; then
       alias gg='lazygit'
+  fi
+
+  # Alias SSH to Kitty's SSH kitten if in Kitty Terminal
+  if [[ $TERM = "xterm-kitty" ]]; then
+      alias ssh="kitty +kitten ssh"
   fi
 
 #+end_src

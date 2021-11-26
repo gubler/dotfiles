@@ -114,6 +114,11 @@ if [[ "command -v lazygit" ]]; then
     alias gg='lazygit'
 fi
 
+# Alias SSH to Kitty's SSH kitten if in Kitty Terminal
+if [[ $TERM = "xterm-kitty" ]]; then
+    alias ssh="kitty +kitten ssh"
+fi
+
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
@@ -156,7 +161,7 @@ function o() {
 
 alias yt=youtube-dl
 
-export STARSHIP_CONFIG=$DOTFILES_ROOT/config/starship/starship.toml
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
