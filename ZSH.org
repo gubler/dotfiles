@@ -192,7 +192,13 @@ Replace =ls= with =exa= and set default options (and icons).
 
 #+end_src
 
-** App Replacements
+** App Replacements and Supplements
+
+All of these replacements/supplements have checks to make sure the replacement application is installed.
+
+*** fd instead of find
+
+[[https://github.com/sharkdp/fd][fd]] is a simpler, friendlier replacement for find.
 
 #+begin_src sh
 
@@ -200,27 +206,74 @@ Replace =ls= with =exa= and set default options (and icons).
       alias find="fd"
   fi
 
+#+end_src
+
+*** bat to supplement cat
+
+[[https://github.com/sharkdp/bat][bat]] adds syntax highlighting, line numbers, and paging. I still need to use regular =cat= though, so I alias bat to =c=
+
+#+begin_src sh
+
   if [[ "command -v bat" ]]; then
       alias c="bat"
   fi
+
+#+end_src
+
+*** Prettyping instead of ping
+
+I don't think its necessarily /better/ than regular old ping, but [[https://github.com/denilsonsa/prettyping][prettyping]] does look nice.
+
+#+begin_src sh
 
   if [[ "command -v prettyping" ]]; then
       alias ping='prettyping --nolegend'
   fi
 
+#+end_src
+
+*** gotop instead of top
+
+I like the look of [[https://github.com/xxxserxxx/gotop][gotop]] over regular =top= (or even =htop=).
+
+#+begin_src sh
+
   if [[ "command -v gotop" ]]; then
       alias top='gotop'
   fi
+
+#+end_src
+
+*** Lazydocker to supplement Docker Desktop
+
+I find [[https://github.com/jesseduffield/lazydocker][lazydocker]] to be a faster way of working with Docker containers than using Docker Desktop or trying to remember all the =docker= commands.
+
+#+begin_src sh
 
   if [[ "command -v lazydocker" ]]; then
       alias ld='lazydocker'
   fi
 
+#+end_src
+
+*** Lazygit to supplement Git
+
+I really like [[https://github.com/jesseduffield/lazygit][lazygit]] to do quick git tasks. Now that I'm using emacs, some of lazygit's usefullness may be replaced by magit, but that's a long way off.
+
+#+begin_src sh
+
   if [[ "command -v lazygit" ]]; then
       alias gg='lazygit'
   fi
 
-  # Alias SSH to Kitty's SSH kitten if in Kitty Terminal
+#+end_src
+
+*** SSH in Kitty terminal
+
+When using Kitty terminal, [[https://sw.kovidgoyal.net/kitty/faq/?highlight=ssh#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-when-sshing-into-a-different-computer][you need to use the SSH kitten (module)]] or you have all kinds of problems when SSH'd into another computer.
+
+#+begin_src sh
+
   if [[ $TERM = "xterm-kitty" ]]; then
       alias ssh="kitty +kitten ssh"
   fi
