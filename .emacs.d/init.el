@@ -239,7 +239,6 @@
   (visual-line-mode 1))
 
 (use-package org
-  :pin org
   :commands (org-capture org-agenda)
   :hook (org-mode . dlg/org-mode-setup)
   :config
@@ -523,8 +522,8 @@
 ;; NOTE: Make sure to configure a GitHub token before using this package!
 ;; - https://magit.vc/manual/forge/Token-Creation.html#Token-Creation
 ;; - https://magit.vc/manual/ghub/Getting-Started.html#Getting-Started
-(use-package forge
-  :after magit)
+;; (use-package forge
+;;  :after magit)
 
 (use-package evil-nerd-commenter
   :bind ("M-/" . evilnc-comment-or-uncomment-lines))
