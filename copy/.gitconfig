@@ -8,17 +8,30 @@
 [apply]
   whitespace = fix
 [alias]
+  # list all aliases
+  la = "!git config -l | grep alias | cut -c 7-"
+  # Shorter/better commands
   br = branch
   ci = commit
   co = checkout
+  cob = checkout -b
   df = diff
-  g = grep -I
+  s = status --short
+  st  = status
+  remotes = remote -v
+  # push head to origin - this also acts as a "publish"
+  poh = push -u origin head
+  # fix commits
+  undo = reset --soft HEAD~1
+  amend = commit -a --amend
+  # show all deleted files in the repo
+  deleted = "!git log --diff-filter=D --summary | grep delete"
+  # Logs
   lg = log -p
-  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
-  rb = rbranch
-  rv = review
-  st = status
-  ksdiff = difftool -y -t Kaleidoscope
+  l = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  # Kaleidoscope commands
+  dkal = difftool -y -t Kaleidoscope
+  mkal = mergetool -y -t Kaleidoscope[alias]
 [color]
   ui = auto
 [color "branch"]
