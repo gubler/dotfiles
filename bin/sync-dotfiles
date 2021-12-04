@@ -8,7 +8,7 @@ RED='\033[1;30m'
 NC='\033[0m'
 
 # Navigate to the directory of this script (generally ~/.dotfiles/.bin)
-cd $(dirname $(readlink -f $0))
+cd $(dirname $(greadlink -f $0))
 cd ..
 
 echo -e "${BLUE}Stashing existing changes...${NC}"
@@ -20,7 +20,7 @@ fi
 
 echo -e "${BLUE}Pulling updates from dotfiles repo...${NC}"
 echo
-git pull origin master
+git pull origin main
 echo
 
 if [[ $needs_pop -eq 1 ]]; then
@@ -38,4 +38,3 @@ else
    # Run stow to ensure all new dotfiles are linked
    stow .
 fi
-
