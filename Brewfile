@@ -42,6 +42,7 @@ brew 'zsh-history-substring-search'
 # Casks
 ## Apps
 cask '1password'
+cask '1password-cli'
 cask 'acorn'
 cask 'aerial'
 cask 'alfred'
