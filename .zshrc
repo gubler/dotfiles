@@ -136,13 +136,6 @@ alias sfcc="rm -rf /dev/shm/app && sf cache:clear"
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
 alias weather="curl wttr.in"
 
-alias dcom='docker run --rm --interactive --tty --volume `pwd`:/app odev/composer'
-alias dcomi='docker run --rm --interactive --tty --volume `pwd`:/app odev/composer --ignore-platform-reqs'
-alias dnpm='docker run --rm --interactive --tty -v `pwd`:/usr/src/app -w /usr/src/app odev/node npm'
-alias dnpx='docker run --rm --interactive --tty -v `pwd`:/usr/src/app -w /usr/src/app odev/node npx'
-alias dsc='docker-compose exec php bin/console'
-alias dce='docker-compose exec'
-
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
 
@@ -159,10 +152,15 @@ function o() {
   fi
 }
 
-alias yt=youtube-dl
+alias yt=yt-dlp
 
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_ROOT/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# BEGIN SNIPPET: Platform.sh CLI configuration
+HOME=${HOME:-'/Users/dev88'}
+export PATH="$HOME/"'.platformsh/bin':"$PATH"
+if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
