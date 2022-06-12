@@ -7,7 +7,7 @@ else
   HOMEBREW_ROOT="/usr/local"
 fi
 
-export EDITOR=emacs
+export EDITOR=vim
 
 # CONFIG Z
 _Z_DATA=$HOME/.local/.z

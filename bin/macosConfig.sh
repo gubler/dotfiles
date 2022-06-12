@@ -457,6 +457,14 @@ echo "Bypass the annoyingly slow t.co URL shortener"
 defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
 
 ###############################################################################
+# 1password 8                                                                 #
+###############################################################################
+
+echo ""
+echo "Symlink 1Password SSH agent to .1password directory"
+mkdir -p ~/.1password && ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
