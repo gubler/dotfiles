@@ -1,11 +1,3 @@
-# Emacs stuff
-etc/
-var/
-elpa/
-packages/
-auto-save-list/
-.emacs.d/network-security.data
-
 # Vim stuff
 
 /.vim/plugged
@@ -21,6 +13,10 @@ auto-save-list/
 /.vim/.netrwhist
 /.vim/viminfo.tmp*
 
+# Lots of junk goes in here.
+/caches/
+/backups/
+
 # Top secret stuff!
 .ssh/*
 !.ssh/config
@@ -34,3 +30,6 @@ auto-save-list/
 !/copy/.zshrc.local
 
 .DS_Store
+
+# Ignore JetBrains config
+.config/jgit/

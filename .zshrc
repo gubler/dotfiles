@@ -7,7 +7,7 @@ else
   HOMEBREW_ROOT="/usr/local"
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # CONFIG Z
 _Z_DATA=$HOME/.local/.z
@@ -89,6 +89,14 @@ fi
 alias h='cd ~'
 alias c='clear'
 alias :q='exit'
+alias cdf="cd $DOTFILES_ROOT"
+alias -- -="cd -"
+
+# NeoVim
+alias cim='nvim'
+alias vm='nvim'
+alias v='nvim'
+alias vim='nvim'
 
 if [[ "command -v fd" ]]; then
     alias find="fd"
@@ -142,6 +150,24 @@ function o() {
   else
     open "$@"
   fi
+}
+
+# Simple calculator
+function calc() {
+        local result=""
+        result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')"
+        #                       └─ default (when `--mathlib` is used) is 20
+        #
+        if [[ "$result" == *.* ]]; then
+                # improve the output for decimal numbers
+                printf "$result" |
+                sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
+                    -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
+                    -e 's/0*$//;s/\.$//'   # remove trailing zeros
+        else
+                printf "$result"
+        fi
+        printf "\n"
 }
 
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml

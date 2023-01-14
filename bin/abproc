@@ -22,11 +22,11 @@ if [ -d "$target" ]; then
 
     # update target filename
     target=$outfile
+else
+    name=$(echo $target | cut -f 1 -d '.')
+
+    # Run file through ffmpeg
+    ffmpeg -i $target -b:a 48k -c:a libmp3lame tmp.mp3
+    trash $target
+    mv tmp.mp3 $name.mp3
 fi
-
-name=$(echo $target | cut -f 1 -d '.')
-
-# Run file through ffmpeg
-ffmpeg -i $target -b:a 48k -c:a libmp3lame tmp.mp3
-trash $target
-mv tmp.mp3 $name.mp3
