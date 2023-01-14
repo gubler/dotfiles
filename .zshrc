@@ -106,10 +106,6 @@ if [[ "command -v gotop" ]]; then
     alias top='gotop'
 fi
 
-if [[ "command -v lazydocker" ]]; then
-    alias ld='lazydocker'
-fi
-
 if [[ "command -v lazygit" ]]; then
     alias gg='lazygit'
 fi
@@ -127,11 +123,7 @@ alias gca='git commit -v -a'
 alias gpo='git push origin'
 alias gpom='git push origin main'
 
-alias sf=symfony
-alias sfc='symfony console'
-alias sfs='symfony serve'
-alias sfdr="sf doctrine:schema:drop --full-database --force -n && rm -rf /dev/shm/app && sf doctrine:migrations:migrate -n && sf doctrine:fixtures:load -n"
-alias sfcc="rm -rf /dev/shm/app && sf cache:clear"
+alias sf='symfony'
 
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
 alias weather="curl wttr.in"
@@ -152,15 +144,8 @@ function o() {
   fi
 }
 
-alias yt=yt-dlp
-
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_ROOT/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# BEGIN SNIPPET: Platform.sh CLI configuration
-HOME=${HOME:-'/Users/dev88'}
-export PATH="$HOME/"'.platformsh/bin':"$PATH"
-if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
