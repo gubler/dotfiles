@@ -6,6 +6,7 @@ copy
 bin
 Brewfile
 
+.DS_Store
 
 # Standard Stow Ignore
 
