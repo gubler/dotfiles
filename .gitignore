@@ -24,10 +24,11 @@
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 !.stow-local-ignore
+!/.config/tmux/tmux.conf.local
+!/copy/.zshrc.local
 
 !reference/**/*
 
-!/copy/.zshrc.local
 
 .DS_Store
 
