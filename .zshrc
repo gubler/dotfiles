@@ -7,7 +7,7 @@ else
   HOMEBREW_ROOT="/usr/local"
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # CONFIG Z
 _Z_DATA=$HOME/.local/.z
@@ -89,6 +89,14 @@ fi
 alias h='cd ~'
 alias c='clear'
 alias :q='exit'
+alias cdf="cd $DOTFILES_ROOT"
+alias -- -="cd -"
+
+# NeoVim
+alias cim='nvim'
+alias vm='nvim'
+alias v='nvim'
+alias vim='nvim'
 
 if [[ "command -v fd" ]]; then
     alias find="fd"
@@ -104,10 +112,6 @@ fi
 
 if [[ "command -v gotop" ]]; then
     alias top='gotop'
-fi
-
-if [[ "command -v lazydocker" ]]; then
-    alias ld='lazydocker'
 fi
 
 if [[ "command -v lazygit" ]]; then
@@ -127,11 +131,7 @@ alias gca='git commit -v -a'
 alias gpo='git push origin'
 alias gpom='git push origin main'
 
-alias sf=symfony
-alias sfc='symfony console'
-alias sfs='symfony serve'
-alias sfdr="sf doctrine:schema:drop --full-database --force -n && rm -rf /dev/shm/app && sf doctrine:migrations:migrate -n && sf doctrine:fixtures:load -n"
-alias sfcc="rm -rf /dev/shm/app && sf cache:clear"
+alias sf='symfony'
 
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
 alias weather="curl wttr.in"
@@ -152,15 +152,26 @@ function o() {
   fi
 }
 
-alias yt=yt-dlp
+# Simple calculator
+function calc() {
+        local result=""
+        result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')"
+        #                       └─ default (when `--mathlib` is used) is 20
+        #
+        if [[ "$result" == *.* ]]; then
+                # improve the output for decimal numbers
+                printf "$result" |
+                sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
+                    -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
+                    -e 's/0*$//;s/\.$//'   # remove trailing zeros
+        else
+                printf "$result"
+        fi
+        printf "\n"
+}
 
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_ROOT/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# BEGIN SNIPPET: Platform.sh CLI configuration
-HOME=${HOME:-'/Users/dev88'}
-export PATH="$HOME/"'.platformsh/bin':"$PATH"
-if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
