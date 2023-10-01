@@ -79,9 +79,9 @@ export NNN_FIFO="/tmp/nnn.fifo"
 alias nnn='nnn -e'
 
 # FIX LS
-if [[ "command -v exa" ]]; then
-    alias l='exa -alh --icons'
-    alias lt='exa -lhT'
+if [[ "command -v eza" ]]; then
+    alias l='eza -alh --icons'
+    alias lt='eza -lhT'
 else
     alias l='ls -lah'
 fi
