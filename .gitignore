@@ -25,6 +25,11 @@ auto-save-list/
 .ssh/*
 !.ssh/config
 
+# Parrot/Peristory
+.config/jgit
+.config/persistory
+.config/pudb
+
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 !.stow-local-ignore
