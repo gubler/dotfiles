@@ -262,6 +262,9 @@ echo ""
 echo "Enable the MacBook Air SuperDrive on any Mac"
 sudo nvram boot-args="mbasd=1"
 
+echo ""
+echo "Disable icon previews"
+defaults write com.apple.finder QLInlinePreviewMinimumSupportedSize -int 512
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #

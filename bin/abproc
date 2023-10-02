@@ -18,7 +18,7 @@ if [ -d "$target" ]; then
     outfile=$target.mp3
 
     # m4b-tool merge
-    docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):/mnt m4b-tool merge $target --jobs=4 --audio-bitrate=48k --audio-format=mp3 --audio-codec=libmp3lame --output-file=$outfile
+    docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):/mnt sandreas/m4b-tool:latest merge $target --jobs=4 --audio-bitrate=48k --audio-format=mp3 --audio-codec=libmp3lame --output-file=$outfile
 
     # update target filename
     target=$outfile
