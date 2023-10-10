@@ -1,17 +1,7 @@
-# Vim stuff
-
-/.vim/plugged
-/.vim/swap/*
-!/.vim/swap/.gitignore
-/.vim/backup/*
-!/.vim/backup/.gitignore
-/.vim/tags/*
-!/.vim/tags/.gitignore
-/.vim/undo/*
-!/.vim/undo/.gitignore
-/.vim/viminfo
-/.vim/.netrwhist
-/.vim/viminfo.tmp*
+etc/
+var/
+packages/
+auto-save-list/
 
 # Lots of junk goes in here.
 /caches/
@@ -20,6 +10,21 @@
 # Top secret stuff!
 .ssh/*
 !.ssh/config
+
+# Don't commit Vim plugins, vim-plug will install them.
+
+.vim/plugged
+.vim/swap/*
+!.vim/swap/.gitignore
+.vim/backup/*
+!.vim/backup/.gitignore
+.vim/tags/*
+!.vim/tags/.gitignore
+.vim/undo/*
+!.vim/undo/.gitignore
+.vim/viminfo
+.vim/.netrwhist
+/.vim/viminfo.tmp*
 
 # Parrot/Peristory
 .config/jgit
@@ -33,7 +38,6 @@
 !/copy/.zshrc.local
 
 !reference/**/*
-
 
 .DS_Store
 

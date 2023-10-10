@@ -9,6 +9,9 @@ fi
 
 export EDITOR=nvim
 
+# Set ULIMIT on MacOS
+ulimit -n 10240
+
 # CONFIG Z
 _Z_DATA=$HOME/.local/.z
 
@@ -27,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 PATH="$HOME/.symfony/bin:$PATH" # Add Symfony binary
 PATH="$HOME/.cargo/bin:$PATH"   # Add Rust/Cargo bin
 PATH="$DOTFILES_ROOT/bin:$PATH" # Add custom scripts
+PATH="$HOME/.bin:$PATH"         # Add scripts in ~/.bin
 PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Add /usr/local
 
 export -U PATH
@@ -98,6 +102,19 @@ alias vm='nvim'
 alias v='nvim'
 alias vim='nvim'
 
+# Composer
+alias cm='composer'
+
+# OTHER APPS
+
+if [[ "command -v gcc-13" ]]; then
+    export CC=gcc-13
+fi
+
+if [[ "command -v tmux" ]]; then
+    alias tm="tmux"
+fi
+
 if [[ "command -v fd" ]]; then
     alias find="fd"
 fi
@@ -114,6 +131,10 @@ if [[ "command -v gotop" ]]; then
     alias top='gotop'
 fi
 
+if [[ "command -v lazydocker" ]]; then
+    alias ld='lazydocker'
+fi
+
 if [[ "command -v lazygit" ]]; then
     alias gg='lazygit'
 fi
@@ -123,12 +144,17 @@ if [[ $TERM = "xterm-kitty" ]]; then
     alias ssh="kitty +kitten ssh"
 fi
 
+if [[ "command -v tldr" ]]; then
+    alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+fi
+
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
 alias gst='git status'
 alias gca='git commit -v -a'
 alias gpo='git push origin'
+alias gpot='git push origin && git push --tag origin'
 alias gpom='git push origin main'
 
 alias sf='symfony'

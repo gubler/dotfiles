@@ -130,6 +130,9 @@ echo ""
 echo "Enabling full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
+echo "Disable auto-correct"
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
 echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 300
@@ -166,12 +169,14 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 echo ""
-echo "Avoid creating .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+echo "Expand save panel by default"
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 echo ""
-echo "Allowing text selection in Quick Look/Preview in Finder by default (does not work in Mojave or later)"
-defaults write com.apple.finder QLEnableTextSelection -bool true
+echo "Avoid creating .DS_Store files on network volumes and USB drives"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 echo ""
 echo "Disabling the warning when changing a file extension"
@@ -244,6 +249,10 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
   Privileges -bool true
+
+echo ""
+echo "Remove paging buttons from QuickLook previews"
+defaults write com.apple.finder QLInlinePreviewMinimumSupportedSize -int 512
 
 echo ""
 echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
@@ -357,10 +366,12 @@ echo "Hide Safari’s sidebar in Top Sites"
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 echo ""
-echo "Enable the Develop menu and the Web Inspector in Safari"
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+echo "Enable the Debug and Develop menus and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
+defaults write -g WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"

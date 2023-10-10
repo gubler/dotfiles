@@ -1,4 +1,10 @@
+-- Space is my leader
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- use spaces instead of tabs
 vim.opt.expandtab = true
+-- tabs are 4 spaces wide
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -18,7 +24,10 @@ vim.opt.mouse = 'a' -- enable mouse for all modes
 
 vim.opt.termguicolors = true
 
-vim.opt.spell = true
+vim.opt.spell = false
+vim.opt.spelllang = en,cjk
+-- Show nine spell checking candidates at most
+vim.opt.spellsuggest=best,9
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

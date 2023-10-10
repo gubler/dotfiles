@@ -100,6 +100,8 @@ let g:WhichKeyDesc_git_branches = "<leader>gb Open Git branches list"
 
 "" Key mappings
 "" ========================================================
+" Don't use Ex mode, use Q for formatting
+map Q gq
 
 inoremap jj <Esc>
 

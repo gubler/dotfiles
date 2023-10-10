@@ -64,5 +64,8 @@ Desktop.ini
 # PHPStorm
 .idea
 
-# Scrath file
+# VS Code
+.vscode
+
+# Scratch files
 .SCRATCH.md
