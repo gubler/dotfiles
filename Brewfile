@@ -41,10 +41,8 @@ brew 'symfony-cli'
 brew 'tldr'
 brew 'tmux'
 brew 'trash'
-brew 'vim'
 brew 'webp'
 brew 'wget'
-brew 'yarn'
 brew 'yabai'
 brew 'yt-dlp'
 brew 'zsh-syntax-highlighting'
@@ -56,9 +54,9 @@ brew 'z'
 cask '1password'
 cask '1password-cli'
 cask 'acorn'
-cask 'aerial'
+# cask 'aerial'
 cask 'alfred'
-cask 'audio-hijack'
+# cask 'audio-hijack'
 cask 'bartender'
 cask 'bettertouchtool'
 cask 'calibre'
@@ -69,24 +67,22 @@ cask 'devonthink'
 cask 'discord'
 cask 'docker'
 cask 'downie'
-cask 'farrago'
+# cask 'farrago'
 cask 'firefox'
-cask 'fission'
-cask 'font-anonymice-nerd-font'
+# cask 'fission'
+# cask 'font-anonymice-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
-cask 'font-new-york'
-cask 'font-sf-pro'
-cask 'font-sf-mono'
-cask 'font-sf-mono-for-powerline'
+# cask 'font-new-york'
+# cask 'font-sf-pro'
+# cask 'font-sf-mono'
+# cask 'font-sf-mono-for-powerline'
 cask 'hazel'
 cask 'jetbrains-toolbox'
-cask 'kaleidoscope'
+# cask 'kaleidoscope'
 cask 'keyboard-maestro'
 cask 'kitty'
-cask 'little-snitch'
-cask 'loopback'
-cask 'mactex-no-gui'
-cask 'marked'
+# cask 'loopback'
+# cask 'marked'
 cask 'minecraft'
 cask 'obsidian'
 cask 'private-internet-access'
@@ -96,12 +92,12 @@ cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'rocket'
-cask 'screenflow'
+# cask 'screenflow'
 cask 'screens'
 cask 'slack'
 cask 'steam'
 cask 'telegram'
-cask 'textexpander'
+# cask 'textexpander'
 cask 'the-unarchiver'
 cask 'transmission'
 cask 'transmit'
@@ -114,7 +110,7 @@ mas '1Blocker', id: 1365531024
 mas '1Password for Safari', id: 1569813296
 mas 'Amphetamine', id: 937984704
 mas 'CARROT Weather', id: 993487541
-mas 'Dato', id: 1470584107
+# mas 'Dato', id: 1470584107
 mas 'Data Jar', id: 1453273600
 mas 'Day One', id: 1055511498
 mas 'Drafts', id: 1435957248
@@ -123,15 +119,15 @@ mas 'iFlicks 3', id: 1274494218
 mas 'Microsoft Remote Desktop', id: 1295203466
 mas 'Magnet', id: 441258766
 mas 'NepTunes', id: 1006739057
-mas 'Noir', id: 1592917505
+# mas 'Noir', id: 1592917505
 mas 'Numbers', id: 409203825
 mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Peek', id: 1554235898
-mas 'Pixelmator Pro', id: 1289583905
+# mas 'Pixelmator Pro', id: 1289583905
 mas 'Save to Pocket', id: 1477385213
 mas 'Scenecuts Helper', id: 1540491573
 mas 'ShellHistory', id: 1564015476
-mas 'Shush', id: 496437906
+# mas 'Shush', id: 496437906
 mas 'Simple Comic', id: 1497435571
 mas 'Super Agent', id: 1568262835
 mas 'StopTheMadness', id: 1376402589
