@@ -139,6 +139,11 @@ if [[ "command -v lazygit" ]]; then
     alias gg='lazygit'
 fi
 
+if [[ "command -v castor" ]]; then
+    eval "$($HOME/.bin/castor completion zsh)"
+    alias cs='castor'
+fi
+
 # Alias SSH to Kitty's SSH kitten if in Kitty Terminal
 if [[ $TERM = "xterm-kitty" ]]; then
     alias ssh="kitty +kitten ssh"
