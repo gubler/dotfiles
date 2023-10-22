@@ -427,6 +427,10 @@ use({
             "rcarriga/nvim-notify",
         }
     })
+
+use({'mg979/vim-visual-multi'})
+
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
