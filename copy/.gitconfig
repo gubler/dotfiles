@@ -92,3 +92,9 @@
     insteadOf = "gst:"
     pushInsteadOf = "gist:"
     pushInsteadOf = "git://gist.github.com/"
+[apply]
+    whitespace = fix
+[push]
+    autoSetupRemote = true
+[branch]
+    sort = committerdate
