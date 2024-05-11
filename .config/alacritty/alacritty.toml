@@ -1,0 +1,17 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+opacity = 0.9
+blur = true
+startup_mode = "Maximized"
+option_as_alt = "Both"
+
+[font]
+size = 18.0
+normal.family = "JetBrainsMono Nerd Font Mono"
+

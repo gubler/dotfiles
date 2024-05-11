@@ -1,11 +1,37 @@
 require('nvim-treesitter.configs').setup({
-    ensure_installed = 'all',
+    ensure_installed = {
+        'bash',
+        'comment',
+        'css',
+        'diff',
+        'git_rebase',
+        'gitattributes',
+        'gitcommit',
+        'gitignore',
+        'html',
+        'ini',
+        'javascript',
+        'jsdoc',
+        'json',
+        'lua',
+        'markdown',
+        'markdown_inline',
+        'mermaid',
+        'php',
+        'phpdoc',
+        'query',
+        'rust',
+        'scss',
+        'sql',
+        'twig',
+        'typescript',
+        'vim',
+        'yaml',
+    },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = true,
-    },
-    context_commentstring = {
-        enable = true,
+        disable = {'blueprint', 'jsonc', 'fusion'}
     },
     textobjects = {
         select = {
@@ -25,3 +51,10 @@ require('nvim-treesitter.configs').setup({
         strategy = require 'ts-rainbow.strategy.global',
     }
 })
+
+require('ts_context_commentstring').setup {
+  enable_autocmd = false,
+  languages = {
+    typescript = '// %s',
+  },
+}

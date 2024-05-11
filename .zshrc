@@ -23,7 +23,7 @@ ZSH_CUSTOM="$DOTFILES_ROOT/zsh"
 # Default theme - replaced by Starship
 ZSH_THEME="candy"
 
-plugins=(git fzf vi-mode z)
+plugins=(git fzf vi-mode zoxide)
 
 source $ZSH/oh-my-zsh.sh
 

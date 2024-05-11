@@ -1,82 +1,94 @@
 [user]
-  name = NAME
-  email = EMAIL
+    name = NAME
+    email = EMAIL
 [core]
-  autocrlf = input
-  whitespace = fix,space-before-tab,tab-in-indent,trailing-space
-  excludesfile = ~/.gitignore_global
-[apply]
-  whitespace = fix
+    autocrlf = input
+    whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+    excludesfile = ~/.gitignore_global
+    pager = delta
 [alias]
-  # list all aliases
-  la = "!git config -l | grep alias | cut -c 7-"
-  # Shorter/better commands
-  br = branch
-  ci = commit
-  co = checkout
-  cob = checkout -b
-  df = diff
-  s = status --short
-  st  = status
-  remotes = remote -v
-  # push head to origin - this also acts as a "publish"
-  poh = push -u origin head
-  # fix commits
-  undo = reset --soft HEAD~1
-  amend = commit -a --amend
-  # show all deleted files in the repo
-  deleted = "!git log --diff-filter=D --summary | grep delete"
-  # Logs
-  lg = log -p
-  l = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  # Kaleidoscope commands
-  dkal = difftool -y -t Kaleidoscope
-  mkal = mergetool -y -t Kaleidoscope[alias]
+    # list all aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    # Shorter/better commands
+    br = branch
+    ci = commit
+    co = checkout
+    cob = checkout -b
+    df = diff
+    dft = difftool
+    s = status --short
+    st  = status
+    remotes = remote -v
+    # push head to origin - this also acts as a "publish"
+    poh = push -u origin head
+
+    # fix commits
+    undo = reset --soft HEAD~1
+    amend = commit -a --amend
+
+    # show all deleted files in the repo
+    deleted = "!git log --diff-filter=D --summary | grep delete"
+
+    # Logs
+    lg = log -p
+    l = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[apply]
+    whitespace = fix
+[branch]
+    sort = committerdate
 [color]
-  ui = auto
+    ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-[merge]
-  log = true
-[difftool "Kaleidoscope"]
-  cmd = ksdiff git \"$LOCAL\" \"$REMOTE\"
-[rerere]
-  enabled = 1
-[url "git@github.com:"]
-  insteadOf = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
-[url "git://github.com/"]
-  insteadOf = "github:"
-[url "git@gist.github.com:"]
-  insteadOf = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
+    added = yellow
+    changed = green
+    untracked = cyan
 [commit]
-  template = ~/.git-commit-template
-[init]
-  defaultBranch = main
+    template = ~/.git-commit-template
 [credential]
-  helper = osxkeychain
-[interactive]
-    diffFilter = delta --color-only
+    helper = osxkeychain
 [delta]
     navigate = true    # use n and N to move between diff sections
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 [diff]
+    algorithm = histogram
     colorMoved = default
-[apply]
-    whitespace = fix
+    tool = difftastic
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[http]
+    sslbackend = secure-transport
+    sslCAInfo = ~/.config/ssl/combined.crt
+[init]
+    defaultBranch = main
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    log = true
+    conflictstyle = zdiff3
+[push]
+    # push will only do the current branch, not all branches
+    default = current
+    autoSetupRemote = true
+[rerere]
+    enabled = 1
+[pager]
+    difftool = true;
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+[url "git@gist.github.com:"]
+    insteadOf = "gst:"
+    pushInsteadOf = "gist:"
+    pushInsteadOf = "git://gist.github.com/"

@@ -133,6 +133,12 @@ use({
         end,
     })
 use({ 'dhruvasagar/vim-zoom' })
+use({
+        "ahmedkhalf/project.nvim",
+        config = function()
+            require("project_nvim").setup {}
+        end
+    })
 -- Fuzzy finder
 use({
         'nvim-telescope/telescope.nvim',
@@ -296,7 +302,7 @@ use({
         run = 'composer install --no-dev --optimize-autoloader',
     })
 
--- -- Project Configuration.
+-- Project Configuration.
 use({
         'tpope/vim-projectionist',
         requires = 'tpope/vim-dispatch',
@@ -328,15 +334,15 @@ use({
             require('user/plugins/symbols-outline')
         end,
     })
--- use({
---         "max397574/better-escape.nvim",
---         config = function()
---             require("better_escape").setup({
---                     mapping = {'jj'},
---                     clear_empty_lines = true,
---                 })
---         end,
---     })
+use({
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup({
+                    mapping = {'jj'},
+                    clear_empty_lines = true,
+                })
+        end,
+    })
 
 use({
         'alexghergh/nvim-tmux-navigation',
@@ -421,6 +427,10 @@ use({
             "rcarriga/nvim-notify",
         }
     })
+
+use({'mg979/vim-visual-multi'})
+
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
