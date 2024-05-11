@@ -12,9 +12,6 @@ export EDITOR=nvim
 # Set ULIMIT on MacOS
 ulimit -n 10240
 
-# CONFIG Z
-_Z_DATA=$HOME/.local/.z
-
 # Oh My ZSH CONFIG
 # Path to your oh-my-zsh installation.
 ZSH="$HOME/.oh-my-zsh"
@@ -30,6 +27,7 @@ source $ZSH/oh-my-zsh.sh
 PATH="$HOME/.symfony/bin:$PATH" # Add Symfony binary
 PATH="$HOME/.cargo/bin:$PATH"   # Add Rust/Cargo bin
 PATH="$DOTFILES_ROOT/bin:$PATH" # Add custom scripts
+PATH="$HOME/.local/bin:$PATH"   # Add .local bin scripts
 PATH="$HOME/.bin:$PATH"         # Add scripts in ~/.bin
 PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Add /usr/local
 
@@ -140,7 +138,7 @@ if [[ "command -v lazygit" ]]; then
 fi
 
 if [[ "command -v castor" ]]; then
-    eval "$($HOME/.bin/castor completion zsh)"
+    eval "$($HOME/.local/bin/castor completion zsh)"
     alias cs='castor'
 fi
 
