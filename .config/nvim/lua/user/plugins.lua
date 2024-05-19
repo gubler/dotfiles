@@ -250,7 +250,7 @@ use({
         requires = {
             'JoosepAlviste/nvim-ts-context-commentstring',
             'nvim-treesitter/nvim-treesitter-textobjects',
-            'HiPhish/nvim-ts-rainbow2',
+            'HiPhish/rainbow-delimiters.nvim',
         },
         config = function()
             require('user/plugins/treesitter')

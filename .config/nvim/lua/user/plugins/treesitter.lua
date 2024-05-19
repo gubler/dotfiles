@@ -44,11 +44,6 @@ require('nvim-treesitter.configs').setup({
                 ['aa'] = '@parameter.outer',
             },
         }
-    },
-    rainbow = {
-        enable = true,
-        query = 'rainbow-parens',
-        strategy = require 'ts-rainbow.strategy.global',
     }
 })
 
