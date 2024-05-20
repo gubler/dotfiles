@@ -228,6 +228,19 @@ use({
         requires = 'tpope/vim-rhubarb',
     })
 
+-- Git commands
+use({
+        "NeogitOrg/neogit",
+        requires = {
+            "nvim-lua/plenary.nvim",         -- required
+            "sindrets/diffview.nvim",        -- optional - Diff integration
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+        config = function()
+            require('neogit').setup()
+        end,
+    })
+
 --- Floating terminal.
 use({
         'voldikss/vim-floaterm',
