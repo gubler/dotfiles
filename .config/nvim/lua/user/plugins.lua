@@ -279,6 +279,8 @@ use({
             'b0o/schemastore.nvim',
             'jose-elias-alvarez/null-ls.nvim',
             'jayp0521/mason-null-ls.nvim',
+            'neovim/nvim-lspconfig',
+            'simrat39/rust-tools.nvim'
         },
         config = function()
             require('user/plugins/lspconfig')
