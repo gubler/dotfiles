@@ -232,9 +232,9 @@ use({
 use({
         "NeogitOrg/neogit",
         requires = {
-            "nvim-lua/plenary.nvim",         -- required
-            "sindrets/diffview.nvim",        -- optional - Diff integration
-            "nvim-telescope/telescope.nvim", -- optional
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+            "nvim-telescope/telescope.nvim",
         },
         config = function()
             require('neogit').setup()
@@ -280,7 +280,7 @@ use({
             'jose-elias-alvarez/null-ls.nvim',
             'jayp0521/mason-null-ls.nvim',
             'neovim/nvim-lspconfig',
-            'simrat39/rust-tools.nvim'
+            'mrcjkb/rustaceanvim',
         },
         config = function()
             require('user/plugins/lspconfig')

@@ -101,6 +101,7 @@ function M.default_keymaps()
                 { '<Leader>rn', vim.lsp.buf.rename, description = 'Rename' },
                 { '<Leader>pm', ':PhpactorContextMenu<CR>', description = 'Phpactor Context Menu' },
                 { '<Leader>pn', ':PhpactorClassNew<CR>', description = 'Phpactor new class' },
+                { '<Leader>ra', ':RustLsp codeAction<CR>', description = 'Rust actions' },
             }
         },
         {
