@@ -13,5 +13,19 @@ option_as_alt = "Both"
 
 [font]
 size = 18.0
-normal.family = "JetBrainsMono Nerd Font Mono"
 
+[font.bold]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Medium"

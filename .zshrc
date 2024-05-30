@@ -204,6 +204,7 @@ eval "$(starship init zsh)"
 
 source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_ROOT/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOMEBREW_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source $HOME/.cargo/env
 
