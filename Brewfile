@@ -4,6 +4,7 @@ tap 'symfony-cli/tap'
 tap 'yt-dlp/taps'
 
 # Homebrew
+brew 'asimov'
 brew 'bat'
 brew 'composer'
 brew 'coreutils'

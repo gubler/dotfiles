@@ -24,6 +24,14 @@ My dotfiles for macOS.
 
 ## Additional Setup
 
+### Asimov
+
+If this machine will be doing Time Machine updates, start Asimov
+
+```bash
+sudo brew services start asimov
+```
+
 ### Tmux
 
 1. Clone TPM to computer
