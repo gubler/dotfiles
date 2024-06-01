@@ -1,22 +1,41 @@
 # Dotfiles
 
 My dotfiles for macOS.
+## PREREQUISITES
 
-## Install
+1. Install xcode command line tools: `xcode-select --install`
+2. Install Homebrew
 
-### Install Dependencies
+## SETUP
 
-- Install command line dev tools with `xcode-select --install`
-- Log into Mac App Store
-- Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+1. Clone this repository to `~/.dotfiles`.
+2. Install Homebrew apps with Brewfile (`brew bunde install --file ~/.dotfiles/Brewfile`)
+3. Symlink files into home directory: `cd ~/.dotfiles; stow .`
+    - You may have some errors because default files were already created. You will have to clean those up.
+4. Post-homebrew initialization: `~/.dotfiles/bin/dotfiles-init`
+5. Update `~/.gitconfig` with your name and email
+7. Update `~/.wegorc` with your OpenWeathermap API key
+6. Create new SSH keys.
+7. Run the macOS defaults config: `~/.dotfiles/bin/macosConfig.sh`
 
-### Install the dotfiles
+## UPDATE
 
-- Clone the dotfiles to `~/.dotfiles`
-- Install Applications via Homebrew: `brew bunde install --file ~/.dotfiles/Brewfile`
-- Copy `~/.dotfiles/copy/.gitconfig` to home directory and edit NAME and EMAIL at top of file
-- Run the macOS defaults config: `~/.dotfiles/bin/macosConfig.sh`
+1. Run `sync-dotfiles`
 
-### Update
+## Additional Setup
 
-To update the dotfiles, run `sync-dotfiles`.
+### Tmux
+
+1. Clone TPM to computer
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+2. Install plugins: Run `<prefix>+I` (that's a capital I) in tmux.
+
+### Castor
+
+Use the instructions from the [Castor github](https://github.com/jolicode/castor?tab=readme-ov-file#installation) for installation.
+
+### Rust
+
+1. Install rust tooling via [rustup](https://www.rust-lang.org/tools/install)

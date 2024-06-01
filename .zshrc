@@ -24,11 +24,12 @@ plugins=(git fzf vi-mode zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
-PATH="$HOME/.symfony/bin:$PATH" # Add Symfony binary
+PATH="$HOMEBREW_ROOT/opt/curl/bin:$PATH" # Prefer Homebrew Curl
 PATH="$HOME/.cargo/bin:$PATH"   # Add Rust/Cargo bin
 PATH="$DOTFILES_ROOT/bin:$PATH" # Add custom scripts
-PATH="$HOME/.local/bin:$PATH"   # Add .local bin scripts
 PATH="$HOME/.bin:$PATH"         # Add scripts in ~/.bin
+PATH="$HOME/.local/bin:$PATH"         # Add scripts in ~/.bin
+PATH="$HOME/.composer/vendor/bin:$PATH" # Add global composer binaries
 PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Add /usr/local
 
 export -U PATH
