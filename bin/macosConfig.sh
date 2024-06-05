@@ -111,6 +111,11 @@ echo ""
 echo "Prevent Photos app from opening when devices are connected"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+echo ""
+echo "Tighten up menu bar icons"
+defaults -currentHost write -globalDomain NSStatusItemSpacing -int 8
+defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 14
+
 # echo ""
 # echo "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
 # /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
