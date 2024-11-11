@@ -6,19 +6,9 @@ RED='\033[1;30m'
 NC='\033[0m'
 
 # Copy "copy" files to Home directory
-
 echo -e "${BLUE}Copying non-linked files...${NC}"
-
 cp $DOTFILES_ROOT/copy/.gitconfig $HOME/
 
-# Install Oh My ZSH
-
-echo -e "${BLUE}Installing Oh My ZSH...${NC}"
-
-sh -c "$(curl -fsSL --insecure https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc
-
-# Link files from One Drive
-
-echo -e "${BLUE}Link files from One Drive...${NC}"
-
-ln -sf $HOME/OneDrive\ -\ Department\ of\ Veterans\ Affairs/local_config/local_zsh_config.zsh $HOME/.zshrc.local
+# Link Obsidian to home dir
+echo -e "${BLUE}Link Obsidian...${NC}"
+ln -s $HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/SecondBrain $HOME/Obsidian

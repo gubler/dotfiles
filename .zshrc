@@ -1,31 +1,17 @@
 # SET DOTFILES ROOT
 DOTFILES_ROOT=$HOME/.dotfiles
 
-if [ $(uname -p) = "arm" ]; then
-  HOMEBREW_ROOT="/opt/homebrew"
-else
-  HOMEBREW_ROOT="/usr/local"
-fi
-
+# SET DEFAULT EDITOR
 export EDITOR=nvim
 
-# Set ULIMIT on MacOS
+# SET ULIMIT ON MAC
 ulimit -n 10240
 
-# Oh My ZSH CONFIG
-# Path to your oh-my-zsh installation.
-ZSH="$HOME/.oh-my-zsh"
-# Path to oh-my-zsh custom directory
-ZSH_CUSTOM="$DOTFILES_ROOT/zsh"
-# Default theme - replaced by Starship
-ZSH_THEME="candy"
+# SET HOMEBREW SHELL ENV VARS
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
-plugins=(git fzf vi-mode zoxide)
-
-source $ZSH/oh-my-zsh.sh
-
-PATH="$HOMEBREW_ROOT/opt/curl/bin:$PATH" # Prefer Homebrew Curl
-PATH="$HOME/.cargo/bin:$PATH"   # Add Rust/Cargo bin
+# CLEAN UP PATH
+PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH" # Prefer Homebrew Curl
 PATH="$DOTFILES_ROOT/bin:$PATH" # Add custom scripts
 PATH="$HOME/.bin:$PATH"         # Add scripts in ~/.bin
 PATH="$HOME/.local/bin:$PATH"         # Add scripts in ~/.bin
@@ -34,6 +20,10 @@ PATH="/usr/local/bin:/usr/local/sbin:$PATH" # Add /usr/local
 
 export -U PATH
 
+# Allow insecure completions (this is due to ZSH being installed by admin account)
+ZSH_DISABLE_COMPFIX="true"
+
+# HISTORY CONFIGURATION
 case $HIST_STAMPS in
   "mm/dd/yyyy") alias history='fc -fl 1' ;;
   "dd.mm.yyyy") alias history='fc -El 1' ;;
@@ -49,37 +39,29 @@ setopt hist_ignore_space # do not store commands with leading spaces to history
 setopt hist_verify # load history expansions into editing buffer instead of executing them directly
 setopt share_history # share command history data
 
-# adding shhist to PATH, so we can use it from Terminal
-PATH="${PATH}:/Applications/ShellHistory.app/Contents/Helpers"
-
+# ADD SHELLHISTORY APP CONFIG
+# adding shhist command
+PATH="$PATH:/Applications/ShellHistory.app/Contents/Helpers"
 # creating an unique session id for each terminal session
 __shhist_session="${RANDOM}"
-
 # prompt function to record the history
 __shhist_prompt() {
     local __exit_code="${?:-1}"
     fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
     return ${__exit_code}
 }
-
 # integrating prompt function in prompt
 precmd_functions=(__shhist_prompt $precmd_functions)
 
-# Prefer US English and use UTF-8
+# PREFER US ENGLISH AND USE UTF-8
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 
-# Make 'less' more.
+# MAKE 'LESS' MORE.
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # MAKE FZF USE RIPGREP
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-
-# CONFIG NNN
-export NNN_PLUG='z:fzcd;f:finder;o:fzopen;d:diffs;p:preview-tui;i:imgview'
-export NNN_FCOLORS='c1e22d2e006033f7c6d6abc4'
-export NNN_FIFO="/tmp/nnn.fifo"
-alias nnn='nnn -e'
 
 # FIX LS
 if [[ "command -v eza" ]]; then
@@ -89,11 +71,12 @@ else
     alias l='ls -lah'
 fi
 
-alias h='cd ~'
 alias c='clear'
 alias :q='exit'
 alias cdf="cd $DOTFILES_ROOT"
 alias -- -="cd -"
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # NeoVim
 alias cim='nvim'
@@ -110,8 +93,9 @@ if [[ "command -v gcc-13" ]]; then
     export CC=gcc-13
 fi
 
-if [[ "command -v tmux" ]]; then
-    alias tm="tmux"
+if [[ "command -v gcc-14" ]]; then
+    export CC=gcc-14
+    alias gcc-13='gcc-14'
 fi
 
 if [[ "command -v fd" ]]; then
@@ -139,13 +123,11 @@ if [[ "command -v lazygit" ]]; then
 fi
 
 if [[ "command -v castor" ]]; then
-    eval "$($HOME/.local/bin/castor completion zsh)"
-    alias cs='castor'
+    alias ca='castor'
 fi
 
-# Alias SSH to Kitty's SSH kitten if in Kitty Terminal
-if [[ $TERM = "xterm-kitty" ]]; then
-    alias ssh="kitty +kitten ssh"
+if [[ "command -v zoxide" ]]; then
+    eval "$(zoxide init zsh)"
 fi
 
 if [[ "command -v tldr" ]]; then
@@ -164,7 +146,6 @@ alias gpom='git push origin main'
 alias sf='symfony'
 
 alias dadjoke="curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/; echo"
-alias weather="curl wttr.in"
 
 # Trim new lines and copy to clipboard
 alias pbc="tr -d '\n' | pbcopy"
@@ -200,12 +181,23 @@ function calc() {
         printf "\n"
 }
 
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-eval "$(starship init zsh)"
+PURE_GIT_PULL=0
+if [[ "$OSTYPE" == darwin* ]]; then
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
+else
+  fpath+=($HOME/.zsh/pure)
+fi
+autoload -U promptinit; promptinit
+prompt pure
 
-source $HOMEBREW_ROOT/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOMEBREW_ROOT/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source $HOMEBREW_ROOT/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-source $HOME/.cargo/env
-
+# Set PhpStorm as the editor for Symfony Error Pages
+export SYMFONY_IDE="phpstorm"

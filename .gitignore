@@ -26,11 +26,6 @@ auto-save-list/
 .vim/.netrwhist
 /.vim/viminfo.tmp*
 
-# Parrot/Peristory
-.config/jgit
-.config/persistory
-.config/pudb
-
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 !.stow-local-ignore
@@ -43,3 +38,6 @@ auto-save-list/
 
 # Ignore JetBrains config
 .config/jgit/
+
+# Ignore lnav config
+.config/lnav/**/*

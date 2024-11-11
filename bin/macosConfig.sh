@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Many things taken from:
-# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
-# and
-# https://gist.github.com/brandonb927/3195465
-#
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -80,7 +75,7 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 echo ""
-echo "Reduce Transparency on Yosemite"
+echo "Reduce Transparency"
 defaults write com.apple.universalaccess reduceTransparency -boolean true
 
 echo ""
@@ -116,21 +111,13 @@ echo "Tighten up menu bar icons"
 defaults -currentHost write -globalDomain NSStatusItemSpacing -int 8
 defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 14
 
-# echo ""
-# echo "Remove duplicates in the “Open With” menu (also see `lscleanup` alias)"
-# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
 echo ""
 echo "Set wallpaper"
-osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/dev88/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${HOME}/.dotfiles/reference/Cortex-Wallpaper-Logo.png"'
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
-echo ""
-echo "Increasing sound quality for Bluetooth headphones/headsets"
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
 echo ""
 echo "Enabling full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -197,6 +184,10 @@ defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 
 echo ""
+echo "Keep folders on top"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+
+echo ""
 echo "Enable spring loading for directories"
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
@@ -260,39 +251,43 @@ echo "Remove paging buttons from QuickLook previews"
 defaults write com.apple.finder QLInlinePreviewMinimumSupportedSize -int 512
 
 echo ""
-echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-echo ""
-echo "Enable the MacBook Air SuperDrive on any Mac"
-sudo nvram boot-args="mbasd=1"
-
-echo ""
 echo "Disable icon previews"
 defaults write com.apple.finder QLInlinePreviewMinimumSupportedSize -int 512
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock                                                                        #
 ###############################################################################
 
 echo ""
+echo "Move dock to right side of screen"
+defaults write com.apple.dock "orientation" -string left
+
+echo ""
 echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock "tilesize" -int "36"
+
+echo ""
+echo "Setting Dock to auto-hide and removing the auto-hiding delay"
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "autohide-delay" -float "0"
+defaults write com.apple.dock "autohide-time-modifier" -float "0"
+
+echo ""
+echo "Do not show recent apps in dock"
+defaults write com.apple.dock "show-recents" -bool "false"
+
+echo ""
+echo "Show only open applications in the Dock"
+defaults write com.apple.dock "static-only" -bool "true"
+
+echo ""
+echo "Set minimize effect to scale"
+defaults write com.apple.dock "mineffect" -string "scale"
 
 echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
-
-echo ""
-echo "Setting Dock to auto-hide and removing the auto-hiding delay"
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock autohide-delay -float 0
-defaults write com.apple.dock autohide-time-modifier -float 0
-
-echo ""
-echo "Move dock to right side of screen"
-defaults write com.apple.dock orientation -string left
 
 echo ""
 echo "Don’t automatically rearrange Spaces based on most recent use"
@@ -318,9 +313,6 @@ echo ""
 echo "Wipe all (default) app icons from the Dock"
 defaults write com.apple.dock persistent-apps -array
 
-echo ""
-echo "Show only open applications in the Dock"
-defaults write com.apple.dock static-only -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -338,28 +330,7 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 
 echo ""
 echo "Adding a context menu item for showing the Web Inspector in web views"
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-
-###############################################################################
-# Mail                                                                        #
-###############################################################################
-
-echo ""
-echo "Privacy: don’t send search queries to Apple"
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-
-echo ""
-echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
-defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
-
-echo ""
-echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
-defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
-
-echo ""
-echo "Show the full URL in the address bar (note: this still hides the scheme)"
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+defaults write -g WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Prevent Safari from opening ‘safe’ files automatically after downloading"
@@ -372,14 +343,6 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 echo ""
 echo "Hide Safari’s sidebar in Top Sites"
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-
-echo ""
-echo "Enable the Debug and Develop menus and the Web Inspector in Safari"
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
-defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
-defaults write -g WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"
@@ -397,6 +360,23 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 echo ""
 echo "Update extensions automatically"
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+###############################################################################
+# Mail                                                                        #
+###############################################################################
+
+echo ""
+echo "Privacy: don’t send search queries to Apple"
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+echo ""
+echo "Setting email addresses to copy as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Mail.app"
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+echo ""
+echo "Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app"
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\U21a9"
 
 ###############################################################################
 # Time Machine                                                                #
@@ -447,41 +427,6 @@ echo ""
 echo "Enable Debug and Developer tools in Mac AppStore"
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 defaults write com.apple.appstore ShowDebugMenu -bool true
-
-###############################################################################
-# Google Chrome & Google Chrome Canary                                        #
-###############################################################################
-
-echo ""
-echo "Google Chrome: Allow installing user scripts via GitHub or Userscripts.org"
-defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-
-echo ""
-echo "Disable the all too sensitive backswipe on trackpads"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
-
-echo ""
-echo "Disable the all too sensitive backswipe on Magic Mouse"
-defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
-
-###############################################################################
-# Tweetbot.app                                                                #
-###############################################################################
-
-echo ""
-echo "Bypass the annoyingly slow t.co URL shortener"
-defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
-
-###############################################################################
-# 1password 8                                                                 #
-###############################################################################
-
-echo ""
-echo "Symlink 1Password SSH agent to .1password directory"
-mkdir -p ~/.1password && ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 
 ###############################################################################
 # Kill affected applications                                                  #

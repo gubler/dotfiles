@@ -68,7 +68,6 @@
     cmd = difft "$LOCAL" "$REMOTE"
 [http]
     sslbackend = secure-transport
-    sslCAInfo = ~/.config/ssl/combined.crt
 [init]
     defaultBranch = main
 [interactive]
@@ -92,9 +91,3 @@
     insteadOf = "gst:"
     pushInsteadOf = "gist:"
     pushInsteadOf = "git://gist.github.com/"
-[apply]
-    whitespace = fix
-[push]
-    autoSetupRemote = true
-[branch]
-    sort = committerdate

@@ -1,113 +1,83 @@
 cask_args appdir: '/Applications'
-tap 'homebrew/cask-fonts'
-tap 'symfony-cli/tap'
 tap 'yt-dlp/taps'
 
 # Homebrew
-brew 'asimov'
-brew 'bat'
-brew 'composer'
-brew 'coreutils'
-brew 'curl'
-brew 'difftastic'
-brew 'eza'
-brew 'fd'
-brew 'ffmpeg'
-brew 'fzf'
-brew 'gcc'
-brew 'git'
-brew 'git-delta'
-brew 'git-extras'
-brew 'go'
-brew 'gotop'
-brew 'hugo'
-brew 'hyfetch'
-brew 'lazygit'
-brew 'lesspipe'
-brew 'lnav'
-brew 'mas'
-brew 'mosh'
-brew 'multi-git-status'
-brew 'neovim'
-brew 'node'
-brew 'onefetch'
-brew 'pandoc'
-brew 'pastel'
-brew 'php'
-brew 'prettyping'
-brew 'python@3'
-brew 'ripgrep'
-brew 'rust-analyzer'
-brew 'sqlite'
-brew 'ssh-copy-id'
-brew 'starship'
-brew 'stow'
-brew 'symfony-cli'
-brew 'tldr'
-brew 'tmux'
-brew 'trash'
-brew 'webp'
-brew 'wego'
-brew 'wget'
-brew 'yt-dlp'
-brew 'zsh-autosuggestions'
-brew 'zsh-syntax-highlighting'
-brew 'zsh-history-substring-search'
-brew 'zoxide'
+brew 'asimov' # ignore dev dependencies in TimeMachine
+brew 'bat' # a better cat
+brew 'composer' # PHP package manager
+brew 'coreutils' # build tools
+brew 'curl' # fetch stuff
+brew 'eza' # a better ls
+brew 'fd' # a better find
+brew 'ffmpeg' # video/audio converter
+brew 'fzf' # fuzzy find stuff
+brew 'gcc' # compiler
+brew 'git' # version control
+brew 'git-delta' # a better diff for git
+brew 'glow' # terminal markdown renderer
+brew 'go' # go programming language
+brew 'gotop' # a better top
+brew 'hugo' # static site generator
+brew 'hyfetch' # system info (neofetch replacement)
+brew 'lazygit' # git tui
+brew 'lnav' # log fine navigator
+brew 'mas' # mac app store installer
+brew 'mosh' # improved ssh
+brew 'multi-git-status' # check git status for multiple repos
+brew 'neovim' # editor
+brew 'node' # JS dev tool
+brew 'onefetch' # git repo info
+brew 'pandoc' # document conversion
+brew 'pastel' # color conversion
+brew 'php' # programming language
+brew 'prettyping' # a better ping
+brew 'pure' # prompt
+brew 'python@3' # programming language
+brew 'ripgrep' # a faster grep
+brew 'rustup' # install rust
+brew 'rust-analyzer' # rust language analyzer
+brew 'sqlite' # database
+brew 'stow' # save and restore dotfiles
+brew 'symfony-cli/tap/symfony-cli' # symfony cli
+brew 'tldr' # summarize commands
+brew 'tmux' # terminal multiplexer
+brew 'trash' # rm but files go in trash
+brew 'webp' # webp image format tools
+brew 'wego' # terminal weather tool
+brew 'wget' # fetch stuff
+brew 'wtfutil' # terminal dashboard
+brew 'yt-dlp' # youtube downloader
+brew 'zsh-autosuggestions' # ZSH plugin
+brew 'zsh-syntax-highlighting' # ZSH plugin
+brew 'zsh-history-substring-search' # ZSH plugin
+brew 'zoxide' # fast directory jumping
+
+## Fonts
+cask 'font-jetbrains-mono-nerd-font'
+cask 'font-symbols-only-nerd-font'
 
 # Casks
 ## Apps
 cask '1password'
 cask '1password-cli'
 cask 'acorn'
-# cask 'aerial'
+cask 'alacritty'
 cask 'alfred'
-# cask 'audio-hijack'
 cask 'bettertouchtool'
 cask 'calibre'
 cask 'carbon-copy-cloner'
 cask 'cleanshot'
-cask 'dash'
 cask 'devonthink'
 cask 'discord'
-cask 'docker'
 cask 'downie'
-# cask 'farrago'
-cask 'firefox'
-# cask 'fission'
-# cask 'font-anonymice-nerd-font'
-cask 'font-jetbrains-mono-nerd-font'
-# cask 'font-new-york'
-# cask 'font-sf-pro'
-# cask 'font-sf-mono'
-# cask 'font-sf-mono-for-powerline'
 cask 'hazel'
 cask 'jetbrains-toolbox'
-# cask 'kaleidoscope'
 cask 'keyboard-maestro'
-cask 'kitty'
-# cask 'loopback'
-# cask 'marked'
 cask 'minecraft'
 cask 'obsidian'
-cask 'private-internet-access'
-cask 'qlcolorcode'
-cask 'qlmarkdown'
-cask 'qlstephen'
-cask 'quicklook-csv'
-cask 'quicklook-json'
 cask 'rocket'
-# cask 'screenflow'
-cask 'screens'
+cask 'shortcat'
 cask 'slack'
-cask 'steam'
-cask 'telegram'
-# cask 'textexpander'
-cask 'the-unarchiver'
-cask 'transmission'
-cask 'transmit'
-cask 'ttscoff-mmd-quicklook'
-cask 'vanilla'
 cask 'vlc'
 cask 'visual-studio-code'
 
@@ -115,30 +85,11 @@ cask 'visual-studio-code'
 mas '1Blocker', id: 1365531024
 mas '1Password for Safari', id: 1569813296
 mas 'Amphetamine', id: 937984704
-mas 'CARROT Weather', id: 993487541
-# mas 'Dato', id: 1470584107
-mas 'Data Jar', id: 1453273600
 mas 'Day One', id: 1055511498
-mas 'Drafts', id: 1435957248
-mas 'HomeLog', id: 1584408332
 mas 'iFlicks 3', id: 1274494218
-mas 'Microsoft Remote Desktop', id: 1295203466
-mas 'Magnet', id: 441258766
-mas 'NepTunes', id: 1006739057
-# mas 'Noir', id: 1592917505
-mas 'Numbers', id: 409203825
 mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Peek', id: 1554235898
-# mas 'Pixelmator Pro', id: 1289583905
-mas 'Save to Pocket', id: 1477385213
-mas 'Scenecuts Helper', id: 1540491573
 mas 'ShellHistory', id: 1564015476
-# mas 'Shush', id: 496437906
 mas 'Simple Comic', id: 1497435571
-mas 'Super Agent', id: 1568262835
-mas 'StopTheMadness', id: 1376402589
-mas 'Streaks', id: 963034692
 mas 'TestFlight', id: 899247664
-mas 'Tweaks for Reddit', id: 1524828965
 mas 'Vidimote', id: 1585702412
-mas 'Xcode', id: 497799835
