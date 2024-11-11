@@ -1,3 +1,2 @@
-require('user/plugins')
-require('user/options')
-require('user/neovide')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
