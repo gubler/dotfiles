@@ -15,19 +15,19 @@ size = 18.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Bold"
+style = "Heavy"
 
 [font.bold_italic]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Bold Italic"
+style = "Heavy Italic"
 
 [font.italic]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Italic"
+style = "Medium Italic"
 
 [font.normal]
 family = "JetBrainsMono Nerd Font Mono"
-style = "Regular"
+style = "Medium"
 
 [general]
 import = ["~/.config/alacritty/catppuccin-mocha.toml"]
