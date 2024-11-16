@@ -25,4 +25,3 @@ vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<C
 vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
 
 vim.keymap.set("n", "<F5>", "<Cmd>UndotreeToggle<CR>", { desc = "Toggle Undotree" })
-vim.keymap.set("n", "<leader>qb", "<Cmd>Bdelete<CR>", { desc = "Close buffer" })

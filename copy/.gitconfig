@@ -16,7 +16,7 @@
     cob = checkout -b
     df = diff
     dft = difftool
-    s = status --short
+    s = switch
     st  = status
     remotes = remote -v
     # push head to origin - this also acts as a "publish"
