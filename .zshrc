@@ -134,6 +134,10 @@ if [[ "command -v tldr" ]]; then
     alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 fi
 
+if [[ "command -v /Applications/Tailscale.app/Contents/MacOS/Tailscale" ]]; then
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
+
 alias g='git'
 function gc() { git checkout "${@:-master}"; } # Checkout master by default
 alias gco='gc'
