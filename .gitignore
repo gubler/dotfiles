@@ -38,6 +38,7 @@ auto-save-list/
 
 # Ignore JetBrains config
 .config/jgit/
+.config/pudb/
 
 # Ignore lnav config
 .config/lnav/**/*
