@@ -1,0 +1,40 @@
+#!/usr/bin/expect -f
+
+# Disable job control
+set nojobcontrol 1
+
+# Disable terminal output
+log_user 1
+
+# Set timeout for process in seconds (10 minutes)
+set timeout 600
+
+# Retrieve the variables from the environment variable
+set hostname $env(SFTP_HOST)
+set username $env(SFTP_USER)
+set password $env(SFTP_PASS)
+set destination $env(DOWNLOAD_DESTINATION)
+set data $env(DATA_DIRECTORY)
+
+#log_file $destination/expect.log
+# Start the sftp connection
+puts $username@$hostname
+spawn /usr/bin/sftp $username@$hostname
+expect {
+    "$username@$hostname's password:" {
+        send "$password\r"
+    }
+    "Permission denied, please try again." {
+        puts "Authentication failed."
+        exit 1
+    }
+}
+
+# Download the folder
+expect "sftp>"
+send "get -r $data $destination\r"
+
+# Exist SFTP
+expect "sftp>"
+send "bye\r"
+#interact
