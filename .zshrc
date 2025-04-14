@@ -41,17 +41,17 @@ setopt share_history # share command history data
 
 # ADD SHELLHISTORY APP CONFIG
 # adding shhist command
-PATH="$PATH:/Applications/ShellHistory.app/Contents/Helpers"
+# PATH="$PATH:/Applications/ShellHistory.app/Contents/Helpers"
 # creating an unique session id for each terminal session
-__shhist_session="${RANDOM}"
+# __shhist_session="${RANDOM}"
 # prompt function to record the history
-__shhist_prompt() {
-    local __exit_code="${?:-1}"
-    fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
-    return ${__exit_code}
-}
+# __shhist_prompt() {
+#     local __exit_code="${?:-1}"
+#     fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
+#     return ${__exit_code}
+# }
 # integrating prompt function in prompt
-precmd_functions=(__shhist_prompt $precmd_functions)
+# precmd_functions=(__shhist_prompt $precmd_functions)
 
 # PREFER US ENGLISH AND USE UTF-8
 export LANG="en_US"
@@ -205,3 +205,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Set PhpStorm as the editor for Symfony Error Pages
 export SYMFONY_IDE="phpstorm"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/dev88/.lmstudio/bin"
+eval "$(atuin init zsh)"

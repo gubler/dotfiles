@@ -42,3 +42,4 @@ auto-save-list/
 
 # Ignore lnav config
 .config/lnav/**/*
+.config/StardewValley
