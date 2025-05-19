@@ -157,6 +157,13 @@ alias pbc="tr -d '\n' | pbcopy"
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache"
 
+# Clean up LaunchServices to remove duplicates in the “Open With” menu. The Finder will then restart.
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Remove Quarrantine flag on an app
+# example: unqar appName.app
+alias unqar="xattr -r -d com.apple.quarantine"
+
 # `o` with no arguments opens current directory
 # otherwise opens the given location
 function o() {
@@ -208,4 +215,10 @@ export SYMFONY_IDE="phpstorm"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/dev88/.lmstudio/bin"
+. "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/dev88/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
