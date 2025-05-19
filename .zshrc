@@ -222,3 +222,6 @@ fpath=(/Users/dev88/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+if [[ "command -v mise" ]]; then
+    eval "$(/Users/dev88/.local/bin/mise activate zsh)"
+fi
