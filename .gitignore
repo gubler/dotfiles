@@ -44,3 +44,4 @@ auto-save-list/
 .config/lnav/**/*
 .config/StardewValley
 .config/atuin/atuin-receipt.json
+.config/github-copilot/versions.json
