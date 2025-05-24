@@ -45,3 +45,4 @@ auto-save-list/
 .config/StardewValley
 .config/atuin/atuin-receipt.json
 .config/github-copilot/versions.json
+.config/fish/conf.d
