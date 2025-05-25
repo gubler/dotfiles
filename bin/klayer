@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LAYER_FILE="$HOME/.local/kmonad/layer"
+
+if [[ -f "$LAYER_FILE" ]]; then
+  cat "$LAYER_FILE"
+  exit 0
+else
+  echo "keyboard layers not initialized"
+  exit 1
+fi
+

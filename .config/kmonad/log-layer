@@ -1,0 +1,14 @@
+#!/bin/bash
+# Usage: log-layer <layer-name>
+
+TARGET_DIR="$HOME/.local/kmonad"
+TARGET_FILE="$TARGET_DIR/layer"
+
+# Create the directory if it doesn't exist
+mkdir -p "$TARGET_DIR"
+
+# Create the file if it doesn't exist
+touch "$TARGET_FILE"
+
+# Write the layer name
+echo "$1" >"$TARGET_FILE"

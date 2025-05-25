@@ -1,0 +1,24 @@
+{
+  "title": "fn + option + F7 → F18",
+  "rules": [
+    {
+      "description": "Map fn + option + F7 to F18",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f7",
+            "modifiers": {
+              "mandatory": ["fn", "option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f18"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -46,3 +46,4 @@ auto-save-list/
 .config/atuin/atuin-receipt.json
 .config/github-copilot/versions.json
 .config/fish/conf.d
+.config/karabiner/automatic_backups
