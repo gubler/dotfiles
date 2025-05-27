@@ -4,12 +4,12 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Map fn + option + F7 to F18",
+                        "description": "Map fn + option + F7 to F17",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "f7",
-                                    "modifiers": { "mandatory": ["fn", "option"] }
+                                    "consumer_key_code": "scan_previous_track",
+                                    "modifiers": { "mandatory": ["left_option"] }
                                 },
                                 "to": [{ "key_code": "f18" }],
                                 "type": "basic"
@@ -18,6 +18,17 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 480,
+                        "vendor_id": 13364
+                    },
+                    "ignore": false
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }

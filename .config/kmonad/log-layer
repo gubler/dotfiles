@@ -1,7 +1,7 @@
 #!/bin/bash
 # Usage: log-layer <layer-name>
 
-TARGET_DIR="$HOME/.local/kmonad"
+TARGET_DIR="/Users/dev88/.local/kmonad"
 TARGET_FILE="$TARGET_DIR/layer"
 
 # Create the directory if it doesn't exist

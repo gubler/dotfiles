@@ -1,0 +1,21 @@
+#!/bin/bash
+
+LAYER_FILE="$HOME/.local/kmonad/layer"
+
+if [ ! -f "$LAYER_FILE" ]; then
+  echo "⚠️"
+  exit 0
+fi
+
+case "$(cat "$LAYER_FILE")" in
+  mods)
+    echo "⌨️"
+    ;;
+  open)
+    echo "🕹️"
+    ;;
+  *)
+    echo "⚠️"
+    ;;
+esac
+

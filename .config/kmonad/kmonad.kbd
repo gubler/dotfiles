@@ -1,5 +1,6 @@
 (defcfg
-  input  (iokit-name "Karabiner DriverKit VirtualHIDKeyboard 1.8.0")
+  ;; input (iokit-name "Karabiner DriverKit VirtualHIDKeyboard 1.8.0")
+  input (iokit-name)
   output (kext)
 
   ;; Emit unhandled events
@@ -17,7 +18,7 @@
 
 (defsrc
   caps    a    s    d    f    g    h    j    k    l    ;
-  f18
+  f22
 )
 
 (defalias
@@ -31,8 +32,8 @@
   alt_l (tap-hold-next-release 200 l lalt)
   ctl_; (tap-hold-next-release 200 ; rctl)
 
-  to-open (around (cmd-button "$HOME/.config/kmonad/log-layer open") (layer-toggle open))
-  to-mods (around (cmd-button "$HOME/.config/kmonad/log-layer mods") (layer-toggle mods))
+  to-open (around (cmd-button "/Users/dev88/.config/kmonad/log-layer open") (layer-switch open))
+  to-mods (around (cmd-button "/Users/dev88/.config/kmonad/log-layer mods") (layer-switch mods))
 
   hyper (tap-hold-next-release 200 esc (around-implicit lctl (around lalt (around lsft lmet))))
 )
