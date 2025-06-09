@@ -39,12 +39,12 @@ brew 'symfony-cli/tap/symfony-cli' # symfony cli
 brew 'tldr' # summarize commands
 brew 'trash' # rm but files go in trash
 brew 'uv' # python package installer
+brew 'tmux' # terminal mulitplexer
 brew 'webp' # webp image format tools
 brew 'wego' # terminal weather tool
 brew 'wget' # fetch stuff
 brew 'wtfutil' # terminal dashboard
 brew 'yt-dlp' # youtube downloader
-brew 'zellij' # terminal mulitplexer
 brew 'zoxide' # fast directory jumping
 brew 'zsh-autosuggestions' # ZSH plugin
 brew 'zsh-syntax-highlighting' # ZSH plugin
