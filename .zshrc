@@ -225,3 +225,12 @@ compinit
 if [[ "command -v mise" ]]; then
     eval "$(/Users/dev88/.local/bin/mise activate zsh)"
 fi
+
+# Don't launch tmux if:
+# - already inside tmux
+# - running non-interactive shell
+# - launched from inside tmux or another shell (nested)
+# - SSH (optional, based on your preference)
+if [ -z "$TMUX" ] && [ -n "$PS1" ] && [ "$SHLVL" -eq 1 ] && [ -z "$SSH_CONNECTION" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
