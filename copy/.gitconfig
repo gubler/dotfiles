@@ -34,6 +34,8 @@
     l = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [apply]
     whitespace = fix
+[help]
+    autocorrect = prompt
 [branch]
     sort = committerdate
 [color]
@@ -60,7 +62,9 @@
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 [diff]
     algorithm = histogram
-    colorMoved = default
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
     tool = difftastic
 [difftool]
     prompt = false
@@ -77,12 +81,20 @@
     conflictstyle = zdiff3
 [push]
     # push will only do the current branch, not all branches
-    default = current
+    default = simple
     autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 [rerere]
-    enabled = 1
+    enabled = true
+    autoupdate = true
 [pager]
     difftool = true;
+[tag]
+    sort = version:refname
 [url "git@github.com:"]
     insteadOf = "gh:"
     pushInsteadOf = "github:"

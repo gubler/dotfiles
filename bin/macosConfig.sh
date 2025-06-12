@@ -264,6 +264,7 @@ defaults write com.apple.dock "orientation" -string left
 
 echo ""
 echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
+defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "tilesize" -int "36"
 
 echo ""
@@ -313,6 +314,10 @@ echo ""
 echo "Wipe all (default) app icons from the Dock"
 defaults write com.apple.dock persistent-apps -array
 
+echo ""
+echo "Show only open applications in the Dock"
+defaults write com.apple.dock static-only -bool true
+
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -343,6 +348,14 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 echo ""
 echo "Hide Safari’s sidebar in Top Sites"
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
+
+echo ""
+echo "Enable the Debug and Develop menus and the Web Inspector in Safari"
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true &&
+    defaults write com.apple.Safari IncludeDevelopMenu -bool true &&
+    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true &&
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true &&
+    defaults write -g WebKitDeveloperExtras -bool true
 
 echo ""
 echo "Add a context menu item for showing the Web Inspector in web views"

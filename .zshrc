@@ -39,20 +39,6 @@ setopt hist_ignore_space # do not store commands with leading spaces to history
 setopt hist_verify # load history expansions into editing buffer instead of executing them directly
 setopt share_history # share command history data
 
-# ADD SHELLHISTORY APP CONFIG
-# adding shhist command
-# PATH="$PATH:/Applications/ShellHistory.app/Contents/Helpers"
-# creating an unique session id for each terminal session
-# __shhist_session="${RANDOM}"
-# prompt function to record the history
-# __shhist_prompt() {
-#     local __exit_code="${?:-1}"
-#     fc -lDt "%s" -1 | sudo --preserve-env --user ${SUDO_USER:-${LOGNAME}} shhist insert --session ${TERM_SESSION_ID:-${__shhist_session}} --username ${LOGNAME} --hostname $(hostname) --exit-code ${__exit_code}
-#     return ${__exit_code}
-# }
-# integrating prompt function in prompt
-# precmd_functions=(__shhist_prompt $precmd_functions)
-
 # PREFER US ENGLISH AND USE UTF-8
 export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
@@ -126,6 +112,10 @@ if [[ "command -v castor" ]]; then
     alias ca='castor'
 fi
 
+if [[ "command -v mgitstatus" ]]; then
+    alias mgst='mgitstatus'
+fi
+
 if [[ "command -v zoxide" ]]; then
     eval "$(zoxide init zsh)"
 fi
@@ -146,6 +136,8 @@ alias gca='git commit -v -a'
 alias gpo='git push origin'
 alias gpot='git push origin && git push --tag origin'
 alias gpom='git push origin main'
+alias glog='git log'
+alias glogo='git log --oneline'
 
 alias sf='symfony'
 

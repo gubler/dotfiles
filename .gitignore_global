@@ -63,6 +63,7 @@ Desktop.ini
 
 # PHPStorm
 .idea
+*.iml
 
 # VS Code
 .vscode
