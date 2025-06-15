@@ -44,6 +44,3 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 Use the instructions from the [Castor github](https://github.com/jolicode/castor?tab=readme-ov-file#installation) for installation.
 
-### Rust
-
-1. Install rust tooling via [rustup](https://www.rust-lang.org/tools/install)

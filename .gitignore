@@ -47,3 +47,5 @@ auto-save-list/
 .config/github-copilot/versions.json
 .config/fish/conf.d
 .config/karabiner/automatic_backups
+.config/gh
+.config/nvim/lazy-lock.json

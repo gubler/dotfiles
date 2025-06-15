@@ -87,7 +87,6 @@ cask 'lookaway' # Ergonomic software
 cask 'macwhisper' # transcribe audio
 cask 'minecraft' # Minecraft
 cask 'obsidian' # note manager
-cask 'omnifocus' # task manager
 cask 'orion' # browser
 cask 'pastebot' # clipboard manager
 cask 'private-internet-access' # VPN software
@@ -104,14 +103,45 @@ cask 'visual-studio-code' # code editor
 cask 'vlc' # video player
 
 # Mac App Store
-mas '1Blocker', id: 1365531024
-mas '1Password for Safari', id: 1569813296
-mas 'Amperfy', id: 1530145038
-mas 'Amphetamine', id: 937984704
-mas 'Automounter', id: 1160435653
-mas 'iFlicks 3', id: 1274494218
-mas 'Paprika Recipe Manager 3', id: 1303222628
-mas 'Peek', id: 1554235898
-mas 'Simple Comic', id: 1497435571
-mas 'TestFlight', id: 899247664
-mas 'Vidimote', id: 1585702412
+
+mas 'Actions for Obsidian', id: 1659667937 # shortcuts actions for obsidian
+mas 'Amperfy', id: 1530145038 # Novidrome client
+mas 'Amphetamine', id: 937984704 # prevent computer from sleeping
+mas 'Automounter', id: 1160435653 # keep remote shares mounted
+mas 'DaisyDisk', id: 411643860 # disk usage listing
+mas 'Everlog', id: 1519935634 # journaling
+mas 'Fantastical', id: 975937182 # better calendar
+mas 'GoodLink', id: 1474335294 # read later app
+mas 'Hand Mirror', id: 1502839586 # use webcam as a mirror
+mas 'iFlicks', id: 1274494218 # video converter
+mas 'Keka', id: 470158793 # archive software
+mas 'Metadatics', id: 554883654 # mp3 tagger
+mas 'Numbers', id: 409203825 # spreadsheet
+mas 'OmniFocus', id: 1542143627 # task manager
+mas 'Paprika Recipe Manager', id: 1303222628 # recipe manager
+mas 'Play', id: 1596506190 # youtube video manager
+mas 'Simple Comic', id: 1497435571 # comic book reader
+mas 'Subtrack', id: 1519946553 # recurring expense tracker
+mas 'TestFlight', id: 899247664 # beta testing app
+mas 'Windows App', id: 1295203466 # Microsoft remote desktop
+mas 'Xcode', id: 497799835 # Mac IDE
+
+### Finder Preview / Quicklook Extensions
+
+mas 'Folder Preview', id: 6698876601 # show folder contents in quicklook
+mas 'Peek', id: 1554235898 # add features to quicklook
+
+### Safari Extensions
+
+mas '1Blocker', id: 1365531024 # Safari extension - ad blocking
+mas '1Password for Safari', id: 1569813296 # Safari extension - integrate 1Password
+mas 'Banish', id: 1639049780 # Safari extension - hide "open in app" banners
+mas 'Eat the Shorts' id: 1668012393 # Safari extension - hides shorts on youtube (does seem available anymore)
+mas 'Hush', id: 1544743900 # Safari extension - block cookie banners
+mas 'Kagi for Safari', id: 1622835804 # Safari extension - set Kagi as search engine
+mas 'Obsidian Web Clipper', id: 6720708363 # Safari extension - clip webpages to obsidian
+mas 'Sink It', id: 6449873635 # Safari extension - reddit enhancements
+mas 'StopTheMadness Pro', id: 6471380298 # Safari extension - stop website annoyances
+mas 'Surfed', id: 1591590700 # Safari extension - unified browsing history
+mas 'Vidimote', id: 1585702412 # Safari extension - video manager
+
