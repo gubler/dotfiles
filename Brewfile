@@ -56,58 +56,59 @@ cask 'font-symbols-only-nerd-font'
 
 # Casks
 ## Apps
-cask '1password'
-cask '1password-cli'
-cask 'acorn'
-cask 'alfred'
-cask 'anki'
-cask 'bartender'
-cask 'bettertouchtool'
-cask 'calibre'
-cask 'carbon-copy-cloner'
-cask 'chatgpt'
-cask 'cleanshot'
-cask 'curseforge'
-cask 'discord'
-cask 'downie'
-cask 'elgato-stream-deck'
-cask 'elgato-wave-link'
-cask 'eufymake-studio'
-cask 'ghostty'
-cask 'hazel'
-cask 'istat-menus'
-cask 'jetbrains-toolbox'
-cask 'kaleidoscope'
-cask 'keyboard-maestro'
-cask 'kindavim'
-cask 'lasso'
-cask 'latest'
-cask 'lm-studio'
-cask 'lookaway'
-cask 'macwhisper'
-cask 'minecraft'
-cask 'obsidian'
-cask 'omnifocus'
-cask 'orion'
-cask 'pastebot'
-cask 'private-internet-access'
-cask 'rocket'
-cask 'shortcat'
-cask 'slack'
-cask 'soundsource'
-cask 'steam'
-cask 'swiftbar'
-cask 'telegram'
-cask 'transmission'
-cask 'transmit'
-cask 'typinator'
-cask 'visual-studio-code'
-cask 'vlc'
+cask '1password' # Password manager
+cask '1password-cli' # CLI access to 1Password
+cask 'acorn' # image editor
+cask 'alfred' # app launcher and more
+cask 'anki' # flash cards
+cask 'automounterhelper' # helper for Automounter from MAS (must run to install)
+cask 'bartender' # manage menu bar apps
+cask 'bettertouchtool' # automation tool
+cask 'calibre' # ebook manager
+cask 'carbon-copy-cloner' # full disk backup
+cask 'chatgpt' # ChatGPT access
+cask 'cleanshot' # Screen shot tool
+cask 'curseforge' # Minecraft mods
+cask 'discord' # social chat
+cask 'downie' # download manager
+cask 'elgato-stream-deck' # Stream Deck software
+cask 'elgato-wave-link' # Wave link microphone software
+cask 'ghostty' # Terminal
+cask 'hazel' # folder/file automation
+cask 'istat-menus' # show computer data in menubar
+cask 'jetbrains-toolbox' # Manage JetBrains software
+cask 'kaleidoscope' # Diff tool
+cask 'keyboard-maestro' # Automation tool
+cask 'kindavim' # Add vim to all apps
+cask 'lasso' # window manager
+cask 'latest' # track app updates
+cask 'lm-studio' # local LLMs
+cask 'lookaway' # Ergonomic software
+cask 'macwhisper' # transcribe audio
+cask 'minecraft' # Minecraft
+cask 'obsidian' # note manager
+cask 'omnifocus' # task manager
+cask 'orion' # browser
+cask 'pastebot' # clipboard manager
+cask 'private-internet-access' # VPN software
+cask 'rocket' # :emoji shortcodes everywhere
+cask 'shortcat' # Accessibility software
+cask 'slack' # team chat
+cask 'soundsource' # audio improver
+cask 'steam' # games!
+cask 'telegram' # communications
+cask 'transmission' # Torrent software
+cask 'transmit' # FTP
+cask 'typinator' # text expansions
+cask 'visual-studio-code' # code editor
+cask 'vlc' # video player
 
 # Mac App Store
 mas '1Blocker', id: 1365531024
 mas '1Password for Safari', id: 1569813296
+mas 'Amperfy', id: 1530145038
 mas 'Amphetamine', id: 937984704
+mas 'Automounter', id: 1160435653
 mas 'iFlicks 3', id: 1274494218
 mas 'Paprika Recipe Manager 3', id: 1303222628
 mas 'Peek', id: 1554235898
