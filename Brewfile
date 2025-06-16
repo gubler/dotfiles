@@ -36,7 +36,7 @@ brew 'ripgrep' # a faster grep
 brew 'sqlite' # database
 brew 'stow' # save and restore dotfiles
 brew 'symfony-cli/tap/symfony-cli' # symfony cli
-brew 'tldr' # summarize commands
+brew 'tlrc' # TLDR summarize commands
 brew 'trash' # rm but files go in trash
 brew 'uv' # python package installer
 brew 'tmux' # terminal mulitplexer
