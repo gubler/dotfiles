@@ -87,6 +87,7 @@ cask 'lookaway' # Ergonomic software
 cask 'macwhisper' # transcribe audio
 cask 'minecraft' # Minecraft
 cask 'obsidian' # note manager
+cask 'openmtp' # copy files to andriod
 cask 'orion' # browser
 cask 'pastebot' # clipboard manager
 cask 'private-internet-access' # VPN software
