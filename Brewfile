@@ -80,12 +80,13 @@ cask 'jetbrains-toolbox' # Manage JetBrains software
 cask 'kaleidoscope' # Diff tool
 cask 'keyboard-maestro' # Automation tool
 cask 'kindavim' # Add vim to all apps
-cask 'lasso' # window manager
+cask 'lasso-app' # window manager
 cask 'latest' # track app updates
 cask 'lm-studio' # local LLMs
 cask 'lookaway' # Ergonomic software
 cask 'macwhisper' # transcribe audio
 cask 'minecraft' # Minecraft
+cask 'nextcloud-vfs' # self hosted file sync
 cask 'obsidian' # note manager
 cask 'openmtp' # copy files to andriod
 cask 'orion' # browser
