@@ -59,6 +59,7 @@ cask 'font-symbols-only-nerd-font'
 cask '1password' # Password manager
 cask '1password-cli' # CLI access to 1Password
 cask 'acorn' # image editor
+cask 'alacritty' # terminal
 cask 'alfred' # app launcher and more
 cask 'anki' # flash cards
 cask 'automounterhelper' # helper for Automounter from MAS (must run to install)
@@ -67,6 +68,7 @@ cask 'bettertouchtool' # automation tool
 cask 'calibre' # ebook manager
 cask 'carbon-copy-cloner' # full disk backup
 cask 'chatgpt' # ChatGPT access
+cask 'claude' # Anthropic Claude access
 cask 'cleanshot' # Screen shot tool
 cask 'curseforge' # Minecraft mods
 cask 'discord' # social chat
