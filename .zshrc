@@ -184,6 +184,14 @@ function calc() {
         printf "\n"
 }
 
+
+# start Claude Code with a specific message
+ccc() {
+    local current_date=$(date "+%B %d, %Y")
+    local current_time=$(date "+%I:%M %p")
+    claude "Hello! It is ${current_date} at ${current_time}. Ready?"
+}
+
 PURE_GIT_PULL=0
 if [[ "$OSTYPE" == darwin* ]]; then
   fpath+=("$(brew --prefix)/share/zsh/site-functions")
