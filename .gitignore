@@ -49,3 +49,7 @@ auto-save-list/
 .config/karabiner/automatic_backups
 .config/gh
 .config/nvim/lazy-lock.json
+.config/beets/import_log.txt
+.config/beets/library.db
+.config/beets/state.pickle
+.config/github-copilot/intellij

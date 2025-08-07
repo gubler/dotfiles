@@ -1,0 +1,25 @@
+directory: /Volumes/MegaStore/Media/Music
+# library: /Volumes/MegaStore/srv/beets/data/library.db
+import:
+    # Don't move files during import - keep them in place
+    copy: no
+    # Ask for confirmation on everything
+    timid: yes
+    # Show more detail during import decisions
+    detail: yes
+    # ask to resume if needed
+    resume: ask
+    log: import_log.txt
+plugins: fetchart lyrics lastgenre embedart bareasc ftintitle fuzzy
+paths:
+    default: "%upper{%asciify{%left{$albumartist_sort,1}}}/$albumartist/$year $album%aunique{}/%if{$multidisc,$disc-}$track $title"
+    comp: Compilation/$year $album/$track $title
+    albumtype:soundtrack: Soundtrack/$year $album/$track $title
+fetchart:
+    auto: no
+    sources: filesystem coverart amazon
+    minwidth: 500
+embedart:
+    auto: no
+lyrics:
+    sources: [lrclib]
