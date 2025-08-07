@@ -1,4 +1,0 @@
-font-size = 18
-# theme = catppuccin-mocha
-theme = Dracula+
-keybind = shift+enter=text:\n
