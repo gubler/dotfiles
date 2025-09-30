@@ -234,3 +234,17 @@ fi
 if [ -z "$TMUX" ] && [ -n "$PS1" ] && [ "$SHLVL" -eq 1 ] && [ -z "$SSH_CONNECTION" ]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/dev88/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected NVM configuration
+export NVM_DIR="/Users/dev88/Library/Application Support/Herd/config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+
+# Herd injected PHP binary.
+export PATH="/Users/dev88/Library/Application Support/Herd/bin/":$PATH

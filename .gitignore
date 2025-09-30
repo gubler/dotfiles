@@ -53,3 +53,5 @@ auto-save-list/
 .config/beets/library.db
 .config/beets/state.pickle
 .config/github-copilot/intellij
+.config/op/config
+.config/psysh/psysh_history
