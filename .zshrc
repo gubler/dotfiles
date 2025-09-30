@@ -79,11 +79,6 @@ if [[ "command -v gcc-13" ]]; then
     export CC=gcc-13
 fi
 
-if [[ "command -v gcc-14" ]]; then
-    export CC=gcc-14
-    alias gcc-13='gcc-14'
-fi
-
 if [[ "command -v fd" ]]; then
     alias find="fd"
 fi
@@ -155,6 +150,8 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Remove Quarrantine flag on an app
 # example: unqar appName.app
 alias unqar="xattr -r -d com.apple.quarantine"
+
+export CC=clang
 
 # `o` with no arguments opens current directory
 # otherwise opens the given location
